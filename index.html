@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>社長の頭の中にしかないものを、組織とAIに移す。｜AI時代の経営者専属顧問 HiMaWaRi合同会社 飯村惇</title>
+<meta name="description" content="AI時代の経営者専属顧問 HiMaWaRi合同会社／飯村惇。社長一人に集中した判断を言語化し、AIと組織に移します。意思決定の同席・社長の分身AI・人とAIの再配置。90分の経営診断セッション（無料・毎月3名）と無料の36タイプ診断をご用意しています。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="社長の頭の中にしかないものを、組織とAIに移す。｜HiMaWaRi合同会社 飯村惇">
+<meta property="og:description" content="AI時代の経営者専属顧問。判断を言語化し、AIと組織に移す。まずは無料の経営タイプ診断から。">
+<meta property="og:site_name" content="AI時代の経営者専属顧問　HiMaWaRi合同会社">
+<meta property="og:url" content="https://kimonoceo.com/">
+<meta property="og:image" content="https://kimonoceo.com/ogp-v2.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kimonoceo.com/ogp-v2.jpg">
+<link rel="canonical" href="https://kimonoceo.com/">
+<!-- ▲ ドメインが kimonoceo.com 以外になる場合は、上の4行のURLを差し替えてください -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23101728'/%3E%3Cg fill='%23C9A227'%3E%3Ccircle cx='16' cy='16' r='4.4'/%3E%3Cg%3E%3Cellipse cx='16' cy='7.6' rx='2.5' ry='4.4'/%3E%3Cellipse cx='16' cy='24.4' rx='2.5' ry='4.4'/%3E%3Cellipse cx='7.6' cy='16' rx='4.4' ry='2.5'/%3E%3Cellipse cx='24.4' cy='16' rx='4.4' ry='2.5'/%3E%3Cellipse cx='10.1' cy='10.1' rx='2.5' ry='4.4' transform='rotate(-45 10.1 10.1)'/%3E%3Cellipse cx='21.9' cy='21.9' rx='2.5' ry='4.4' transform='rotate(-45 21.9 21.9)'/%3E%3Cellipse cx='21.9' cy='10.1' rx='2.5' ry='4.4' transform='rotate(45 21.9 10.1)'/%3E%3Cellipse cx='10.1' cy='21.9' rx='2.5' ry='4.4' transform='rotate(45 10.1 21.9)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E">
+<script>
+/* =====================================================================
+   ▼ 設定　※ここだけ書き換えれば全体に反映されます
+   ===================================================================== */
+/* メンタリズム36診断の設置場所。同ドメインの /36/ に移した場合はこのまま。
+   まだ移していない場合は "https://mentalism36.netlify.app" に戻してください */
+var DIAG36_URL = "https://mentalism36.netlify.app";
+
+/* Microsoft Clarity のプロジェクトID（10文字程度）。取得したら貼り付けてください。
+   空のままなら計測タグは読み込まれません */
+var CLARITY_ID = "y77khly13m";
+
+/* Google アナリティクス4 の測定ID（G-から始まる文字列）。
+   取得したら貼り付けてください。空のままなら読み込まれません */
+var GA4_ID = "G-9QV3GB55KC";
+
+/* 顧問契約の受入枠。毎月ここだけ書き換えてください。
+   ADVISORY_LEFT を 0 にすると「今月は満枠」と表示されます */
+var ADVISORY_TOTAL = 3;   /* 月あたりの新規お引き受け社数 */
+var ADVISORY_LEFT  = 1;   /* 今月の残り枠 */
+
+/* 経営診断セッション（初回90分・無料）の月間受入人数 */
+var SESSION_LIMIT  = 3;
+
+/* 内部トラフィック判定（IPに依存しない端末フラグ）
+   ?internal=1 を一度開くと、その端末は以後ずっと計測から除外されます。
+   解除は ?internal=0 。除外中は画面左下に小さな表示が出ます（本人の端末にだけ） */
+var IS_INTERNAL = (function(){
+  try{
+    var p = new URLSearchParams(location.search).get('internal');
+    if (p === '1') localStorage.setItem('ga_internal','1');
+    if (p === '0') localStorage.removeItem('ga_internal');
+    return localStorage.getItem('ga_internal') === '1';
+  }catch(e){ return false; }
+})();
+
+if (GA4_ID) {
+  var _g=document.createElement('script');
+  _g.async=1; _g.src="https://www.googletagmanager.com/gtag/js?id="+GA4_ID;
+  document.head.appendChild(_g);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA4_ID, IS_INTERNAL ? { traffic_type: 'internal' } : {});
+}
+
+/* 計測除外中の画面表示は行いません（除外は traffic_type で継続） */
+
+if (CLARITY_ID && !IS_INTERNAL) {
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script",CLARITY_ID);
+}
+</script>
+<style>
+
+:root{
+  --navy:#101728; --navy2:#1B2540;
+  --gold:#A5811C; --gold-l:#C9A227; --gold-bg:#F6EEDA;
+  --paper:#F7F2E8; --paper2:#FFFDF8;
+  --ink:#1D2333; --sub:#6A6558;
+  --fuji:#7E5FA8; --shu:#B5473C; --moss:#4C7A55;
+  --line:#DCD2BE;
+  --serif:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 80px}
+
+header{text-align:center;padding:46px 0 30px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.32em;color:var(--gold);margin:0 0 14px;text-indent:.32em}
+h1{font-family:var(--serif);font-size:clamp(24px,4.4vw,36px);margin:0;letter-spacing:.05em;font-weight:600}
+.lede{color:var(--sub);font-size:13.5px;max-width:600px;margin:18px auto 0;line-height:1.95}
+
+.step{margin:34px 0 0;padding:26px 0 0;border-top:1px solid var(--line)}
+.step:first-of-type{border-top:none}
+.step.locked{opacity:.35;pointer-events:none}
+.step-h{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.step-n{font-family:var(--serif);color:var(--gold);font-size:12px;letter-spacing:.2em;white-space:nowrap}
+.step-t{font-family:var(--serif);font-size:19px;margin:0;letter-spacing:.04em;font-weight:600}
+.step-d{color:var(--sub);font-size:12.5px;margin:0 0 18px}
+
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.opt{
+  background:var(--paper2);border:1px solid var(--line);border-radius:3px;
+  padding:14px 15px;cursor:pointer;transition:border-color .18s,background .18s,box-shadow .18s;
+  font-size:14px;line-height:1.55;display:block;
+}
+.opt small{display:block;color:var(--sub);font-size:11.5px;margin-top:5px;line-height:1.5}
+.opt:hover{border-color:var(--gold-l)}
+.opt.sel{border-color:var(--gold);background:var(--gold-bg);box-shadow:inset 3px 0 0 var(--gold)}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+
+.cat{margin-top:20px}
+.cat h4{
+  font-size:11.5px;letter-spacing:.18em;color:var(--gold);margin:0 0 10px;font-weight:600;
+  border-bottom:1px solid var(--line);padding-bottom:7px;
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  border:1px solid var(--line);background:var(--paper2);border-radius:100px;
+  padding:8px 15px;font-size:13.5px;cursor:pointer;transition:.16s;line-height:1.4;
+}
+.chip:hover{border-color:var(--gold-l)}
+.chip.sel{background:var(--navy);border-color:var(--navy);color:#F4EEE2}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:34px}
+.btn{
+  background:var(--navy);color:#F4EEE2;border:none;border-radius:3px;
+  padding:15px 34px;font-family:var(--serif);font-size:16px;letter-spacing:.12em;cursor:pointer;transition:.2s;
+}
+.btn:hover{background:#0A1020}
+.btn[disabled]{background:#B8B3A6;cursor:not-allowed}
+.btn.ghost{background:none;color:var(--gold);border:1px solid var(--line);font-size:13px;padding:13px 20px;font-family:var(--sans)}
+.btn.ghost:hover{background:var(--gold-bg)}
+.selnote{color:var(--sub);font-size:12.5px}
+
+/* ---------- result ---------- */
+#result{display:none;margin-top:44px}
+#result.show{display:block;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.verdict{
+  background:var(--navy);color:#F4EEE2;border-radius:4px;padding:30px 28px;text-align:center;
+}
+.verdict .vlabel{font-size:11px;letter-spacing:.3em;color:var(--gold-l);margin-bottom:14px}
+.verdict h2{font-family:var(--serif);font-size:clamp(20px,3.6vw,28px);margin:0 0 12px;letter-spacing:.04em;font-weight:600}
+.verdict p{margin:0;color:rgba(244,238,226,.75);font-size:13.5px;line-height:1.9}
+.tally{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:22px;padding-top:20px;border-top:1px solid rgba(201,162,39,.3)}
+.tally div b{display:block;font-family:var(--serif);font-size:24px;color:var(--gold-l);line-height:1.2}
+.tally div span{font-size:10.5px;letter-spacing:.1em;color:rgba(244,238,226,.6)}
+
+.rsec{margin-top:34px}
+.rsec > h3{
+  font-family:var(--serif);font-size:17px;margin:0 0 4px;letter-spacing:.05em;font-weight:600;
+  display:flex;align-items:center;gap:10px;
+}
+.rsec > h3::before{content:"";width:20px;height:1px;background:var(--gold)}
+.rsec > p.note{color:var(--sub);font-size:12.5px;margin:2px 0 14px;padding-left:30px}
+
+.item{
+  background:var(--paper2);border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:3px;padding:16px 18px;margin-bottom:10px;
+}
+.item.b{border-left-color:var(--fuji)}
+.item.c{border-left-color:var(--shu)}
+.item .ih{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.item .badge{
+  font-size:10.5px;letter-spacing:.08em;padding:3px 9px;border-radius:2px;white-space:nowrap;
+  background:var(--gold-bg);color:var(--gold);border:1px solid rgba(165,129,28,.35);
+}
+.item.b .badge{background:#F0EAF6;color:var(--fuji);border-color:rgba(126,95,168,.35)}
+.item.c .badge{background:#F8EAE8;color:var(--shu);border-color:rgba(181,71,60,.35)}
+.item .t{font-family:var(--serif);font-size:15.5px;letter-spacing:.03em}
+.item .menu{margin:9px 0 0;padding:0;list-style:none}
+.item .menu li{font-size:13.5px;padding:3px 0 3px 14px;position:relative;color:#3A3F4E}
+.item .menu li::before{content:"";position:absolute;left:0;top:12px;width:4px;height:4px;background:var(--gold);border-radius:50%}
+.item .ask{
+  margin-top:11px;padding:10px 12px;background:#F1EBDD;border-radius:2px;
+  font-size:13px;color:#4A4436;line-height:1.7;
+}
+.item .ask b{color:var(--gold);font-size:11px;letter-spacing:.12em;display:block;margin-bottom:3px}
+
+.plan{background:var(--paper2);border:1px solid var(--gold);border-radius:4px;padding:24px 22px}
+.plan .pname{font-family:var(--serif);font-size:20px;letter-spacing:.04em;margin:0 0 4px}
+.plan .pprice{color:var(--gold);font-size:14px;letter-spacing:.06em;margin:0 0 14px}
+.plan .pwhy{font-size:13.5px;color:#3A3F4E;margin:0 0 14px;line-height:1.85}
+.plan .palt{font-size:12.5px;color:var(--sub);border-top:1px dashed var(--line);padding-top:12px;margin:0}
+
+.plan .pfee{
+  font-size:12.5px;color:var(--sub);margin:12px 0 0;padding-top:12px;
+  border-top:1px dashed var(--line);line-height:1.8;
+}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.contact a{
+  display:block;text-decoration:none;background:var(--navy);color:#F4EEE2;
+  border-radius:3px;padding:16px 18px;transition:.2s;
+}
+.contact a:hover{background:#0A1020}
+.contact a span{display:block;font-size:10.5px;letter-spacing:.2em;color:var(--gold-l);margin-bottom:6px}
+.contact a b{font-family:var(--serif);font-size:16px;letter-spacing:.05em;font-weight:600;display:block}
+.contact a small{display:block;font-size:11.5px;color:rgba(244,238,226,.6);margin-top:5px;word-break:break-all}
+.steps-next{counter-reset:sn;list-style:none;padding:0;margin:0}
+.steps-next li{
+  counter-increment:sn;position:relative;padding:10px 0 10px 40px;font-size:14px;border-bottom:1px dashed var(--line);
+}
+.steps-next li:last-child{border-bottom:none}
+.steps-next li::before{
+  content:counter(sn);position:absolute;left:0;top:11px;width:24px;height:24px;line-height:24px;
+  text-align:center;font-family:var(--serif);font-size:12px;color:var(--gold);border:1px solid var(--gold);border-radius:50%;
+}
+.copybox{width:100%;min-height:170px;font-family:var(--sans);font-size:12.5px;line-height:1.8;
+  border:1px solid var(--line);border-radius:3px;padding:14px;background:var(--paper2);color:#3A3F4E;resize:vertical}
+footer{margin-top:56px;padding-top:26px;border-top:1px solid var(--line);text-align:center;color:var(--sub);font-size:11.5px;letter-spacing:.1em;line-height:2}
+footer b{font-family:var(--serif);font-size:14px;color:var(--ink);letter-spacing:.14em;display:block;margin-bottom:8px;font-weight:600}
+@media print{.bar,.copywrap,.step{display:none}#result{display:block}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* ================= LP ================= */
+body{font-size:15.5px}
+#pains,#whynow,#cause,#service,#days90,#criteria,#cases,#free,#shindan,#offer,#philosophy,#trust,#profile,#base,#media,#faq,#contact-final,#result{scroll-margin-top:72px}
+.band{background:var(--navy);color:#F4EEE2}
+.band-inner{max-width:1000px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1000px}
+
+.topbar{position:sticky;top:0;z-index:60;background:rgba(16,23,40,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(201,162,39,.22)}
+.topbar .in{max-width:1000px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:20px}
+.topbar .lg{font-family:var(--serif);color:#F4EEE2;font-size:14px;letter-spacing:.16em;white-space:nowrap}
+.topbar nav{margin-left:auto;display:flex;gap:16px;flex-wrap:nowrap}
+.topbar nav a{color:rgba(244,238,226,.7);text-decoration:none;font-size:11px;letter-spacing:.06em;white-space:nowrap}
+.topbar nav a:hover{color:var(--gold-l)}
+@media(max-width:900px){.topbar .in{flex-wrap:wrap;row-gap:6px}.topbar nav{display:flex;order:3;width:100%;margin-left:0;gap:16px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 0 1px}.topbar nav::-webkit-scrollbar{display:none}.topbar nav a{font-size:11.5px}}
+
+/* hero split */
+.topbar .toplinebtn{
+  display:inline-flex;align-items:center;gap:6px;margin-left:16px;flex:none;
+  background:#06C755;color:#fff;text-decoration:none;border-radius:100px;
+  padding:7px 16px;font-size:12.5px;letter-spacing:.06em;transition:.2s;white-space:nowrap;
+}
+.topbar .toplinebtn:hover{background:#05b04c;transform:translateY(-1px)}
+.topbar .toplinebtn svg{width:14px;height:14px;fill:currentColor;flex:none}
+@media(max-width:900px){.topbar .toplinebtn{margin-left:auto}}
+@media(max-width:400px){.topbar .lg{font-size:12.5px}.topbar .toplinebtn{padding:7px 13px}}
+
+/* スマホ：ヒーローの写真を見出し直下に表示し、右カラムの写真は隠す */
+.heroimg-sp{display:none}
+@media(max-width:859px){
+  .heroimg-sp{display:block;margin:20px auto 6px;max-width:420px}
+  .heroimg-sp img{height:230px;object-fit:cover;object-position:52% 18%}
+  .heroimg-sp::after{transform:translate(8px,8px)}
+  .hero .grid > .heroimg:not(.heroimg-sp){display:none}
+  .hero .sub{font-size:13.5px;line-height:1.9;margin-top:14px}
+}
+.hero{padding:66px 0 62px;position:relative;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.hero .heroimg{max-width:420px;margin:0 auto}
+@media(min-width:860px){.hero .grid{grid-template-columns:1.1fr .9fr;gap:48px}}
+.hero .eyebrow{color:var(--gold-l);margin:0 0 16px}
+.hero h1{font-family:var(--serif);font-weight:600;letter-spacing:.05em;margin:0;
+  font-size:clamp(25px,3.4vw,36px);line-height:1.5}
+.hero h1 .gl{color:var(--gold-l)}
+.hero .tag{margin:20px 0 0;font-family:var(--serif);font-size:15px;color:var(--gold-l);letter-spacing:.08em}
+.hero p.sub{margin:18px 0 0;color:rgba(244,238,226,.74);font-size:14.5px;line-height:2.05}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.cta{display:inline-block;background:var(--gold-l);color:var(--navy);text-decoration:none;
+  font-family:var(--serif);font-size:15.5px;letter-spacing:.1em;padding:15px 26px;border-radius:3px;transition:.2s}
+.cta:hover{background:#E6C878;transform:translateY(-2px)}
+.cta.line2{background:rgba(201,162,39,.14);color:var(--gold-l);border:1px solid rgba(201,162,39,.75)}
+.cta.line2:hover{background:rgba(201,162,39,.12);transform:translateY(-2px)}
+.hero .fine{margin-top:14px;font-size:11.5px;letter-spacing:.13em;color:rgba(244,238,226,.5)}
+.heroimg{position:relative}
+.heroimg img{width:100%;display:block;border-radius:3px;filter:saturate(.96)}
+.heroimg::after{content:"";position:absolute;inset:0;border:1px solid rgba(201,162,39,.4);
+  border-radius:3px;transform:translate(11px,11px);pointer-events:none}
+.slots{
+  display:inline-flex;align-items:center;gap:9px;margin:18px 0 0;
+  border:1px solid rgba(201,162,39,.45);border-radius:100px;padding:8px 18px;
+  font-size:12.5px;letter-spacing:.06em;color:rgba(244,238,226,.86);
+}
+.slots b{font-family:var(--serif);color:var(--gold-l);font-size:15px;letter-spacing:.04em;font-weight:600}
+.slots .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-l);flex:none;
+  box-shadow:0 0 0 0 rgba(230,200,120,.6);animation:pulse 2.4s infinite}
+.slots.full{border-color:rgba(244,238,226,.25);color:rgba(244,238,226,.6)}
+.slots.full b{color:rgba(244,238,226,.7)}
+.slots.full .dot{background:rgba(244,238,226,.4);animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(230,200,120,.5)}70%{box-shadow:0 0 0 9px rgba(230,200,120,0)}100%{box-shadow:0 0 0 0 rgba(230,200,120,0)}}
+.slots-final{margin:0 0 26px}
+@media(prefers-reduced-motion:reduce){.slots .dot{animation:none}}
+.badges{display:flex;gap:9px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid rgba(201,162,39,.22)}
+.badges span{border:1px solid rgba(201,162,39,.3);border-radius:100px;padding:6px 14px;
+  font-size:11px;letter-spacing:.05em;color:rgba(244,238,226,.8)}
+
+.sec{padding:66px 0 12px}
+.sec-h{text-align:center;margin-bottom:38px}
+.sec-h .eyebrow{color:var(--gold);font-size:10.5px;letter-spacing:.3em;margin:0 0 12px}
+.sec-h h2{font-family:var(--serif);font-size:clamp(21px,3.9vw,31px);margin:0;letter-spacing:.06em;font-weight:600;line-height:1.5}
+.sec-h p{color:var(--sub);font-size:13.5px;margin:15px auto 0;max-width:640px;line-height:1.95}
+.band .sec-h .eyebrow{color:var(--gold-l)}
+.band .sec-h p{color:rgba(244,238,226,.66)}
+
+.pains{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:720px){.pains{grid-template-columns:1fr 1fr}}
+.pcol{background:var(--paper2);border:1px solid var(--line);border-radius:3px;padding:22px 22px 16px}
+.pcol h4{margin:0 0 14px;font-size:12px;letter-spacing:.16em;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:9px}
+.pcol ul{list-style:none;margin:0;padding:0}
+.pcol li{font-size:14px;line-height:1.7;padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed var(--line)}
+.pcol li:last-child{border-bottom:none}
+.pcol li::before{content:"□";position:absolute;left:0;top:8px;color:var(--gold);font-size:13px}
+.pafter{text-align:center;font-family:var(--serif);font-size:clamp(16px,2.8vw,20px);line-height:1.95;margin:34px 0 0;letter-spacing:.03em}
+.pafter em{font-style:normal;color:var(--gold);border-bottom:1px solid var(--gold)}
+
+/* philosophy */
+.philo{max-width:720px;margin:0 auto;text-align:center}
+.philo .big{font-family:var(--serif);font-size:clamp(22px,4vw,32px);line-height:1.7;letter-spacing:.06em;margin:0 0 28px}
+.philo p{font-size:14.5px;line-height:2.1;color:rgba(244,238,226,.8);margin:0 0 18px;text-align:left}
+.philo .kv{display:inline-block;font-family:var(--serif);font-size:19px;color:var(--gold-l);
+  letter-spacing:.14em;border-top:1px solid rgba(201,162,39,.4);border-bottom:1px solid rgba(201,162,39,.4);
+  padding:12px 26px;margin:8px 0 26px}
+
+.how{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.how{grid-template-columns:repeat(3,1fr)}}
+.hcard{border:1px solid rgba(201,162,39,.28);border-radius:3px;padding:26px 22px;
+  background:linear-gradient(180deg,rgba(201,162,39,.07),rgba(201,162,39,0))}
+.hcard .n{font-family:var(--sans);font-size:9.5px;letter-spacing:.22em;color:var(--gold-l);margin-bottom:12px}
+.hcard h4{font-family:var(--serif);font-size:19px;margin:0 0 12px;letter-spacing:.05em;font-weight:600;line-height:1.5}
+.hcard p{font-size:13.5px;line-height:1.9;color:rgba(244,238,226,.76);margin:0}
+.screen{text-align:center;margin-top:24px;font-size:12px;letter-spacing:.14em;color:var(--fuji)}
+
+.tools{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.tools{grid-template-columns:repeat(3,1fr)}}
+.tool{display:block;text-decoration:none;color:inherit;background:var(--paper2);
+  border:1px solid var(--line);border-radius:4px;padding:26px 22px;transition:.2s;position:relative}
+.tool:hover{border-color:var(--gold);box-shadow:0 6px 20px rgba(0,0,0,.06);transform:translateY(-2px)}
+.tool.main{border-color:var(--gold);box-shadow:inset 0 3px 0 var(--gold)}
+.tool .tag{font-size:10px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px;display:block}
+.tool b{display:block;font-family:var(--serif);font-size:19px;letter-spacing:.04em;margin-bottom:10px;line-height:1.5}
+.tool p{font-size:13px;line-height:1.85;color:var(--sub);margin:0 0 14px}
+.tool .go{font-size:12.5px;color:var(--gold);letter-spacing:.1em}
+.tool .rec{position:absolute;top:-11px;right:16px;background:var(--gold);color:var(--paper2);
+  font-size:10.5px;letter-spacing:.14em;padding:4px 12px;border-radius:100px}
+
+
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:10px}
+.case{border:1px solid rgba(201,162,39,.22);border-radius:3px;padding:14px;background:rgba(255,255,255,.03)}
+.case .from{font-size:11.5px;color:rgba(244,238,226,.52);line-height:1.5}
+.case .ar{color:var(--gold-l);font-size:11px;margin:3px 0}
+.case .to{font-size:13.5px;line-height:1.5;font-weight:600}
+.case .to i{font-style:normal;color:var(--gold-l)}
+.case.big{grid-column:span 2;background:rgba(201,162,39,.09);border-color:rgba(201,162,39,.4)}
+.case.big .to{font-family:var(--serif);font-size:16px}
+.morecase{text-align:center;color:rgba(244,238,226,.5);font-size:12px;letter-spacing:.1em;margin-top:20px}
+
+.profile{display:grid;grid-template-columns:1fr;gap:26px;align-items:start}
+@media(min-width:820px){.profile{grid-template-columns:.85fr 1.35fr;gap:44px}}
+.pcard2{border:1px solid rgba(201,162,39,.3);border-radius:3px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(201,162,39,.08),rgba(201,162,39,0))}
+.pcard2 img{width:100%;display:block}
+.pcard2 .in{padding:22px 22px 24px;text-align:center}
+.pcard2 .pn{font-family:var(--serif);font-size:25px;letter-spacing:.14em;margin:0}
+.pcard2 .pr{font-size:11px;letter-spacing:.16em;color:var(--gold-l);margin:9px 0 16px}
+.pcard2 ul{list-style:none;margin:0;padding:0;text-align:left}
+.pcard2 li{font-size:12.5px;line-height:1.7;padding:6px 0 6px 14px;position:relative;color:rgba(244,238,226,.82)}
+.pcard2 li::before{content:"";position:absolute;left:0;top:14px;width:4px;height:4px;background:var(--gold-l);border-radius:50%}
+.ptext p{font-size:14.5px;line-height:2.05;color:rgba(244,238,226,.86);margin:0 0 18px}
+.ptext p.lead{font-family:var(--serif);font-size:17px;color:#F4EEE2;line-height:1.9}
+.ptext .quote{border-left:2px solid var(--gold-l);padding:4px 0 4px 18px;margin:24px 0 0;
+  font-family:var(--serif);font-size:15.5px;color:var(--gold-l);line-height:1.9;letter-spacing:.03em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:20px;
+  margin-top:44px;padding-top:34px;border-top:1px solid rgba(201,162,39,.28);text-align:center}
+.stats div b{display:block;font-family:var(--serif);font-size:27px;color:var(--gold-l);line-height:1.2}
+.stats div b i{font-style:normal;font-size:.5em}
+.stats div span{display:block;font-size:11px;letter-spacing:.06em;color:rgba(244,238,226,.58);margin-top:8px}
+
+.bases{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:820px){.bases{grid-template-columns:1fr 1fr;gap:26px}}
+.base{border:1px solid rgba(201,162,39,.28);border-radius:3px;overflow:hidden;background:rgba(255,255,255,.03)}
+.base img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}
+.base .in{padding:22px 22px 24px}
+.base .yr{font-size:10.5px;letter-spacing:.2em;color:var(--gold-l);margin-bottom:9px}
+.base h4{font-family:var(--serif);font-size:20px;margin:0 0 12px;letter-spacing:.06em;font-weight:600}
+.base p{font-size:13.5px;line-height:1.95;color:rgba(244,238,226,.78);margin:0}
+.baseafter{max-width:720px;margin:30px auto 0;font-size:14px;line-height:2.05;color:rgba(244,238,226,.8)}
+.baseafter .q{font-family:var(--serif);font-size:16px;color:var(--gold-l);letter-spacing:.04em;display:block;margin-top:18px}
+.media{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:720px){.media{grid-template-columns:1fr 1fr}}
+.mcard{display:flex;gap:16px;text-decoration:none;color:inherit;border:1px solid var(--line);
+  border-radius:3px;padding:20px;background:var(--paper2);transition:.2s;align-items:flex-start}
+.mcard:hover{border-color:var(--gold);transform:translateY(-2px)}
+.mcard img{width:78px;flex:none;border-radius:2px;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+.mcard .k{font-size:10px;letter-spacing:.18em;color:var(--gold);display:block;margin-bottom:9px}
+.mcard b{font-family:var(--serif);font-size:16.5px;letter-spacing:.03em;display:block;margin-bottom:7px;line-height:1.5}
+.mcard span.d{font-size:12.5px;color:var(--sub);line-height:1.8;display:block}
+
+.lineoffer{
+  border:1px solid var(--gold);border-radius:4px;overflow:hidden;background:var(--paper2);
+  box-shadow:0 6px 22px rgba(0,0,0,.06);margin-top:6px;
+}
+.lineoffer .lo-top{background:var(--navy);color:#F4EEE2;padding:22px 24px;text-align:center}
+.lineoffer .lo-eyebrow{font-size:10.5px;letter-spacing:.24em;color:var(--gold-l);margin-bottom:11px}
+.lineoffer .lo-top h4{font-family:var(--serif);font-size:clamp(18px,3.2vw,23px);margin:0;letter-spacing:.04em;font-weight:600;line-height:1.55}
+.lineoffer .lo-body{padding:22px 24px 24px}
+.lineoffer .lo-body p{font-size:13.5px;line-height:1.95;color:#3A3F4E;margin:0 0 16px}
+.lineoffer ol{margin:0 0 18px;padding:0;list-style:none;counter-reset:lo}
+.lineoffer ol li{counter-increment:lo;position:relative;padding:7px 0 7px 34px;font-size:13.5px;line-height:1.7;border-bottom:1px dashed var(--line)}
+.lineoffer ol li:last-child{border-bottom:none}
+.lineoffer ol li::before{content:counter(lo);position:absolute;left:0;top:8px;width:22px;height:22px;line-height:22px;
+  text-align:center;font-family:var(--serif);font-size:11px;color:var(--gold);border:1px solid var(--gold);border-radius:50%}
+.linebtn{
+  display:block;text-align:center;text-decoration:none;background:#06C755;color:#fff;
+  font-family:var(--serif);font-size:17px;letter-spacing:.1em;padding:17px 24px;border-radius:3px;transition:.2s;
+}
+.linebtn:hover{background:#05b04c;transform:translateY(-2px)}
+.linebtn small{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.06em;opacity:.9;margin-top:5px}
+.lineoffer .lo-note{text-align:center;font-size:11.5px;color:var(--sub);margin:13px 0 0;line-height:1.8}
+.band .linebtn{box-shadow:0 4px 18px rgba(6,199,85,.28)}
+.mailsub{text-align:center;margin:18px 0 0;font-size:12.5px}
+.mailsub a{color:rgba(244,238,226,.62);text-decoration:none;border-bottom:1px solid rgba(244,238,226,.25)}
+.mailsub a:hover{color:var(--gold-l)}
+.stars{display:block;font-size:13px;color:var(--gold);letter-spacing:.06em;margin-bottom:8px}
+.stars i{font-style:normal;font-size:11.5px;color:var(--sub);letter-spacing:0}
+
+.offer{border:1px solid var(--gold);border-radius:4px;background:var(--paper2);
+  padding:0;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.06)}
+.offer .top{background:var(--navy);color:#F4EEE2;padding:26px 26px 24px;text-align:center}
+.offer .limit{display:inline-block;border:1px solid var(--gold-l);color:var(--gold-l);
+  font-size:11px;letter-spacing:.18em;padding:5px 14px;border-radius:100px;margin-bottom:16px}
+.offer .top h3{font-family:var(--serif);font-size:clamp(20px,3.4vw,27px);margin:0;letter-spacing:.05em;font-weight:600;line-height:1.5}
+.offer .top .free{margin:14px 0 0;font-size:13px;color:rgba(244,238,226,.7);letter-spacing:.08em}
+.offer .body{padding:28px 26px 30px}
+.offer .lead{font-size:14px;line-height:2;color:#3A3F4E;margin:0 0 22px}
+.offer ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+@media(min-width:720px){.offer ul{grid-template-columns:1fr 1fr;gap:10px 22px}}
+.offer li{font-size:13.5px;line-height:1.75;padding:9px 0 9px 26px;position:relative;border-bottom:1px dashed var(--line)}
+.offer li::before{content:"✓";position:absolute;left:2px;top:9px;color:var(--gold);font-size:12px}
+.offer .terms{background:#F1EBDD;border-radius:3px;padding:14px 16px;font-size:12.5px;
+  line-height:1.9;color:#4A4436;margin:0 0 22px}
+.offer .terms b{color:var(--gold);font-size:11px;letter-spacing:.14em;display:block;margin-bottom:5px}
+.offer .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.offer .btn2{display:inline-block;text-decoration:none;background:var(--navy);color:#F4EEE2;
+  font-family:var(--serif);font-size:16px;letter-spacing:.1em;padding:16px 34px;border-radius:3px;transition:.2s}
+.offer .btn2:hover{background:#0A1020;transform:translateY(-2px)}
+.offer .btn2.sub{background:none;color:var(--gold);border:1px solid var(--line)}
+.offer .btn2.sub:hover{background:var(--gold-bg);transform:translateY(-2px)}
+.offer .note2{text-align:center;font-size:12px;color:var(--sub);margin:16px 0 0;line-height:1.9}
+@media(max-width:760px){.offer .btn2{width:100%;text-align:center;padding:16px 0}}
+
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;
+  font-family:var(--serif);font-size:16px;letter-spacing:.03em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";position:absolute;right:4px;top:18px;color:var(--gold);font-size:14px}
+.faq details[open] summary::after{content:"−"}
+.faq .a{padding:0 0 20px;font-size:14px;color:#3A3F4E;line-height:1.95}
+
+.final{padding:66px 0 72px;text-align:center}
+.final h2{font-family:var(--serif);font-size:clamp(20px,3.7vw,28px);margin:0 0 16px;letter-spacing:.06em;font-weight:600}
+.final p{color:rgba(244,238,226,.72);font-size:13.5px;margin:0 auto 30px;max-width:560px;line-height:2}
+.final .contact a{background:rgba(255,255,255,.05);border:1px solid rgba(201,162,39,.35)}
+.final .contact a:hover{background:rgba(201,162,39,.14)}
+
+.sitefoot{padding:40px 0 100px;text-align:center;color:var(--sub);font-size:11.5px;line-height:2;letter-spacing:.05em}
+.sitefoot .nm{font-family:var(--serif);font-size:15px;color:var(--ink);letter-spacing:.14em;display:block;margin-bottom:12px;font-weight:600}
+.sitefoot a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(165,129,28,.3)}
+.sitefoot .legal{margin-top:18px;font-size:10.5px;color:#8C8676;line-height:1.9}
+
+.stickybar{position:fixed;z-index:70;display:none;left:auto;right:24px;bottom:24px;width:300px;
+  background:rgba(16,23,40,.97);backdrop-filter:blur(8px);padding:14px 16px;
+  border:1px solid rgba(201,162,39,.45);border-radius:4px;box-shadow:0 10px 34px rgba(0,0,0,.4)}
+.stickybar.on{display:block}
+.stickybar .sbt{display:block;text-align:center;color:rgba(244,238,226,.72);font-size:11.5px;letter-spacing:.09em;margin-bottom:9px}
+.stickybar a{display:block;text-align:center;background:var(--gold-l);color:var(--navy);
+  text-decoration:none;font-family:var(--serif);font-size:14.5px;letter-spacing:.05em;padding:13px 8px;border-radius:3px}
+.trustgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:4px}
+.tcard{background:var(--paper2);border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:3px;padding:18px 18px 14px}
+.tcard b{display:block;font-size:11.5px;letter-spacing:.16em;color:var(--gold);margin-bottom:10px;font-weight:400}
+.tcard ul{margin:0;padding:0;list-style:none}
+.tcard li{font-size:13px;line-height:1.75;padding:5px 0 5px 14px;position:relative;color:#3A3F4E}
+.tcard li:before{content:"";position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--gold)}
+.tmore{text-align:center;margin:24px 0 0;font-size:13px}
+.tmore a{color:var(--gold);text-decoration:none;letter-spacing:.06em;border-bottom:1px solid rgba(165,129,28,.35)}
+@media(max-width:760px){.trustgrid{grid-template-columns:1fr;gap:12px}}
+@media(max-width:760px){
+  .stickybar{left:0;right:0;bottom:0;width:auto;border:none;border-radius:0;
+    border-top:1px solid rgba(201,162,39,.3);padding:10px 14px;box-shadow:none}
+  .sm-hide{display:none}
+  .hero{padding:44px 0 46px}
+  .hero h1{font-size:25.5px;line-height:1.55;letter-spacing:.02em}
+  .hero .grid{gap:28px}
+  .cta{width:100%;padding:16px 0;text-align:center}
+  .sec{padding:48px 0 8px}
+  .mcard{flex-direction:column}
+  .mcard img{width:96px}
+}
+
+
+/* ===== v10 追加 ===== */
+@media(min-width:761px){.hero h1{font-size:clamp(26px,2.95vw,31px);line-height:1.55}}
+.sponly{display:none}
+@media(max-width:760px){
+  .sponly{display:inline}
+  .pconly{display:none}
+  .hero h1{font-size:25px;line-height:1.6}
+  .hero .tag{font-size:13.5px;margin-top:16px}
+  .heroimg-sp img{height:190px}
+  .hero p.sub{font-size:13px;line-height:1.85;margin-top:14px}
+  .hero .ctas{margin-top:22px}
+}
+
+.tools.two{grid-template-columns:1fr}
+@media(min-width:760px){.tools.two{grid-template-columns:repeat(2,1fr)}}
+
+.causes{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:820px){.causes{grid-template-columns:repeat(3,1fr)}}
+.ccard{position:relative;background:var(--paper2);border:1px solid var(--line);
+  border-top:3px solid var(--gold);border-radius:3px;padding:26px 22px 22px}
+.ccard .cn{position:absolute;top:-1px;right:14px;font-family:var(--serif);font-size:30px;
+  color:rgba(165,129,28,.16);letter-spacing:.02em;line-height:1}
+.ccard h4{font-family:var(--serif);font-size:17px;margin:0 0 11px;letter-spacing:.04em;
+  font-weight:600;line-height:1.6;padding-right:34px}
+.ccard p{font-size:13.5px;line-height:1.95;color:var(--sub);margin:0}
+
+.hcard .deliv{margin-top:16px;padding-top:12px;border-top:1px solid rgba(201,162,39,.28);
+  font-size:11.5px;letter-spacing:.12em;color:var(--gold-l)}
+
+.steps90{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:820px){.steps90{grid-template-columns:repeat(3,1fr)}}
+.s90{background:var(--paper2);border:1px solid var(--line);border-radius:3px;padding:22px 22px 20px;position:relative}
+.s90 .d{display:inline-block;font-size:10.5px;letter-spacing:.2em;color:var(--paper2);
+  background:var(--gold);border-radius:100px;padding:4px 13px;margin-bottom:13px}
+.s90 h4{font-family:var(--serif);font-size:19px;margin:0 0 10px;letter-spacing:.08em;font-weight:600}
+.s90 p{font-size:13.5px;line-height:1.95;color:var(--sub);margin:0}
+@media(min-width:820px){
+  .s90:not(:last-child):after{content:"";position:absolute;top:50%;right:-10px;width:7px;height:7px;
+    border-top:1px solid var(--gold);border-right:1px solid var(--gold);transform:translateY(-50%) rotate(45deg)}
+}
+.kpi{margin-top:30px;border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:3px;background:var(--gold-bg);padding:22px 24px 20px}
+.kpi .kh{margin:0 0 14px;font-size:12px;letter-spacing:.14em;color:var(--gold)}
+.kpi .krow{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:620px){.kpi .krow{grid-template-columns:1fr 1fr}}
+.kpi .krow div{display:flex;align-items:baseline;gap:10px}
+.kpi .krow b{font-family:var(--serif);color:var(--gold);font-size:17px;font-weight:600}
+.kpi .krow span{font-family:var(--serif);font-size:16px;letter-spacing:.04em;line-height:1.6}
+.kpi .kn{margin:14px 0 0;font-size:11.5px;line-height:1.8;color:var(--sub)}
+
+.pcol.ok h4{color:var(--moss);border-bottom-color:rgba(76,122,85,.35)}
+.pcol.ok li::before{content:"○";color:var(--moss);font-size:11px;top:9px}
+.pcol.ng h4{color:var(--sub)}
+.pcol.ng li{color:var(--sub)}
+.pcol.ng li::before{content:"—";color:var(--line)}
+.crafter{text-align:center;margin:30px 0 0;font-size:13.5px;line-height:2;color:var(--sub)}
+.crafter em{font-style:normal;color:var(--gold);border-bottom:1px solid var(--gold)}
+.crafter span{display:block;margin-top:8px;font-size:12px}
+
+.casenote{margin:22px auto 0;max-width:640px;text-align:center;font-size:12.5px;line-height:1.95;
+  color:rgba(244,238,226,.6);border:1px dashed rgba(201,162,39,.35);border-radius:3px;padding:14px 18px}
+
+.sharerow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;
+  margin:32px auto 0;padding-top:24px;border-top:1px solid rgba(201,162,39,.2);max-width:560px}
+.sharerow .sl{width:100%;text-align:center;font-size:11px;letter-spacing:.2em;
+  color:rgba(244,238,226,.5);margin-bottom:4px}
+.sharerow .sbtn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;cursor:pointer;
+  border:1px solid rgba(244,238,226,.28);background:transparent;color:rgba(244,238,226,.85);
+  border-radius:100px;padding:8px 18px;font-size:12px;letter-spacing:.06em;
+  font-family:var(--sans);transition:.2s}
+.sharerow .sbtn:hover{border-color:var(--gold-l);color:var(--gold-l)}
+.sharerow .sbtn.line:hover{border-color:#06C755;color:#06C755}
+.sharerow .sbtn.cp.done{border-color:var(--gold-l);color:var(--gold-l)}
+
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": [
+    "Organization",
+    "ProfessionalService"
+  ],
+  "@id": "https://kimonoceo.com/#organization",
+  "name": "HiMaWaRi合同会社",
+  "alternateName": [
+    "HiMaWaRi LLC",
+    "ひまわり合同会社"
+  ],
+  "url": "https://kimonoceo.com/",
+  "description": "AI時代の経営者専属顧問 HiMaWaRi合同会社（代表社員 飯村惇）の公式サイト。内閣総理大臣認定コーチング・カウンセリング1級と英国王立技芸協会フェロー（FRSA）の知見をもとに、経営戦略・資金・営業・組織と、経営者自身の意思決定までを一人の顧問が担います。自社オリジナルの36タイプ分析を用いた無料診断を公開しています。",
+  "foundingDate": "2016-11-11",
+  "founder": {
+    "@id": "https://kimonoceo.com/#person"
+  },
+  "employee": {
+    "@id": "https://kimonoceo.com/#person"
+  },
+  "email": "KimonoCEO@kimonoceo.com",
+  "telephone": "050-5367-4821",
+  "image": "https://kimonoceo.com/ogp-v2.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "153-0051",
+    "addressRegion": "東京都",
+    "addressLocality": "目黒区",
+    "streetAddress": "上目黒1-16-12",
+    "addressCountry": "JP"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "10:00",
+      "closes": "21:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "日本"
+    },
+    {
+      "@type": "Place",
+      "name": "オンライン（海外含む）"
+    }
+  ],
+  "knowsAbout": [
+    "経営顧問",
+    "経営戦略",
+    "資金調達",
+    "営業組織の構築",
+    "組織マネジメント",
+    "人材育成",
+    "36タイプ分析",
+    "人生戦略OS"
+  ],
+  "sameAs": [
+    "https://x.com/Kimonoceo",
+    "https://www.threads.com/@kimonoceo",
+    "https://www.instagram.com/kimonoceo/",
+    "https://bsky.app/profile/kimonoceo.bsky.social",
+    "https://www.facebook.com/share/1AoLAmDemj/",
+    "https://stand.fm/channels/65bb39fd63d866d93e4fb0a2",
+    "https://www.amazon.co.jp/dp/B07FZK5VL3",
+    "https://humanstory.jp/iimura_makoto/"
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "法人顧問プラン",
+      "description": "経営者の右腕として、経営戦略・資金・営業・組織の意思決定に継続して関与する顧問契約です。",
+      "url": "https://kimonoceo.com/service/#corporate",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "description": "費用は、お話を伺ったうえで一人ひとり個別にご案内しています（要相談）。"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "パーソナル顧問プラン",
+      "description": "独立・法人化・キャリア転換など、個人の事業と人生の再設計を、顧問として一緒に引き受ける契約です。",
+      "url": "https://kimonoceo.com/service/#personal",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "description": "費用は、お話を伺ったうえで一人ひとり個別にご案内しています（要相談）。"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "初回90分 経営診断セッション",
+      "description": "顧問契約の前に、一度お話しする無料の場です。その場で解決すれば、それで終わりで構いません。",
+      "url": "https://kimonoceo.com/service/#session",
+      "price": "0",
+      "priceCurrency": "JPY"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://kimonoceo.com/#person",
+  "name": "飯村惇",
+  "alternateName": [
+    "飯村 惇",
+    "いいむら まこと",
+    "Makoto Iimura"
+  ],
+  "jobTitle": "AI時代の経営者専属顧問",
+  "description": "飯村惇（いいむら まこと）は、HiMaWaRi合同会社の代表社員を務めるAI時代の経営者専属顧問です。内閣総理大臣認定のコーチング1級・カウンセリング1級を保持し、英国王立技芸協会（RSA）のフェロー（FRSA）として日本で唯一認定されたビジネス哲学者でもあります。経営戦略・資金調達・営業・組織づくりといった事業の実務と、経営者自身の意思決定や人生設計の両方を、一人の顧問として担うことを特徴としています。",
+  "url": "https://kimonoceo.com/about/",
+  "image": "https://kimonoceo.com/ogp-v2.jpg",
+  "email": "KimonoCEO@kimonoceo.com",
+  "worksFor": {
+    "@id": "https://kimonoceo.com/#organization"
+  },
+  "birthPlace": {
+    "@type": "Place",
+    "name": "茨城県つくば市"
+  },
+  "nationality": {
+    "@type": "Country",
+    "name": "日本"
+  },
+  "knowsAbout": [
+    "経営戦略",
+    "事業再構築",
+    "営業",
+    "組織マネジメント",
+    "人材育成",
+    "36タイプ分析",
+    "経営哲学"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "内閣総理大臣認定 コーチング1級"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "内閣総理大臣認定 カウンセリング1級"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "英国王立技芸協会フェロー（FRSA）／日本で唯一認定のビジネス哲学者"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "組織診断士"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "36タイプ パーソナル分析（自社開発）"
+    }
+  ],
+  "sameAs": [
+    "https://x.com/Kimonoceo",
+    "https://www.threads.com/@kimonoceo",
+    "https://www.instagram.com/kimonoceo/",
+    "https://bsky.app/profile/kimonoceo.bsky.social",
+    "https://www.facebook.com/share/1AoLAmDemj/",
+    "https://stand.fm/channels/65bb39fd63d866d93e4fb0a2",
+    "https://www.amazon.co.jp/dp/B07FZK5VL3",
+    "https://humanstory.jp/iimura_makoto/"
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://kimonoceo.com/#website",
+  "url": "https://kimonoceo.com/",
+  "name": "AI時代の経営者専属顧問 HiMaWaRi合同会社",
+  "inLanguage": "ja",
+  "publisher": {
+    "@id": "https://kimonoceo.com/#organization"
+  }
+}</script>
+<style>.foot-nav{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;margin:14px 0 4px}.foot-nav a{font-size:12.5px}.src-link{font-size:.78em;margin-left:.3em;white-space:nowrap}</style>
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="in">
+    <span class="lg">HiMaWaRi 合同会社</span>
+    <nav>
+      <a href="#service">提供</a>
+      <a href="#days90">90日</a>
+      <a href="#free">診断</a>
+      <a href="#offer">相談</a>
+      <a href="/about/">飯村惇とは</a>
+      <a href="/36type/">36タイプ</a>
+      <a href="/service/">顧問サービス</a>
+      <a href="/articles/">記事</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/company/">会社概要</a>
+    </nav>
+    <a class="toplinebtn" data-line="topbar" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.6 7.4 8.4 8.1.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6h0c1.5-1.6 2.2-3.3 2.2-5.1C22.4 5.7 17.5 2 12 2z"/></svg>
+      LINE
+    </a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<div class="band" id="hero">
+  <div class="band-inner hero">
+    <div class="grid">
+      <div>
+        <p class="eyebrow">HIMAWARI LLC ／ AI時代の経営者専属顧問　飯村 惇</p>
+        <h1>社長の頭の中にしかない<br class="sponly">ものを、<br class="pconly"><span class="gl">組織とAIに移す。</span></h1>
+        <p class="tag">日英公認の知見と、50業種以上・累計年商50億円超の支援実績</p>
+        <div class="heroimg heroimg-sp"><img src="/assets/img/hero-84cb4994.webp" alt="HiMaWaRi合同会社 代表 飯村惇"></div>
+        <p class="sub">判断を一人で抱えたままでは、会社は社長の器を超えられません。<br>10期にわたり、広告を出さずご紹介だけで続けてまいりました。</p>
+        <div class="ctas">
+          <a class="cta" data-d36 href="#" target="_blank" rel="noopener">無料｜経営タイプ診断（36タイプ）</a>
+          <a class="cta line2" href="#offer">経営診断セッション（90分・無料）</a>
+        </div>
+        <p class="fine">診断は所要5分　／　セッションは毎月<span data-session-limit>3</span>名まで</p>
+        <p class="fine" style="margin-top:8px">診断結果の<strong style="color:var(--gold-l);font-weight:400">詳細解析（PDF）</strong>は、LINEで無料でお届けしています</p>
+        <p class="slots" id="slotsHero"></p>
+      </div>
+      <div class="heroimg"><img src="/assets/img/hero-84cb4994.webp" alt="HiMaWaRi合同会社 代表 飯村惇"></div>
+    </div>
+    <div class="badges">
+      <span>会社経営 10期目</span>
+      <span>50業種以上の個人・法人支援</span>
+      <span>累計年商50億円以上の企業顧問</span>
+      <span>内閣総理大臣認定 コーチング・カウンセリング1級</span>
+      <span>英国王立技芸協会フェロー（FRSA）</span>
+      <span>Amazon 教育部門1位</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAINS ============ -->
+<div class="wrap" id="pains">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">SYMPTOMS</p>
+      <h2>こんなところで、止まっていませんか</h2>
+      <p>ひとつでも当てはまるなら、お読みいただく価値があります。</p>
+    </div>
+    <div class="pains">
+      <div class="pcol">
+        <h4>会社のこと</h4>
+        <ul>
+          <li>最終判断が、結局すべて自分に戻ってくる</li>
+          <li>任せたはずの仕事を、気づくと自分が巻き取っている</li>
+          <li>幹部が「社長はどう思いますか」としか聞いてこない</li>
+          <li>人は増えたのに、自分の仕事は減っていない</li>
+          <li>売上は立っているが、自分が抜けたら止まる</li>
+          <li>承継を考え始めたが、渡せる形になっていない</li>
+        </ul>
+      </div>
+      <div class="pcol">
+        <h4>AIのこと</h4>
+        <ul>
+          <li>AIを入れたいが、何を任せるべきか決まっていない</li>
+          <li>ツールは契約したが、現場で使われていない</li>
+          <li>話は聞くが、自社の何が変わるのか分からない</li>
+          <li>置き換わる仕事の線引きが、自社では引けない</li>
+          <li>社内に詳しい人がおらず、判断材料がない</li>
+          <li>作業は移せても、判断だけは移せる気がしない</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pafter">これらは別々の問題に見えて、<br><em>「社長の頭の中が、外に出ていない」という一つの原因から起きています。</em></p>
+  </div>
+</div>
+
+<!-- ============ WHY NOW ============ -->
+<div class="band" id="whynow" style="border-top:1px solid rgba(201,162,39,.2)">
+  <div class="band-inner sec" style="padding-bottom:60px">
+    <div class="sec-h">
+      <p class="eyebrow">WHY NOW</p>
+      <h2>なぜ、いま「移す」必要があるのか</h2>
+      <p>先送りできた時期は終わりました。三つの時計が、同時に進んでいます。</p>
+    </div>
+    <div class="how">
+      <div class="hcard">
+        <div class="n">TECHNOLOGY</div>
+        <h4>AIは「作業」を先に引き受けた</h4>
+        <p>定型業務の自動化は、もはや競争優位ではなく前提になりました。差がつくのは判断のほうです。ところがその判断が社長一人の頭の中にある限り、AIに渡す材料そのものが存在しません。先にやるべきは導入ではなく、言語化です。</p>
+      </div>
+      <div class="hcard">
+        <div class="n">ORGANIZATION</div>
+        <h4>人が増えても、社長の仕事は減らない</h4>
+        <p>社員が一定数を超えると、創業者の直接指示では回らなくなります。経営学では古くから「自律性の危機」と呼ばれてきた局面です。権限を渡せないのは信頼の問題ではなく、判断の基準が言葉になっていないためです。</p>
+      </div>
+      <div class="hcard">
+        <div class="n">SUCCESSION</div>
+        <h4>承継の準備期間は、想像より長い</h4>
+        <p>後継者を決めてから実際に引き継ぐまでには、数年を要するのが通例です。株式も帳簿も移せますが、社長の判断基準は書面になっていない限り移りません。着手が遅れるほど、選べる選択肢は減っていきます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CAUSE ============ -->
+<div class="wrap" id="cause">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">THE REAL CAUSE</p>
+      <h2>止まっている原因は、<br>たいてい次の三つのどれかです</h2>
+    </div>
+    <div class="causes">
+      <div class="ccard">
+        <span class="cn">01</span>
+        <h4>他人の成功モデルを、そのままなぞっている</h4>
+        <p>有名経営者の型も、コンサルティングの標準フレームも、その人・その会社の判断基準の上に成り立っています。自分の基準を言葉にしないまま借り物を載せると、現場で必ず矛盾が出ます。動かないのは社員の能力不足ではなく、基準が二重になっているためです。</p>
+      </div>
+      <div class="ccard">
+        <span class="cn">02</span>
+        <h4>ツールを入れて、終わっている</h4>
+        <p>AIもSaaSも、導入した時点では何も変わりません。何を任せ、何を任せないかを決める作業を飛ばすと、契約だけが増えて使われないまま残ります。費用は毎月出ていき、「やってみたが効果がなかった」という記憶だけが社内に積み上がります。</p>
+      </div>
+      <div class="ccard">
+        <span class="cn">03</span>
+        <h4>相談先が、バラバラになっている</h4>
+        <p>税理士、社労士、コンサルタント、コーチ。それぞれが正しいことを言います。ただ、それらを統合して一つの判断にする人がいません。結果、統合する役目は社長に戻り、また一人で決めることになります。相談先が増えるほど孤独になる、という逆転が起きています。</p>
+      </div>
+    </div>
+    <p class="pafter">だから私は、助言ではなく<br><em>「社長の中にあるものを外に出して、移すこと」</em>を仕事にしています。</p>
+  </div>
+</div>
+
+<!-- ============ SERVICE ============ -->
+<div class="band" id="service" style="border-top:1px solid rgba(201,162,39,.2)">
+  <div class="band-inner sec" style="padding-bottom:60px">
+    <div class="sec-h">
+      <p class="eyebrow">SERVICE</p>
+      <h2>三つの提供</h2>
+      <p>いずれも、終わったときに形あるものが残ります。話して終わりにはいたしません。</p>
+    </div>
+    <div class="how">
+      <div class="hcard">
+        <div class="n">01 ／ DECISION</div>
+        <h4>意思決定の同席</h4>
+        <p>重要な判断の場に同席し、その場で何を見て、何を切り捨てたのかを言葉にして記録します。積み上がったものが判断基準書です。次に同じ種類の判断が来たとき、社長がその場にいなくても同じ結論に近づける状態をつくります。</p>
+        <p class="deliv">成果物　判断基準書（更新型）</p>
+      </div>
+      <div class="hcard">
+        <div class="n">02 ／ AI</div>
+        <h4>社長の分身AI</h4>
+        <p>判断基準書をもとに、社内で使えるAIを構築します。稟議の一次判断、見積の妥当性チェック、採用の一次評価、幹部からの相談の受け口。これまで社長に来ていた質問の何割かが、社長に届く前に処理される状態をつくります。</p>
+        <p class="deliv">成果物　社内で使える分身AI</p>
+      </div>
+      <div class="hcard">
+        <div class="n">03 ／ ORGANIZATION</div>
+        <h4>人とAIの再配置</h4>
+        <p>判断が移ると、人の配置が合わなくなります。誰が何を決め、何をAIに任せ、何を社長に上げるのか。権限と責任の線を引き直し、図にして社内で共有できる形にします。ここまでやって、はじめて社長の手が空きます。</p>
+        <p class="deliv">成果物　組織・配置設計図</p>
+      </div>
+    </div>
+    <p class="screen" id="slotsSanctuary"></p>
+  </div>
+</div>
+
+<!-- ============ 90 DAYS ============ -->
+<div class="wrap" id="days90">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">FIRST 90 DAYS</p>
+      <h2>最初の90日で、ここまで進みます</h2>
+      <p>順番を入れ替えると、うまくいきません。言語化を飛ばしてAIから入った会社が、そのまま止まっているのを何度も見てきました。</p>
+    </div>
+    <div class="steps90">
+      <div class="s90">
+        <span class="d">1 — 30日</span>
+        <h4>言語化</h4>
+        <p>過去1年の主要な判断を棚卸しし、何を基準に決めたのかを伺って文章にします。この段階で、ご自身でも言葉にしていなかった基準が必ず出てきます。ここが最も時間のかかる工程です。</p>
+      </div>
+      <div class="s90">
+        <span class="d">31 — 60日</span>
+        <h4>AI化</h4>
+        <p>言語化した基準をAIに学習させ、社内で試験運用します。最初は社長が答え合わせをする運用です。ずれた箇所を直すたびに精度が上がり、任せてよい範囲と、必ず人が見る範囲が分かれていきます。</p>
+      </div>
+      <div class="s90">
+        <span class="d">61 — 90日</span>
+        <h4>再配置</h4>
+        <p>AIが受けられるようになった判断を、実際に社長の手から外します。あわせて幹部の役割と、社長に上げる基準を決め直します。ここまでで、社長の時間の使い方が目に見えて変わります。</p>
+      </div>
+    </div>
+    <div class="kpi">
+      <p class="kh">四半期ごとに、次の二つを数字でご報告します</p>
+      <div class="krow">
+        <div><b>①</b><span>社長が手放せた判断の数</span></div>
+        <div><b>②</b><span>AIに移した業務時間</span></div>
+      </div>
+      <p class="kn">いずれも実績のご報告であり、特定の成果をお約束するものではありません。進み方は会社の状況によって変わります。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CRITERIA ============ -->
+<div class="wrap" id="criteria">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">WHO IT&#39;S FOR</p>
+      <h2>お引き受けする方、<br>お引き受けしない方</h2>
+      <p>先に申し上げておいたほうが、お互いの時間を無駄にしません。</p>
+    </div>
+    <div class="pains">
+      <div class="pcol ok">
+        <h4>向いている方</h4>
+        <ul>
+          <li>すでに黒字で、社員は10〜50名前後</li>
+          <li>最終判断が、社長に集中している</li>
+          <li>AIを入れたいが、何を任せるかが決まっていない</li>
+          <li>5年以内の承継を考え始めた</li>
+          <li>自社の言葉で考え直すことを、面倒がらない</li>
+        </ul>
+      </div>
+      <div class="pcol ng">
+        <h4>お引き受けしていない方</h4>
+        <ul>
+          <li>創業前・赤字期で、まず売上をつくる段階の方</li>
+          <li>ノウハウや資料だけを求めている方</li>
+          <li>売上の数字だけを追う関係を望まれる方</li>
+          <li>決めるのは他人、という前提の方</li>
+        </ul>
+      </div>
+    </div>
+    <p class="crafter">顧問契約は<em>完全審査制</em>です。1〜2回お話ししたうえで、双方で判断いたします。<br><span>創業前・個人の方のご相談は、内容によって提携先の専門家をご紹介する場合があります。</span></p>
+  </div>
+</div>
+
+<!-- ============ CASES ============ -->
+<div class="band" id="cases">
+  <div class="band-inner sec" style="padding-bottom:56px">
+    <div class="sec-h">
+      <p class="eyebrow">CLIENT STORIES</p>
+      <h2>関わった方に、起きたこと</h2>
+      <p>業種も規模も違いますが、共通しているのは「一人で抱えていた判断を外に出した」ことです。</p>
+    </div>
+    <div class="cases">
+      <div class="case big"><div class="from">大規模農家</div><div class="ar">↓</div><div class="to">半年で年商 <i>2,000万円</i> 増</div></div>
+      <div class="case big"><div class="from">借金3,000万円の経営者</div><div class="ar">↓</div><div class="to">年収 <i>3倍</i> へV字回復</div></div>
+      <div class="case big"><div class="from">学校の先生</div><div class="ar">↓</div><div class="to">2社で <i>日本一</i> の営業マン</div></div>
+      <div class="case"><div class="from">うつ病</div><div class="ar">↓</div><div class="to">IT起業家 <i>年収1,000万円</i></div></div>
+      <div class="case"><div class="from">ウーバー配達員</div><div class="ar">↓</div><div class="to"><i>FIRE</i> した投資家</div></div>
+      <div class="case"><div class="from">派遣社員</div><div class="ar">↓</div><div class="to">Vtuber <i>1万人</i> 以上</div></div>
+      <div class="case"><div class="from">薬剤師</div><div class="ar">↓</div><div class="to">金融業で <i>法人設立</i></div></div>
+      <div class="case"><div class="from">飲食店従業員</div><div class="ar">↓</div><div class="to">クラファン支援で <i>独立</i></div></div>
+      <div class="case"><div class="from">大手企業勤務</div><div class="ar">↓</div><div class="to">念願の <i>海外移住</i></div></div>
+      <div class="case"><div class="from">IT会社の新卒</div><div class="ar">↓</div><div class="to">半年でWEBコンサル <i>独立</i></div></div>
+      <div class="case"><div class="from">保険営業マン</div><div class="ar">↓</div><div class="to">IT会社 <i>経営者</i></div></div>
+    </div>
+    <p class="morecase">ほか、変革事例 27件　／　支援業種 50以上</p>
+    <div class="stats">
+      <div><b>10<i>期目</i></b><span>会社経営の継続</span></div>
+      <div><b>50<i>億円超</i></b><span>累計年商の企業顧問</span></div>
+      <div><b>450<i>万円</i></b><span>1店舗あたり月間純利益</span></div>
+      <div><b>3,000<i>件超</i></b><span>商談の実践知</span></div>
+      <div><b>2<i>名</i></b><span>日本一の営業を育成</span></div>
+      <div><b>20<i>年</i></b><span>経営者との対話歴</span></div>
+    </div>
+    <p class="casenote">現在、クライアント様との対談動画を収録しております。<br>お名前と映像でお話しいただいたものを、順次こちらに掲載いたします。</p>
+  </div>
+</div>
+
+<!-- ============ FREE TOOLS ============ -->
+<div class="wrap" id="free">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">DIAGNOSIS</p>
+      <h2>まずは、無料の二つからどうぞ</h2>
+      <p>売り込みのご連絡はいたしません。ご自身の理解を深めるためだけにお使いいただけます。</p>
+    </div>
+    <div class="tools two">
+      <a class="tool main" data-d36 href="#" target="_blank" rel="noopener">
+        <span class="rec">おすすめ</span>
+        <span class="tag">01 ／ 自社オリジナル</span>
+        <b>経営タイプ診断（メンタリズム36タイプ）</b>
+        <p>心理分析 × 脳分析。30の質問で、生まれ持った12の気質と3つの性質を掛け合わせ、36タイプから診断します。ご自身の意思決定の癖、任せられること・任せられないことの傾向が分かります。所要5分。</p>
+        <span class="go">診断を受ける　→</span>
+      </a>
+      <a class="tool" href="#shindan">
+        <span class="tag">02 ／ 入力不要</span>
+        <b>お困りごと対応診断</b>
+        <p>気になることを選ぶだけで、当社が直接お手伝いできること、提携先の専門家にお渡しすること、対応していないことが、その場で分かります。所要2分。</p>
+        <span class="go">このページで診断する　↓</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 診断ツール ============ -->
+<div class="wrap" id="shindan">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">SELF CHECK</p>
+      <h2>そのお悩み、お力になれるか<br>3つの質問でお答えします</h2>
+      <p>当てはまるものを選ぶだけです。個人情報の入力はありません。</p>
+    </div>
+<!-- STEP 0 -->
+<div class="step" id="s0">
+  <div class="step-h"><span class="step-n">STEP 0</span><h3 class="step-t">今日は何度目のご縁ですか</h3></div>
+  <p class="step-d">お会いする回数によって、お聞きする深さを変えています。</p>
+  <div class="opts" id="stage"></div>
+</div>
+
+<!-- STEP 1 -->
+<div class="step locked" id="s1">
+  <div class="step-h"><span class="step-n">STEP 1</span><h3 class="step-t">今のお立場に一番近いものは</h3></div>
+  <p class="step-d">年商1,000万円を境に、ご提案する形が変わります。</p>
+  <div class="opts" id="stance"></div>
+</div>
+
+<!-- STEP 2 -->
+<div class="step locked" id="s2">
+  <div class="step-h"><span class="step-n">STEP 2</span><h3 class="step-t">気になっていること・変えたいこと</h3></div>
+  <p class="step-d">いくつでも選べます。まだ漠然としていても構いません。</p>
+  <div id="concerns"></div>
+</div>
+
+<!-- STEP 3 -->
+<div class="step locked" id="s3" style="display:none">
+  <div class="step-h"><span class="step-n">STEP 3</span><h3 class="step-t">もう少しだけ、状況を教えてください</h3></div>
+  <p class="step-d">お答えの精度が上がります。</p>
+  <div class="cat"><h4>いつまでに変えたいですか</h4><div class="opts" id="timing"></div></div>
+  <div class="cat"><h4>今いちばん引っかかっていることは</h4><div class="opts" id="block"></div></div>
+</div>
+
+<div class="bar">
+  <button class="btn" id="go" disabled>診断する</button>
+  <span class="selnote" id="selnote">まずSTEP 0からお選びください</span>
+</div>
+
+<!-- RESULT -->
+<div id="result">
+  <div class="verdict">
+    <div class="vlabel">RESULT</div>
+    <h2 id="vTitle"></h2>
+    <p id="vText"></p>
+    <div class="tally" id="vTally"></div>
+  </div>
+
+  <div class="rsec" id="secA">
+    <h3>当社が直接お手伝いできること</h3>
+    <p class="note">飯村本人が実務まで入って対応する範囲です。</p>
+    <div id="listA"></div>
+  </div>
+
+  <div class="rsec" id="secB" style="display:none">
+    <h3>提携する専門家と組んで対応すること</h3>
+    <p class="note">全体設計と進行管理は当社、実務は各分野の専門家が担当します。</p>
+    <div id="listB"></div>
+  </div>
+
+  <div class="rsec" id="secC" style="display:none">
+    <h3>通常の顧問事業とは切り分けているもの</h3>
+    <p class="note">ご希望の方にのみ、別枠でご案内しています。</p>
+    <div id="listC"></div>
+  </div>
+
+  <div class="rsec">
+    <h3>今のお立場に合うプラン</h3>
+    <p class="note">上位プランには下位プランの内容がすべて含まれます。</p>
+    <div class="plan">
+      <p class="pname" id="pName"></p>
+      <p class="pprice" id="pPrice"></p>
+      <p class="pwhy" id="pWhy"></p>
+      <p class="palt" id="pAlt"></p>
+      <p class="pfee">費用は、お話を伺ったうえで一人ひとり個別にご案内しております。同じお悩みでも、必要な深さと関わり方が方によって異なるためです。</p>
+    </div>
+  </div>
+
+  <div class="rsec">
+    <h3>次にすること</h3>
+    <ol class="steps-next" id="nextSteps"></ol>
+  </div>
+
+  <div class="rsec">
+    <h3>この結果を、飯村が個別に読み解きます</h3>
+    <p class="note">診断でわかるのは傾向までです。あなたの状況に当てはめた見立ては、個別にお届けしています。</p>
+    <div class="lineoffer">
+      <div class="lo-top">
+        <div class="lo-eyebrow">FREE / LINE</div>
+        <h4>36タイプ診断の詳細解析<br>PDFでお届けします</h4>
+      </div>
+      <div class="lo-body">
+        <p>自動で出力される結果とは別に、気質と性質の組み合わせから、強みの活かし方・決断の癖・人との関わり方までを飯村が文章でお伝えします。費用はいただきません。</p>
+        <ol>
+          <li>下のボタンからLINEを追加します</li>
+          <li>「解析希望」とだけ送ってください</li>
+          <li>3日ほどお時間をいただき、お一人ずつ読み解きます</li>
+          <li>ご登録のメールアドレス宛にPDFでお届けします</li>
+        </ol>
+        <a class="linebtn" data-line="lp_result" href="#" target="_blank" rel="noopener">LINEで詳細解析を受け取る<small>「解析希望」と送るだけ・無料</small></a>
+        <p class="lo-note">売り込みはいたしません。<br>ご相談内容が固まっていない段階でも構いません。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rsec copywrap">
+    <h3>この結果を持ち帰る</h3>
+    <p class="note">全文をコピーして、メモやLINEに貼り付けられます。</p>
+    <textarea class="copybox" id="copybox" readonly></textarea>
+    <div class="bar">
+      <button class="btn ghost" id="copy">テキストをコピー</button>
+      <button class="btn ghost" id="print">印刷・PDFで保存</button>
+      <button class="btn ghost" id="again">はじめからやり直す</button>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- ============ OFFER ============ -->
+<div class="wrap" id="offer">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">FIRST SESSION</p>
+      <h2>いきなり契約ではなく、<br>まず一度、90分お話ししませんか</h2>
+      <p>顧問契約の前に、経営診断セッションをご用意しています。ここで整理がついて終わる方もいらっしゃいます。それで構いません。</p>
+    </div>
+    <div class="offer">
+      <div class="top">
+        <span class="limit">毎月 <span data-session-limit>3</span>名 限定</span>
+        <h3>経営診断セッション（90分）</h3>
+        <p class="free">オンラインまたは対面　／　費用はいただきません</p>
+      </div>
+      <div class="body">
+        <p class="lead">「何に困っているか、自分でも整理できていない」という状態で構いません。90分のうち、前半はひたすらお話を伺います。後半で、いま何が社長に集中しているのか、そのうち何から移せるのかを、私の見立てとしてお返しします。その場でお持ち帰りいただける形にします。</p>
+        <ul>
+          <li>現状のヒアリングと、課題の切り分け</li>
+          <li>いま社長に集中している判断の棚卸し（その場で可視化）</li>
+          <li>AIに移せる判断／移してはいけない判断の線引き</li>
+          <li>36タイプ分析にもとづく、ご自身の意思決定の癖</li>
+          <li>最初に着手すべき一手と、着手してはいけない一手</li>
+          <li>その場で整理がつけば、それで終わりで構いません</li>
+        </ul>
+        <p class="terms">
+          <b>この場でしないこと</b>
+          売り込みはいたしません。顧問契約のご説明は、ご要望があった場合のみ行います。10期にわたり広告を出さずご紹介だけで続けてまいりましたので、無理にお勧めする必要がないためです。
+        </p>
+        <div class="btns">
+          <a class="btn2" id="offerLine" href="#" target="_blank" rel="noopener">LINEでセッションを申し込む</a>
+          <a class="btn2 sub" data-d36 href="#" target="_blank" rel="noopener">まず無料診断だけ受ける</a>
+        </div>
+        <p class="note2">お申し込みの際、「セッション希望」とだけお送りください。<br>日程調整のご連絡を差し上げます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PHILOSOPHY ============ -->
+<div class="band" id="philosophy">
+  <div class="band-inner sec" style="padding-bottom:64px">
+    <div class="sec-h">
+      <p class="eyebrow">PHILOSOPHY</p>
+      <h2>哲学</h2>
+    </div>
+    <div class="philo">
+      <p class="big">経営に、<br>哲学という軸を。</p>
+      <span class="kv">心が現実化する</span>
+      <p>変化の激しい現代において、小手先の戦術やノウハウだけでは、企業を永続的な成長に導くことはできません。真に必要なのは、いかなる逆境にも揺るがない「哲学」という強靭な軸です。</p>
+      <p>ビジネスの成果とは、経営者自身の内面（OS）の写し鏡に過ぎません。人が動けないのは、能力が足りないからではなく、自分を理解しないまま他人の成功モデルをなぞっているからです。だからこそ表層的な課題解決にとどまらず、トップの孤独に深く寄り添い、内閣総理大臣認定の一級技術をもって、あなたの「天命」を呼び覚まします。</p>
+      <p>目の前の人に最大限貢献し、個人の限界を突破させる『人生戦略OS』を共に設計する。経営と人生を高い次元で統合し、企業が安心して次なる高みへ挑戦し続けられる未来を、私はつくり続けます。</p>
+      <p>社長の頭の中にあるものを外に出す作業は、突き詰めれば「自分は何を大切にして決めてきたのか」を言葉にする作業です。だから私は、経営の話と人生の話を切り離しません。AIに渡せるのは、言葉になったものだけだからです。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TRUST ============ -->
+<div class="wrap" id="trust">
+  <div class="sec" style="padding-bottom:10px">
+    <div class="sec-h">
+      <p class="eyebrow">WHO ANSWERS</p>
+      <h2>答えているのは、誰か</h2>
+      <p>経営のご相談は、何を言うかと同じだけ、誰が言うかで決まります。先に、こちらを明かしておきます。</p>
+    </div>
+    <div class="trustgrid">
+      <div class="tcard">
+        <b>資格・認定</b>
+        <ul>
+          <li>内閣総理大臣認定　コーチング1級・カウンセリング1級</li>
+          <li>英国王立技芸協会　唯一認定のビジネス哲学者（FRSA）</li>
+          <li>組織診断士／36タイプ パーソナル分析</li>
+        </ul>
+      </div>
+      <div class="tcard">
+        <b>実績</b>
+        <ul>
+          <li>会社経営 10期目　／　広告を出さず、ご紹介のみで継続</li>
+          <li>50業種以上の個人・法人を支援</li>
+          <li>商談3,000件超　／　大手不動産広告の営業で日本一</li>
+          <li>日本一の営業マンを2名育成</li>
+        </ul>
+      </div>
+      <div class="tcard">
+        <b>著書</b>
+        <ul>
+          <li>『自分革命の法則』</li>
+          <li>Amazon 教育部門1位</li>
+          <li>★★★★☆ 4.3（レビュー30件）</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tmore"><a href="#profile">詳しい経歴と、ここに至るまでの経緯 →</a>　<a href="/about/">経歴・資格・実績の一覧 →</a></p>
+  </div>
+</div>
+
+<!-- ============ PROFILE ============ -->
+<div class="band" id="profile" style="border-top:1px solid rgba(201,162,39,.2)">
+  <div class="band-inner sec" style="padding-bottom:60px">
+    <div class="sec-h">
+      <p class="eyebrow">PROFILE</p>
+      <h2>概要</h2>
+    </div>
+    <div class="profile">
+      <div class="pcard2">
+        <img src="/assets/img/profile-585bcf8b.webp" loading="lazy" decoding="async" alt="飯村惇">
+        <div class="in">
+          <p class="pn">飯村　惇</p>
+          <p class="pr">HiMaWaRi合同会社 代表社員／AI時代の経営者専属顧問</p>
+          <ul>
+            <li>内閣総理大臣認定 コーチング1級・カウンセリング1級</li>
+            <li>英国王立技芸協会 唯一認定のビジネス哲学者（FRSA）</li>
+            <li>組織診断士／パーソナル分析</li>
+            <li>大手不動産広告の営業で日本一</li>
+            <li>累計年商50億円以上の企業顧問</li>
+            <li>茨城県つくば市出身／和装社長</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ptext">
+        <p class="lead">「結果を出す力は、もう証明済み。次に磨くべきは、その力を置く『哲学』だ」</p>
+        <p>そう申し上げると、順風満帆に見えるかもしれません。実際は、その逆でした。300万円の借金、信用情報はブラック。その日のご飯すら買えず、彼女の家に転がり込んだ時期があります。そこから大手不動産広告の営業で日本一を獲って独立し、1年で年商1,500万円へ。ようやく軌道に乗ったと思った矢先、手元資金の93%を投資詐欺で失い、コロナ禍で売上はゼロ、1年のうちに二度の婚約破棄まで重なりました。</p>
+        <p>真っ暗な部屋で「もう人生終わったな」と思いました。けれど人は、生きるか死ぬかまで追い込まれて初めて本当の力が出るものです。そこで気づいたのは、出来事そのものに意味はなく、意味をつけているのは自分だということ。過去の挫折はすべて、人を救うための武器に解釈し直しました。</p>
+        <p>輝かしい成果の裏で、孤独や葛藤、見えない限界を抱えるトップの心に深く寄り添う。単なる助言者にとどまらず、共に未来の戦略を描き、時には泥臭い課題解決にも共に立ち向かう。それが私の役割だと考えています。</p>
+        <p class="quote">ビジネスより先に、<br>人生の豊かさと人間関係がある。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ BASE ============ -->
+<div class="band" id="base" style="border-top:1px solid rgba(201,162,39,.2)">
+  <div class="band-inner sec" style="padding-bottom:60px">
+    <div class="sec-h">
+      <p class="eyebrow">BASE</p>
+      <h2>拠点</h2>
+      <p>これまで20カ国以上を渡航し、二度、生活の拠点そのものを海外へ移しました。旅行ではなく、暮らしごと移すという選択です。</p>
+    </div>
+    <div class="bases">
+      <div class="base">
+        <img src="/assets/img/bali-ebb3af32.webp" loading="lazy" decoding="async" alt="インドネシア・バリ島での生活">
+        <div class="in">
+          <p class="yr">2019 — 2020　INDONESIA</p>
+          <h4>バリ島</h4>
+          <p>きっかけは、婚約が破棄になったことでした。日本にいる理由が一つ消えたとき、以前から抱いていた「世界に住んで視野を広げたい」という思いが前に出ました。旅行で訪れるのと、そこで暮らすのはまったく別のことです。語学ができない状態のまま、住む場所ごと移しました。ところが半年後、パンデミックが起こります。住み続けることができなくなり、志半ばで日本へ戻りました。</p>
+        </div>
+      </div>
+      <div class="base">
+        <img src="/assets/img/bangkok-6b5dfc80.webp" loading="lazy" decoding="async" alt="タイ・バンコクでの生活">
+        <div class="in">
+          <p class="yr">2023 — 2024　THAILAND</p>
+          <h4>バンコク</h4>
+          <p>バリ島できちんと住みきれなかった心残りが、ずっとありました。次に選んだのはバンコクです。アジア経済の成長の只中にあり、世界のハブでありながら物価は安い。妻とバンコク・豊洲の二拠点生活を始めました。海外のもの、人、お金の流れをリアルに肌で感じながら、日本が世界で勝てるビジネスとは何かを模索するためです。この期間に、会社の売上は過去最高益となりました。</p>
+        </div>
+      </div>
+    </div>
+    <p class="baseafter">日本の中だけを見ていると、自社の強みも弱みも正しく測れません。外から日本を眺めて初めて、何が世界に通用し、何が通用しないのかが見えてきます。海外進出や移住をお考えの方はもちろん、今いる場所で行き詰まりを感じている方にも、この経験からお伝えできることがあります。
+      <span class="q">戦う場所は、変えていい。</span>
+    </p>
+  </div>
+</div>
+
+<!-- ============ MEDIA ============ -->
+<div class="wrap" id="media">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">MEDIA</p>
+      <h2>もう少し、知っていただくために</h2>
+      <p>お会いする前に、人となりをご確認ください。</p>
+    </div>
+    <div class="media">
+      <a class="mcard" href="https://www.amazon.co.jp/dp/B07FZK5VL3" target="_blank" rel="noopener">
+        <img src="/assets/img/book-a14fe29e.webp" loading="lazy" decoding="async" alt="自分革命の法則">
+        <span>
+          <span class="k">電子書籍　／　Amazon 教育部門1位</span>
+          <b>自分革命の法則</b>
+          <span class="stars">★★★★☆　4.3　<i>（レビュー30件）</i></span>
+          <span class="d">300万円の借金生活から、1年で月収を20倍にした逆転の記録。人財共育のスペシャリストとしての方法論をまとめた一冊です。</span>
+        </span>
+      </a>
+      <a class="mcard" href="https://the-next-generation.jp/2026/10/05/%e4%b8%80%e7%ac%91%e6%87%b8%e5%91%bd-2/" target="_blank" rel="noopener">
+        <span>
+          <span class="k">取材記事　／　THE NEXT GENERATION（2026年10月）</span>
+          <b>一笑懸命</b>
+          <span class="d">Webメディア「THE NEXT GENERATION -次世代につぐ-」に、経歴と、いまの事業への想いを掲載いただきました。</span>
+        </span>
+      </a>
+      <a class="mcard" href="https://the-leader.jp/interview/himawari/" target="_blank" rel="noopener">
+        <span>
+          <span class="k">取材記事　／　The Leader（2023年12月）</span>
+          <b>飯村惇 代表インタビュー</b>
+          <span class="d">社長インタビューサイト「The Leader」にて、これまでの経歴と事業について取材いただきました。</span>
+        </span>
+      </a>
+      <a class="mcard" href="https://humanstory.jp/iimura_makoto/" target="_blank" rel="noopener">
+        <span>
+          <span class="k">取材記事　／　HUMAN STORY</span>
+          <b>飯村惇 インタビュー</b>
+          <span class="d">Webメディア「HUMAN STORY」にて、これまでの歩みと事業への想いを取材いただきました。第三者の目から見た人物像がご覧いただけます。</span>
+        </span>
+      </a>
+      <a class="mcard" href="https://stand.fm/channels/65bb39fd63d866d93e4fb0a2" target="_blank" rel="noopener">
+        <span>
+          <span class="k">音声配信　／　stand.fm</span>
+          <b>私が大切にしている「あり方」</b>
+          <span class="d">経営哲学と日々の気づきを配信しています。文章よりも、声のほうが人柄は伝わります。移動中にでもどうぞ。</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FAQ ============ -->
+<div class="wrap" id="faq">
+  <div class="sec">
+    <div class="sec-h">
+      <p class="eyebrow">QUESTIONS</p>
+      <h2>よくいただくご質問</h2>
+    </div>
+    <div class="faq">
+      <details><summary>経営診断セッションは、本当に無料ですか</summary>
+        <div class="a">はい。費用はいただきません。ただし毎月3名までとさせていただいております。じっくり伺うため90分を確保しており、それ以上は既存のクライアント様への時間を削ることになるためです。売り込みもいたしません。その場で課題が整理できて終わりであれば、それで構いません。</div></details>
+      <details><summary>「社長の分身AI」は、どのツールを使うのですか</summary>
+        <div class="a">特定の製品に固定していません。すでにお使いの環境があればその上に、なければ社内の運用体制とご予算に合わせてご提案します。お渡しするのは道具そのものではなく、社長の判断基準と、それを動かし続ける仕組みです。ツールが変わっても、基準は残ります。</div></details>
+      <details><summary>AIに判断を任せて、間違えませんか</summary>
+        <div class="a">最初から任せきりにはしません。当初の1〜2か月は、AIの出した答えを社長が確認する運用にします。ずれた箇所を直すたびに精度が上がり、任せてよい範囲と、必ず人が見る範囲が分かれていきます。最終的な責任は常に人にある、という前提は動かしません。</div></details>
+      <details><summary>社内にITやAIに強い人がいません</summary>
+        <div class="a">いらっしゃることを前提にしていません。むしろ、詳しい人がいないために何を任せるかが決まらない、という状態からのご依頼が大半です。社内で運用できる形まで落とし込んだうえでお渡しします。</div></details>
+      <details><summary>費用はどのくらいかかりますか</summary>
+        <div class="a">お話を伺ったうえで、一社ずつ個別にご案内しております。同じお悩みでも、必要な深さと関わり方が会社によって異なるためです。期間の目安は、法人顧問プランが月額制の年間契約（更新制）、承継プログラムは期間を定めたご契約となります。</div></details>
+      <details><summary>なぜ金額を公開していないのですか</summary>
+        <div class="a">同じ「判断が自分に集中している」というご相談でも、言語化から始める必要がある会社と、すでに基準はあるので配置だけ直せばよい会社とでは、関わる深さがまったく違います。先に金額だけをお伝えすると、必要のない支援まで含んだ数字か、足りない支援しか含まない数字か、どちらかになってしまいます。</div></details>
+      <details><summary>顧問契約は誰でも受けられますか</summary>
+        <div class="a">完全審査制としております。1〜2回の打ち合わせを経て、双方でお受けするかどうかを判断します。売上のみを追求するご関係はお引き受けしておりません。</div></details>
+      <details><summary>いきなり契約の話になりませんか</summary>
+        <div class="a">なりません。10期にわたり広告を出さず、ご紹介だけで事業を続けてまいりました。売り込む必要がない状態を保つことを方針としています。まずは診断だけ、ご相談だけでも構いません。</div></details>
+      <details><summary>契約が終わったら、そこで関係も終わりですか</summary>
+        <div class="a">いいえ。事業が真に安定するまでには相応の時間を要すると考えているため、契約終了後もおおむね3年間はご相談に応じる姿勢で関わることを方針としております。短期間での成果を謳うのではなく、地に足のついた基盤づくりをご支援いたします。</div></details>
+      <details><summary>遠方に住んでいますが、対応できますか</summary>
+        <div class="a">オンラインでご対応しております。代表自身が2019年から2020年にかけてインドネシア・バリ島、2023年から2024年にかけてタイ・バンコクに居住し、20カ国以上を渡航しながら事業を続けてまいりました。海外にお住まいの方、これから移住・進出をお考えの方からのご相談も承っております。</div></details>
+      <details><summary>相談内容がまだ固まっていません</summary>
+        <div class="a">固まっていない段階でも構いません。むしろ「何に困っているのか分からない」という状態そのものが、最初にお手伝いする内容です。まずは一度、お話をお聞かせください。</div></details>
+      <details><summary>個人ですが、相談できますか</summary>
+        <div class="a">現在は法人の経営者様を中心にお受けしております。個人の方や創業前のご相談は、内容によって提携先の専門家をご紹介する形になる場合があります。まずは「お困りごと対応診断」で、対応範囲かどうかをお確かめください。</div></details>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FINAL ============ -->
+<div class="band" id="contact-final">
+  <div class="band-inner final">
+    <h2>まずは一度、お話をお聞かせください</h2>
+    <p class="slots slots-final" id="slotsFinal"></p>
+    <p>ご相談内容が固まっていなくても構いません。<br>売り込むことはいたしません。お気軽にご連絡ください。</p>
+    <p style="margin:-14px auto 26px"><a href="#offer" style="color:var(--gold-l);font-size:13px;letter-spacing:.08em;border-bottom:1px solid rgba(201,162,39,.4);text-decoration:none">経営診断セッション（90分・毎月<span data-session-limit>3</span>名限定・無料）はこちら</a></p>
+    <div style="max-width:440px;margin:0 auto">
+      <a class="linebtn" data-line="lp_footer" href="#" target="_blank" rel="noopener">公式LINEで相談する<small>診断の詳細解析・セッションのお申し込みもこちらから</small></a>
+    </div>
+    <p class="mailsub"><a href="mailto:KimonoCEO@kimonoceo.com">メールでのお問い合わせはこちら</a></p>
+    <div class="sharerow">
+      <span class="sl">このページを共有する</span>
+      <a class="sbtn line" id="shareLine" href="#" target="_blank" rel="noopener">LINEでシェア</a>
+      <a class="sbtn x" id="shareX" href="#" target="_blank" rel="noopener">Xでシェア</a>
+      <button class="sbtn cp" id="shareCopy" type="button">URLをコピー</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sitefoot">
+    <span class="nm">AI時代の経営者専属顧問　HiMaWaRi合同会社</span>
+    設立 2016年11月11日　／　代表社員　飯村 惇（いいむら まこと）<br>
+    〒153-0051 東京都目黒区上目黒1-16-12　／　050-5367-4821　／　営業時間 水〜日 10:00〜21:00（予約優先）<br>
+        <a href="https://stand.fm/channels/65bb39fd63d866d93e4fb0a2" target="_blank" rel="noopener">スタンドFM</a>
+    <nav class="foot-nav" aria-label="サイト内"><a href="/about/">飯村惇とは</a><a href="/36type/">36タイプとは</a><a href="/service/">顧問サービス</a><a href="/faq/">よくある質問</a><a href="/articles/">記事</a><a href="/company/">会社概要</a><a href="/privacy/">プライバシーポリシー</a></nav>
+    <p class="legal">© 2026 HiMaWaRi LLC.</p>
+  </div>
+</div>
+
+<div class="stickybar" id="stickyCta">
+  <span class="sbt">無料　／　毎月<span data-session-limit>3</span>名　／　90分</span>
+  <a href="#offer">経営診断セッションを申し込む</a>
+</div>
+
+<script>
+/* ============================================================
+   ▼ お問い合わせ先　※ここだけ書き換えれば全体に反映されます
+   ============================================================ */
+/* 公式LINE（友だち追加の主導線）。ここだけ書き換えれば全体に反映されます */
+var LINE_URL = "https://lin.ee/TypjZLM";
+
+const CONTACT={
+  officialLine:{label:"公式LINE",  url:LINE_URL},
+  mail:        {label:"メール",     url:"KimonoCEO@kimonoceo.com"}
+};
+
+/* ============ data ============ */
+const STAGES=[
+ {id:"first",t:"はじめまして",d:"まずは全体像から。3ステップでお答えします"},
+ {id:"second",t:"2回目です",d:"優先順位と時間軸まで踏み込みます"},
+ {id:"third",t:"3回目以降です",d:"何が決断を止めているかまで整理します"}
+];
+
+const STANCES=[
+ {id:"employee",t:"会社員・勤め人",d:"副業や独立も、今はまだ考えている段階",plan:"basic"},
+ {id:"side",t:"副業中・これから始める",d:"収入の柱をもう一本つくりたい",plan:"basic"},
+ {id:"solo3",t:"個人事業主（3年以内）",d:"年商1,000万円未満",plan:"build"},
+ {id:"solo3p",t:"個人事業主（3年以上）",d:"年商1,000万円以上",plan:"corp"},
+ {id:"corp",t:"法人経営者",d:"従業員・役員がいる／これから増やす",plan:"corp"},
+ {id:"partner",t:"紹介・提携が目的",d:"自分より、周りの誰かをつなぎたい",plan:"network"}
+];
+
+const TIMING=[
+ {id:"now",t:"今すぐ",d:"3か月以内に形にしたい"},
+ {id:"half",t:"半年〜1年",d:"腰を据えて土台からつくりたい"},
+ {id:"unsure",t:"まだ決めていない",d:"まず整理したい"}
+];
+const BLOCKS=[
+ {id:"money",t:"お金の目処",d:"投資に踏み切れない"},
+ {id:"time",t:"時間がない",d:"現場が回らない"},
+ {id:"trust",t:"誰に頼むかの判断",d:"相性や実績を見極めたい"},
+ {id:"self",t:"自分の中の迷い",d:"何がしたいのかが定まらない"}
+];
+
+/* level: A=自社で直接 / B=提携専門家と / C=別枠 */
+const CONCERNS=[
+{c:"事業・経営",id:"c1", t:"戦略や計画が描けない", lv:"A",
+ menu:["3カ年 事業生存戦略ロードマップの作成","SWOT・クロス分析／STP・価格分析","マーケットポジショニングの再定義"],
+ ask:"今の売上の何割が、どのお客様から生まれていますか？"},
+{c:"事業・経営",id:"c2", t:"資金が足りない・融資を受けたい", lv:"A",
+ menu:["日本政策金融公庫の融資設計と面談対策","信用保証協会の融資（創業3年以内は公庫が先）","調達後の分配設計（当初は3分の1程度に抑える）"],
+ ask:"直近の決算と、今の手元資金は何か月分ありますか？"},
+{c:"事業・経営",id:"c3", t:"補助金・助成金を活かしたい", lv:"A",
+ menu:["AI導入補助金・リスキリング・キャリアアップ等の申請支援","制度の組み合わせによる手元資金の確保"],
+ ask:"これまでに申請したことのある制度はありますか？"},
+{c:"事業・経営",id:"c4", t:"クラウドファンディングをやりたい", lv:"A",
+ menu:["クラウドファンディング代行（追加オプション）","先行予約販売による受注と市場調査の同時実行","成功後の融資審査への波及効果"],
+ ask:"届けたい相手と、伝えたい物語は決まっていますか？"},
+{c:"事業・経営",id:"c5", t:"失敗したときが怖い", lv:"A",
+ menu:["失敗時のリカバリー手段5つの事前提示","預金残高連動型の事業転換ライン（損切りルール）","多拠点によるコスト最適化とリスク分散"],
+ ask:"どこまで減ったら撤退する、という線を決めていますか？"},
+{c:"事業・経営",id:"c6", t:"節税したい・税理士が合わない", lv:"B",
+ menu:["融資を引き続けることを前提とした計算書の設計","最適な税理士・財務パートナーの選定とご紹介"],
+ ask:"今の税理士に、節税の提案を受けたことはありますか？"},
+{c:"事業・経営",id:"c7", t:"事業を多角化したい・第二の柱がほしい", lv:"A",
+ menu:["収入の柱を複数持つ設計（実践者としての7本）","既存資源から立ち上げる新規事業の見極め"],
+ ask:"今の事業の中で、他に転用できる資産は何ですか？"},
+{c:"事業・経営",id:"c8", t:"相談できる相手がいない", lv:"A",
+ menu:["外部CFO・軍師としての意思決定サポート","エグゼクティブコーチング","経営者直結のコネクションハブ"],
+ ask:"直近で、誰にも言えないまま決めたことは何ですか？"},
+
+{c:"集客・営業",id:"m1", t:"集客が安定しない", lv:"A",
+ menu:["オンライン／オフラインの選定と導線設計","Webサイト構築・公式LINE構築（追加オプション）","紹介営業（リファーラル）の仕組み化"],
+ ask:"今のお客様は、紹介・広告・SNSのどれから来ていますか？"},
+{c:"集客・営業",id:"m2", t:"成約率が上がらない", lv:"A",
+ menu:["36タイプ別のセールス手法","相手の判断基準に合わせた語り方の設計","クロージング／ハイタッチ・クロージング"],
+ ask:"直近10件の商談で、断られた理由に共通点はありますか？"},
+{c:"集客・営業",id:"m3", t:"営業が自分頼みになっている", lv:"A",
+ menu:["営業の型化・マニュアル化（誰が担当しても結果が出る形へ）","講師・クローザーの育成","営業マネージャー向けのタイプ別指導設計"],
+ ask:"あなたのトークを、今そのまま再現できる人はいますか？"},
+{c:"集客・営業",id:"m4", t:"価格の付け方が分からない", lv:"A",
+ menu:["価格分析・プライシング戦略","USP抽出（独自の強みの言語化）","段階的な価値の積み上げ設計"],
+ ask:"値上げをためらう理由は、相場ですか、それとも自信ですか？"},
+{c:"集客・営業",id:"m5", t:"見込み客がほしい（保険・不動産）", lv:"A",
+ menu:["見込み顧客のご紹介（送客）","MDRT／COT／TOTの達成サポート","生保・不動産営業の研修（日本一を2名育成）"],
+ ask:"今の月間の面談件数と、そこからの成約率はいくつですか？"},
+{c:"集客・営業",id:"m6", t:"発信・自己紹介が弱い", lv:"A",
+ menu:["ストーリーブランディング（自分の物語で売る技術）","プロフィール・肩書き・写真の再設計","電子書籍出版・音声配信・動画台本"],
+ ask:"初対面の30秒で、あなたは何と名乗っていますか？"},
+
+{c:"組織・人材",id:"o1", t:"人が採用できない・すぐ辞める", lv:"A",
+ menu:["タイプ分析に基づく最適な人材配置","採用要件の設計とピンポイント採用","離職率を下げる指導設計"],
+ ask:"辞めた方に共通するタイプや配属はありましたか？"},
+{c:"組織・人材",id:"o2", t:"社員が思うように動かない", lv:"A",
+ menu:["全従業員・役員との面談によるベクトル合わせ","タイプ別マネジメント指導","組織診断による問題箇所の特定"],
+ ask:"会社の方針を、社員は自分の言葉で言えますか？"},
+{c:"組織・人材",id:"o3", t:"幹部・後継者を育てたい", lv:"A",
+ menu:["リーダー・幹部育成","相互コーチングの仕組み導入","権限委譲の順序設計"],
+ ask:"あなたが1か月不在にしたら、何が止まりますか？"},
+{c:"組織・人材",id:"o4", t:"自分の頭の中を組織に渡したい", lv:"A",
+ menu:["社長の判断基準をトレースする分身AIチャットボット構築","徹底ヒアリングによる思考の言語化","社内ナレッジの自動化・マニュアル完遂"],
+ ask:"部下からの相談で、いつも同じ説明を繰り返していませんか？"},
+{c:"組織・人材",id:"o5", t:"AI・DXを入れたい", lv:"A",
+ menu:["AI導入フローのコンサルティング","社内業務の自動化・DX推進","生成AIによるHP・LP・メール文面の自動化"],
+ ask:"今いちばん時間を取られている手作業は何ですか？"},
+{c:"組織・人材",id:"o6", t:"人材・キーパーソンを紹介してほしい", lv:"A",
+ menu:["企業に必要なキーパーソンのご紹介","事業提携・販路のマッチング","税理士・士業・各分野の専門家の紹介"],
+ ask:"どんな人が入れば、来月から変わりますか？"},
+
+{c:"自分・キャリア",id:"s1", t:"自分が何をしたいのか分からない", lv:"A",
+ menu:["徹底した自己理解（カウンセリング→コーチングの順）","36タイプ診断","人生のロードマップ作成"],
+ ask:"時間もお金も制約がないとしたら、明日は何をしますか？"},
+{c:"自分・キャリア",id:"s2", t:"過去の失敗や経験が足を引っ張る", lv:"A",
+ menu:["トラウマ・固定観念の言語化（ご両親からの影響の整理）","マインドブロックの解除","ポジティブ・リフレーミング"],
+ ask:"「自分は◯◯だから無理だ」の◯◯に入る言葉は何ですか？"},
+{c:"自分・キャリア",id:"s3", t:"分かっているのに行動できない・続かない", lv:"A",
+ menu:["行動できない原因の特定（何が原動力かの言語化）","タイプに合った目標設計（型にはめない）","内省の習慣化（自分MTG）"],
+ ask:"続いたことと続かなかったこと、違いは何でしたか？"},
+{c:"自分・キャリア",id:"s4", t:"転職・キャリアに迷っている", lv:"A",
+ menu:["適性と成功モデルの特定","選択肢ごとの人生設計の比較","昇進・独立・転職の意思決定支援"],
+ ask:"今の仕事で、辞めたら惜しいものは何ですか？"},
+{c:"自分・キャリア",id:"s5", t:"副業を始めたい", lv:"A",
+ menu:["あなたに合った副業ロードマップの設計","在宅・オンラインでの収入設計","フロント商品づくりと初期集客"],
+ ask:"今、週に何時間を副業に充てられますか？"},
+{c:"自分・キャリア",id:"s6", t:"独立・起業したい", lv:"A",
+ menu:["事業の戦略と数値計画の設計","融資・マーケティングによる収益化","起業から黒字化までの伴走"],
+ ask:"最初のお客様は、誰になりそうですか？"},
+{c:"自分・キャリア",id:"s7", t:"法人化したい", lv:"A",
+ menu:["会社設立サポート・登記場所のご紹介","助成金・補助金の申請サポート","バックオフィス構築（税務・採用・ブランディング）"],
+ ask:"法人化したい理由は、節税ですか、信用ですか、規模ですか？"},
+{c:"自分・キャリア",id:"s8", t:"メンタル・自信を立て直したい", lv:"A",
+ menu:["カウンセリング（内閣総理大臣認定1級）","メンタルコーチング（J1選手・指導者育成の実績）","セカンドバースデイ・ワークショップ"],
+ ask:"最後に自分を褒めたのは、いつのことですか？"},
+
+{c:"お金・家族",id:"f1", t:"お金が貯まらない・家計を整えたい", lv:"A",
+ menu:["家計全体の設計と支出構造の見直し","引っ越し・家電サブスク等の生活コスト最適化","優先順位の明確化"],
+ ask:"毎月、何にいくら使っているか把握できていますか？"},
+{c:"お金・家族",id:"f2", t:"保険を見直したい", lv:"B",
+ menu:["保険を考える順序と優先順位の整理（当社）","具体的な商品選定・契約手続き（提携する保険代理店）"],
+ ask:"今の保険に入った理由を、覚えていますか？"},
+{c:"お金・家族",id:"f3", t:"資産形成の考え方を整理したい", lv:"B",
+ menu:["家計全体からみた資産形成の考え方の共有（当社）","具体的な金融商品の選定・運用助言（提携するFP）","※当社は利回りの提示・保証を行いません"],
+ ask:"何年後に、いくら必要になる予定ですか？"},
+{c:"お金・家族",id:"f4", t:"借金・多重債務がある", lv:"A",
+ menu:["多重債務・自立支援（再生のスペシャリスト）","CICブラックからの信用回復実務","債務整理は提携する専門家と連携"],
+ ask:"今の残高と、毎月の返済額はいくらですか？"},
+{c:"お金・家族",id:"f5", t:"恋愛・結婚したい", lv:"A",
+ menu:["恋愛コンサルティング（7組を婚約・結婚に）","男性脳・女性脳の違いの理解","36タイプによる相性分析（二者間）"],
+ ask:"うまくいかなかった相手に、共通点はありましたか？"},
+{c:"お金・家族",id:"f6", t:"夫婦・親子の関係を良くしたい", lv:"A",
+ menu:["夫婦・親子パートナーコーチング","タイプの違いから見るミスコミュニケーションの解消","家庭内の役割と期待値の再設計"],
+ ask:"直近のけんかは、何がきっかけでしたか？"},
+{c:"お金・家族",id:"f7", t:"結婚式・指輪の費用を抑えたい", lv:"A",
+ menu:["結婚式のキャッシュフロー設計（自己負担を最小化）","新婚旅行のカード戦略","指輪の選び方とコストの考え方"],
+ ask:"式の予算と、今の見積もりの差はいくらですか？"},
+{c:"お金・家族",id:"f8", t:"人間関係で疲れる", lv:"A",
+ menu:["タイプ分析による相手の判断基準の読み解き","距離の取り方と伝え方の設計","職場・家庭での関係最適化"],
+ ask:"いちばん消耗する相手は、どんなタイプの方ですか？"},
+
+{c:"つながり・その他",id:"n1", t:"海外進出・海外移住に興味がある", lv:"A",
+ menu:["バンコク・バリ島での居住経験に基づくサポート","語学ができない状態からの移住の実務","海外にいても成り立つ働き方の設計"],
+ ask:"移住したいのは、生活のためですか、事業のためですか？"},
+{c:"つながり・その他",id:"n2", t:"経営者とつながりたい・紹介がほしい", lv:"A",
+ menu:["経営者ネットワークでのマッチング","事業提携・販路の橋渡し","イベントの企画・運営"],
+ ask:"どんな方に会えたら、次の一手が動きますか？"},
+{c:"つながり・その他",id:"n3", t:"車が好き・コミュニティに入りたい", lv:"A",
+ menu:["自動車関連コミュニティの運営（茨城県）","車好きの経営者・愛好家との交流"],
+ ask:"今、どんな車に乗っていらっしゃいますか？"},
+{c:"つながり・その他",id:"n4", t:"茨城にゆかりがある・地元を良くしたい", lv:"A",
+ menu:["「茨城会」の運営と交流促進","地域とビジネスをつなぐ企画"],
+ ask:"茨城のどのあたりとご縁がありますか？"},
+{c:"つながり・その他",id:"n5", t:"占い・使命鑑定に興味がある", lv:"C",
+ menu:["使命鑑定（人生の使命・天命の見立て）","統計学・心理学・手相・人相など6〜7の観点からの分析","相性診断（チーター・サル・コアラ・ゾウと好相性）"],
+ ask:"生年月日を伺ってもよろしいですか？"},
+{c:"つながり・その他",id:"n6", t:"人前で話す・登壇の機会を増やしたい", lv:"A",
+ menu:["スピーチ・プレゼンテーション指導","講師育成","セミナー・イベントの企画運営"],
+ ask:"話す相手は、何人くらいの、どんな方々ですか？"}
+];
+
+const PLANS={
+ basic:{n:"自分軸の再設計",p:"パーソナル顧問プラン ／ 3か月 ／ 自己基盤の構築",
+  why:"目標を決める前に、まず「自分を知る」段階です。過去の固定観念とマインドブロックを外し、進むべき道を確定させます。ここが定まらないまま事業や副業を始めると、遠回りになります。",
+  alt:"この先の段階：人生設計の最適化（半年）｜事業構築プログラム（1年）｜経営者への移行支援（2年）"},
+ build:{n:"事業構築プログラム",p:"パーソナル顧問プラン ／ 1年 ／ 事業立ち上げ",
+  why:"自己理解と人生設計の内容をすべて含んだうえで、事業の戦略と数値計画を設計し、融資とマーケティングで収益化まで運びます。売上が安定しない段階を抜けるためのプログラムです。",
+  alt:"手前の段階：自分軸の再設計（3か月）｜人生設計の最適化（半年）｜この先の段階：経営者への移行支援（2年）"},
+ corp:{n:"法人顧問プラン（成長加速パートナーシップ）",p:"法人顧問プラン ／ 月額制・年間契約（更新制）",
+  why:"外部CFO、外から着任するナンバー2として、経営戦略・資金調達・営業の型化・組織づくりまで実務ごと引き受けます。稼働は週1回60分から最大週3日まで、実行支援の深度に応じて調整します。助成金・補助金の獲得や生産性の向上まで含めれば、費用対効果はご納得いただけるはずです。",
+  alt:"年商1,000万円未満の場合は、パーソナル顧問プラン（3か月〜2年）でご対応します。｜追加オプション：Webサイト構築／公式LINE構築／クラウドファンディング代行"},
+ network:{n:"ご紹介・ネットワーク",p:"費用はいただいておりません",
+  why:"ご自身の課題というより、周りの方をつなぎたいというご相談です。経営者・個人事業主・起業志望の方、車を愛好される方、茨城にゆかりのある方、海外進出に関心のある方とは特に親和性が高く、いつでもお引き合わせします。",
+  alt:"ご紹介いただいた方のご相談内容が固まっていなくても構いません。"}
+};
+
+/* ============ build UI ============ */
+const state={stage:null,stance:null,concerns:new Set(),timing:null,block:null};
+
+function radios(host,arr,key,after){
+  const el=document.getElementById(host);
+  el.innerHTML=arr.map(o=>`<label class="opt" data-id="${o.id}">${o.t}<small>${o.d}</small></label>`).join('');
+  el.querySelectorAll('.opt').forEach(l=>l.addEventListener('click',()=>{
+    el.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));
+    l.classList.add('sel'); state[key]=l.dataset.id; if(after)after(); update();
+  }));
+}
+radios('stage',STAGES,'stage',()=>{
+  document.getElementById('s1').classList.remove('locked');
+  document.getElementById('s2').classList.remove('locked');
+  document.getElementById('s3').style.display = state.stage==='first' ? 'none':'block';
+  if(state.stage!=='first') document.getElementById('s3').classList.remove('locked');
+});
+radios('stance',STANCES,'stance');
+radios('timing',TIMING,'timing');
+radios('block',BLOCKS,'block');
+
+(function(){
+  const host=document.getElementById('concerns');
+  const cats=[...new Set(CONCERNS.map(c=>c.c))];
+  host.innerHTML=cats.map(cat=>`
+    <div class="cat"><h4>${cat}</h4><div class="chips">
+    ${CONCERNS.filter(c=>c.c===cat).map(c=>`<label class="chip" data-id="${c.id}">${c.t}</label>`).join('')}
+    </div></div>`).join('');
+  host.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',()=>{
+    ch.classList.toggle('sel');
+    const id=ch.dataset.id;
+    state.concerns.has(id)?state.concerns.delete(id):state.concerns.add(id);
+    update();
+  }));
+})();
+
+const goBtn=document.getElementById('go'), note=document.getElementById('selnote');
+function update(){
+  const ok = state.stage && state.stance && state.concerns.size>0;
+  goBtn.disabled=!ok;
+  if(!state.stage) note.textContent='まずSTEP 0からお選びください';
+  else if(!state.stance) note.textContent='STEP 1でお立場をお選びください';
+  else if(state.concerns.size===0) note.textContent='STEP 2で気になることを1つ以上お選びください';
+  else note.textContent=`${state.concerns.size}件を選択中`;
+}
+
+/* ============ result ============ */
+goBtn.addEventListener('click',()=>{
+  const picked=CONCERNS.filter(c=>state.concerns.has(c.id));
+  const A=picked.filter(c=>c.lv==='A'), B=picked.filter(c=>c.lv==='B'), C=picked.filter(c=>c.lv==='C');
+  const stance=STANCES.find(s=>s.id===state.stance);
+  const stage=STAGES.find(s=>s.id===state.stage);
+
+  document.getElementById('vTitle').textContent =
+    A.length===picked.length ? 'お選びいただいたすべて、当社で直接お手伝いできます'
+    : A.length===0 ? 'いずれも、提携先と組む形でお受けします'
+    : `${picked.length}件のうち${A.length}件は当社で直接、残りは専門家と組んでお受けします`;
+
+  document.getElementById('vText').textContent =
+    `${stance.t}のお立場で、${picked.map(p=>p.t).slice(0,3).join('／')}${picked.length>3?' ほか':''}についてのご相談です。`
+    + '　当社は50業種以上への支援実績をもとに全体設計と実行支援を担い、専門特化した領域は各分野の専門家にお渡しする体制をとっています。';
+
+  document.getElementById('vTally').innerHTML =
+    `<div><b>${A.length}</b><span>直接お手伝い</span></div>`+
+    (B.length?`<div><b>${B.length}</b><span>専門家と連携</span></div>`:'')+
+    (C.length?`<div><b>${C.length}</b><span>別枠でご案内</span></div>`:'')+
+    `<div><b>${picked.length}</b><span>合計</span></div>`;
+
+  const render=(arr,cls)=>arr.map(c=>`
+    <div class="item ${cls}">
+      <div class="ih"><span class="badge">${c.c}</span><span class="t">${c.t}</span></div>
+      <ul class="menu">${c.menu.map(m=>`<li>${m}</li>`).join('')}</ul>
+      <div class="ask"><b>面談でお聞きすること</b>${c.ask}</div>
+    </div>`).join('');
+
+  document.getElementById('listA').innerHTML = A.length?render(A,''):'<p class="note">該当なし</p>';
+  document.getElementById('secA').style.display = A.length?'block':'none';
+  document.getElementById('listB').innerHTML = render(B,'b');
+  document.getElementById('secB').style.display = B.length?'block':'none';
+  document.getElementById('listC').innerHTML = render(C,'c');
+  document.getElementById('secC').style.display = C.length?'block':'none';
+
+  const plan=PLANS[stance.plan];
+  document.getElementById('pName').textContent=plan.n;
+  document.getElementById('pPrice').textContent=plan.p;
+  document.getElementById('pWhy').textContent=plan.why;
+  document.getElementById('pAlt').textContent=plan.alt;
+
+  const steps=[];
+  if(state.stage==='first'){
+    steps.push('今日は結論を出さなくて構いません。まずはこの結果をお持ち帰りください。');
+    steps.push('気になった項目について、次回30〜60分お時間をいただき、現状を詳しくお聞きします。');
+  }else if(state.stage==='second'){
+    const tm=TIMING.find(t=>t.id===state.timing);
+    steps.push(tm?`「${tm.t}」というご希望に合わせて、支援の順序を組み立てます。`:'ご希望の時期に合わせて支援の順序を組み立てます。');
+    steps.push('選ばれた項目のうち、最も効果が早く出るものを1つに絞ってお伝えします。');
+  }else{
+    const bl=BLOCKS.find(b=>b.id===state.block);
+    steps.push(bl?`引っかかっている「${bl.t}」について、率直にお話しさせてください。`:'決断を止めているものについて、率直にお話しさせてください。');
+    steps.push('1〜2回の打ち合わせを経て、双方でお受けするかどうかを判断します。');
+  }
+  steps.push('契約期間が終わっても、おおむね3年間はご相談に応じます。短期の成果より、地に足のついた基盤づくりを重視しています。');
+  if(stance.plan!=='network') steps.push('周りに、経営者・個人事業主・起業志望の方、車好きの方、茨城にゆかりのある方がいらっしゃれば、ぜひお引き合わせください。');
+  document.getElementById('nextSteps').innerHTML=steps.map(s=>`<li>${s}</li>`).join('');
+
+
+
+  const txt=[
+    '【HiMaWaRi合同会社　対応診断の結果】',
+    `面談段階：${stage.t}／お立場：${stance.t}`,
+    '',
+    '■ 当社が直接お手伝いできること',
+    ...A.map(c=>`・${c.t}\n   ${c.menu.join('\n   ')}`),
+    B.length?'\n■ 提携する専門家と組んで対応すること':'',
+    ...B.map(c=>`・${c.t}\n   ${c.menu.join('\n   ')}`),
+    C.length?'\n■ 別枠でご案内しているもの':'',
+    ...C.map(c=>`・${c.t}\n   ${c.menu.join('\n   ')}`),
+    '',
+    `■ 合うプラン：${plan.n}（${plan.p}）`,
+    plan.why,
+    '※費用は、お話を伺ったうえで個別にご案内しております。',
+    '',
+    '■ 次にすること',
+    ...steps.map((s,i)=>`${i+1}. ${s}`),
+    '',
+    '■ お問い合わせ',
+    `${CONTACT.officialLine.label}：${CONTACT.officialLine.url}`,
+    `${CONTACT.mail.label}：${CONTACT.mail.url}`,
+    '',
+    'HiMaWaRi合同会社　代表社員　飯村　惇'
+  ].filter(Boolean).join('\n');
+  document.getElementById('copybox').value=txt;
+
+  try{
+    if(window.gtag) gtag('event','shindan_complete',{stance:stance.t,count:picked.length});
+    if(window.clarity) clarity('set','shindan_complete','yes');
+  }catch(e){}
+
+  const r=document.getElementById('result');
+  r.classList.add('show');
+  r.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+document.getElementById('copy').addEventListener('click',e=>{
+  const ta=document.getElementById('copybox');
+  ta.select(); ta.setSelectionRange(0,999999);
+  try{document.execCommand('copy');e.target.textContent='コピーしました';
+    setTimeout(()=>e.target.textContent='テキストをコピー',1800);}catch(err){}
+});
+document.getElementById('print').addEventListener('click',()=>window.print());
+document.getElementById('again').addEventListener('click',()=>{location.reload()});
+update();
+
+
+/* ================= LP ================= */
+(function(){
+  const isMail=u=>u.includes('@');
+
+  document.querySelectorAll('a[data-d36]').forEach(a=>{
+    a.setAttribute('href', DIAG36_URL);
+    a.addEventListener('click',()=>{
+      try{ if(window.gtag) gtag('event','diag36_click'); }catch(e){}
+      try{ if(window.clarity) clarity('set','diag36_click','yes'); }catch(e){}
+    });
+  });
+
+  /* LINEボタン：URL差し込みと、どこから押されたかの計測 */
+  document.querySelectorAll('a[data-line]').forEach(a=>{
+    a.setAttribute('href', LINE_URL);
+    a.addEventListener('click',()=>{
+      const from = a.getAttribute('data-line');
+      try{ if(window.clarity) clarity('set','line_click',from); }catch(e){}
+      try{ if(window.gtag) gtag('event','line_friend_click',{placement:from}); }catch(e){}
+    });
+  });
+
+  /* 顧問枠の残数を描画 */
+  (function(){
+    const left = ADVISORY_LEFT, total = ADVISORY_TOTAL;
+    const full = left <= 0;
+    const chip = full
+      ? '<span class="dot"></span>今月の新規お引き受けは<b>満枠</b>となりました'
+      : '<span class="dot"></span>今月の新規お引き受け　<b>残り' + left + '社</b>　（月' + total + '社まで）';
+    ['slotsHero','slotsFinal'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el){ el.innerHTML=chip; if(full) el.classList.add('full'); }
+    });
+    const sn=document.getElementById('slotsSanctuary');
+    if(sn){
+      sn.innerHTML = full
+        ? '※ 顧問契約は完全審査制　／　新規のお引き受けは月'+total+'社まで（今月は満枠となりました）'
+        : '※ 顧問契約は完全審査制　／　新規のお引き受けは月'+total+'社まで（今月 残り'+left+'社）';
+    }
+  })();
+  const ol=document.getElementById('offerLine');
+  if(ol){ ol.setAttribute('href', LINE_URL);
+    ol.addEventListener('click',()=>{ try{ if(window.clarity) clarity('set','line_click','lp_offer'); }catch(e){} }); }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const t=document.querySelector(a.getAttribute('href'));
+      if(!t) return;
+      e.preventDefault();
+      window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-56,behavior:'smooth'});
+    });
+  });
+})();
+
+/* ================= セクション計測 ================= */
+(function(){
+  if(typeof window.gtag!=='function') return;
+  var SECTIONS=[
+    ['hero','01_ヒーロー'],['pains','02_兆候'],['whynow','03_なぜ今か'],['cause','04_原因'],
+    ['service','05_三つの提供'],['days90','06_最初の90日'],['criteria','07_対象と審査'],
+    ['cases','08_事例'],['free','09_無料の二つ'],['shindan','10_診断ツール'],
+    ['offer','11_経営診断セッション'],['philosophy','12_哲学'],['trust','13_信頼帯'],
+    ['profile','14_概要'],['base','15_拠点'],['media','16_メディア'],['faq','17_FAQ'],
+    ['contact-final','18_最終CTA']
+  ];
+  var order=0, lastName='', maxOrder=0, sent=false;
+  var st={};   /* id -> {name, seen, t0, sec} */
+  SECTIONS.forEach(function(p){ st[p[0]]={name:p[1], seen:false, t0:0, sec:0}; });
+
+  function send(ev,params){ try{ gtag('event',ev,params); }catch(e){} }
+
+  function leave(id){
+    var o=st[id]; if(!o||!o.t0) return;
+    o.sec += (Date.now()-o.t0)/1000; o.t0=0;
+    if(o.sec>=3){
+      send('section_time',{section_name:o.name, dwell_sec:Math.round(o.sec)});
+      o.sec=0;
+    }
+  }
+  function enter(id){
+    var o=st[id]; if(!o) return;
+    o.t0=Date.now(); lastName=o.name;
+    if(!o.seen){
+      o.seen=true; order++; if(order>maxOrder) maxOrder=order;
+      send('section_view',{section_name:o.name, view_order:order});
+      try{ if(window.clarity) clarity('set','last_section',o.name); }catch(e){}
+    }
+  }
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var id=e.target.id;
+        if(e.isIntersecting) enter(id); else leave(id);
+      });
+    },{threshold:[0.4]});
+    SECTIONS.forEach(function(p){ var el=document.getElementById(p[0]); if(el) io.observe(el); });
+  }
+
+  function finish(){
+    if(sent) return; sent=true;
+    for(var k in st) leave(k);
+    send('lp_exit',{exit_section:lastName, max_order:maxOrder});
+  }
+  document.addEventListener('visibilitychange',function(){ if(document.visibilityState==='hidden') finish(); });
+  window.addEventListener('pagehide',finish);
+
+  /* 診断ツールのSTEP到達 */
+  ['s0','s1','s2'].forEach(function(id,i){
+    var el=document.getElementById(id); if(!el) return;
+    var f=false;
+    el.addEventListener('click',function(){ if(f) return; f=true;
+      send('shindan_step',{step:'STEP'+i}); });
+  });
+})();
+
+/* ================= セッション枠の表示 ================= */
+(function(){
+  try{
+    var n = (typeof SESSION_LIMIT === 'number') ? SESSION_LIMIT : 3;
+    document.querySelectorAll('[data-session-limit]').forEach(function(el){ el.textContent = n; });
+  }catch(e){}
+})();
+
+/* ================= シェア ================= */
+(function(){
+  var SHARE_URL = (location.protocol === 'file:' || !location.host)
+    ? 'https://kimonoceo.com/'
+    : location.origin + location.pathname;
+  var TEXT = '社長の頭の中にしかないものを、組織とAIに移す。｜AI時代の経営者専属顧問 飯村惇｜経営タイプ診断（無料）';
+
+  var line = document.getElementById('shareLine');
+  var x    = document.getElementById('shareX');
+  var cp   = document.getElementById('shareCopy');
+
+  if(line) line.href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(SHARE_URL);
+  if(x)    x.href    = 'https://x.com/intent/post?text=' + encodeURIComponent(TEXT) + '&url=' + encodeURIComponent(SHARE_URL);
+
+  function track(where){
+    try{ if(window.gtag) gtag('event','share',{method:where, content_type:'lp'}); }catch(e){}
+    try{ if(window.clarity) clarity('set','share',where); }catch(e){}
+  }
+  if(line) line.addEventListener('click', function(){ track('line'); });
+  if(x)    x.addEventListener('click',    function(){ track('x'); });
+  if(cp)   cp.addEventListener('click', function(){
+    var done = function(){
+      cp.textContent = 'コピーしました'; cp.classList.add('done');
+      setTimeout(function(){ cp.textContent='URLをコピー'; cp.classList.remove('done'); }, 2000);
+      track('copy');
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(SHARE_URL).then(done, function(){});
+    }else{
+      var t=document.createElement('textarea'); t.value=SHARE_URL; document.body.appendChild(t);
+      t.select(); try{ document.execCommand('copy'); done(); }catch(e){} document.body.removeChild(t);
+    }
+  });
+})();
+
+/* ================= 追従CTA ================= */
+(function(){
+  var bar=document.getElementById('stickyCta'); if(!bar) return;
+  var offer=document.getElementById('offer'), fin=document.getElementById('contact-final'),
+      tool=document.querySelector('#shindan .bar');
+  function seen(el){ if(!el) return false; var r=el.getBoundingClientRect();
+    return r.top < window.innerHeight*0.92 && r.bottom > 0; }
+  var t=null;
+  function upd(){ bar.classList.toggle('on', window.scrollY>800 && !seen(offer) && !seen(fin) && !seen(tool)); }
+  window.addEventListener('scroll',function(){ if(t) return; t=setTimeout(function(){t=null;upd();},120); },{passive:true});
+  window.addEventListener('resize',upd);
+  bar.querySelector('a').addEventListener('click',function(){
+    try{ if(window.gtag) gtag('event','sticky_offer_click'); }catch(e){}
+    try{ if(window.clarity) clarity('set','sticky_offer_click','yes'); }catch(e){}
+  });
+  upd();
+})();
+</script>
+</body>
+</html>
+

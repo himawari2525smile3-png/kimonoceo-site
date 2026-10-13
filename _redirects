@@ -1,0 +1,55 @@
+# =====================================================================
+#  正規ドメインは https://kimonoceo.com
+#  旧ドメイン・サブドメインはすべてここへ301転送する
+# =====================================================================
+http://himawari-shindan36.netlify.app/*   https://kimonoceo.com/:splat   301!
+https://himawari-shindan36.netlify.app/*  https://kimonoceo.com/:splat   301!
+http://shindan.kimonoceo.com/*            https://kimonoceo.com/:splat   301!
+https://shindan.kimonoceo.com/*           https://kimonoceo.com/:splat   301!
+http://www.kimonoceo.com/*                https://kimonoceo.com/:splat   301!
+https://www.kimonoceo.com/*               https://kimonoceo.com/:splat   301!
+
+# =====================================================================
+#  SNS別 短縮URL（プロフィール欄に貼る用）
+#  例： kimonoceo.com/x  →  Xからの流入としてGA4に記録される
+# =====================================================================
+/x     /?utm_source=x&utm_medium=social&utm_campaign=profile           302
+/ig    /?utm_source=instagram&utm_medium=social&utm_campaign=profile   302
+/th    /?utm_source=threads&utm_medium=social&utm_campaign=profile     302
+/fb    /?utm_source=facebook&utm_medium=social&utm_campaign=profile    302
+/li    /?utm_source=linkedin&utm_medium=social&utm_campaign=profile    302
+/yt    /?utm_source=youtube&utm_medium=social&utm_campaign=profile     302
+/nt    /?utm_source=note&utm_medium=social&utm_campaign=profile        302
+/pi    /?utm_source=pinterest&utm_medium=social&utm_campaign=profile   302
+/bs    /?utm_source=bluesky&utm_medium=social&utm_campaign=profile     302
+
+# --- SNS以外の経路 ---
+/line  /?utm_source=line&utm_medium=messaging&utm_campaign=profile     302
+/qr    /?utm_source=meishi&utm_medium=offline&utm_campaign=qr          302
+/ref   /?utm_source=referral&utm_medium=introduction&utm_campaign=client  302
+
+# =====================================================================
+#  投稿ごとに分けたいとき（末尾に自由な文字列を足す）
+#  例： kimonoceo.com/x/0928  →  campaign が 0928 で記録される
+# =====================================================================
+/x/:id    /?utm_source=x&utm_medium=social&utm_campaign=:id           302
+/ig/:id   /?utm_source=instagram&utm_medium=social&utm_campaign=:id   302
+/th/:id   /?utm_source=threads&utm_medium=social&utm_campaign=:id     302
+/fb/:id   /?utm_source=facebook&utm_medium=social&utm_campaign=:id    302
+/li/:id   /?utm_source=linkedin&utm_medium=social&utm_campaign=:id    302
+/yt/:id   /?utm_source=youtube&utm_medium=social&utm_campaign=:id     302
+/nt/:id   /?utm_source=note&utm_medium=social&utm_campaign=:id        302
+/pi/:id   /?utm_source=pinterest&utm_medium=social&utm_campaign=:id   302
+/bs/:id   /?utm_source=bluesky&utm_medium=social&utm_campaign=:id     302
+/ref/:id  /?utm_source=referral&utm_medium=introduction&utm_campaign=:id  302
+
+# =====================================================================
+#  旧STUDIOサイトのパス
+# =====================================================================
+/news      /articles/   301
+/news/*    /articles/   301
+/contact   /company/    301
+
+# note記事のCTA（/service/session/）を経営診断セッションの説明へ
+/service/session   /service/#session   301
+/service/session/  /service/#session   301

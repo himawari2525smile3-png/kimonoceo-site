@@ -1,0 +1,5 @@
+# kimonoceo.com（HiMaWaRi合同会社）。ビルド無しで、このリポジトリの最上位をそのまま公開する。
+# 転送ルールは _redirects、ヘッダーは _headers。毎月書き換える値は index.html 冒頭の ADVISORY_LEFT（今月の残り枠）。
+[build]
+  publish = "."
+  command = ""

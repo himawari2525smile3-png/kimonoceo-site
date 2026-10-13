@@ -1,0 +1,251 @@
+/* ============================================================
+   HiMaWaRi合同会社 公式サイト — スタイル
+   配色：勝色（かちいろ）× 和紙 × 金茶
+   ============================================================ */
+
+:root {
+  --kachi: #101728;        /* 勝色：主役の濃紺 */
+  --kachi-deep: #0b1120;
+  --kachi-soft: #1B2540;
+  --washi: #F7F2E8;        /* 和紙：地の色 */
+  --washi-dim: #eae4d6;
+  --sumi: #1b1a17;         /* 墨：本文 */
+  --sumi-soft: #4a4740;
+  --kincha: #A5811C;       /* 金茶：差し色 */
+  --kincha-light: #C9A227;
+  --line: #DCD2BE;
+  --maxw: 1080px;
+  --radius: 4px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--washi);
+  color: var(--sumi);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Meiryo", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--kachi); text-decoration-color: var(--line); text-underline-offset: 3px; }
+a:hover { color: var(--kincha); }
+
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: 20px; }
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--kachi); color: #fff; padding: 10px 16px; z-index: 100;
+}
+.skip:focus { left: 8px; top: 8px; }
+
+/* ---------- ヘッダー ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246, 242, 233, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; min-height: 64px;
+}
+.brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1.25; }
+.brand-mark {
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif; font-weight: 700;
+  font-size: 20px; letter-spacing: 0.12em; color: var(--kachi);
+}
+.brand-sub { font-size: 11px; letter-spacing: 0.22em; color: var(--kincha); }
+
+.site-nav { display: flex; gap: 22px; }
+.site-nav a {
+  font-size: 14px; text-decoration: none; color: var(--sumi-soft);
+  padding: 6px 0; border-bottom: 2px solid transparent; white-space: nowrap;
+}
+.site-nav a:hover { color: var(--kachi); border-bottom-color: var(--kincha-light); }
+.site-nav a[aria-current="page"] { color: var(--kachi); border-bottom-color: var(--kincha); font-weight: 700; }
+
+.menu-toggle {
+  display: none; background: none; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 7px 12px; font-size: 13px;
+  color: var(--kachi); cursor: pointer; font-family: inherit;
+}
+
+/* ---------- パンくず ---------- */
+.crumbs {
+  max-width: var(--maxw); margin: 18px auto 0; padding-inline: 20px;
+  font-size: 12.5px; color: var(--sumi-soft);
+}
+.crumbs a { text-decoration: none; }
+.crumbs span { margin: 0 8px; color: var(--line); }
+
+/* ---------- 見出し・本文 ---------- */
+h1, h2, h3, h4 { font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif; color: var(--kachi); line-height: 1.5; }
+
+h1 { font-size: clamp(26px, 4.4vw, 40px); letter-spacing: 0.02em; margin: 0 0 20px; }
+h2 { font-size: clamp(21px, 3vw, 28px); margin: 0 0 18px; }
+h3 { font-size: clamp(17px, 2.2vw, 20px); margin: 32px 0 10px; }
+
+.eyebrow {
+  font-size: 11px; letter-spacing: 0.3em; color: var(--kincha);
+  margin: 0 0 10px; font-weight: 700;
+}
+
+section { padding: 56px 0; }
+section + section { border-top: 1px solid var(--line); }
+
+.lead { font-size: 17px; line-height: 2.0; }
+
+/* AIに拾わせたい定義文。ページ冒頭に必ず1つ置く */
+.definition {
+  background: #fff;
+  border-left: 4px solid var(--kincha);
+  padding: 20px 24px;
+  margin: 0 0 28px;
+  font-size: 16.5px;
+  line-height: 2.0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.definition strong { color: var(--kachi); }
+
+/* ---------- ヒーロー ---------- */
+.hero {
+  background: linear-gradient(170deg, var(--kachi-deep), var(--kachi) 55%, var(--kachi-soft));
+  color: #fff; padding: 76px 0 64px; border-top: none;
+}
+.hero h1 { color: #fff; margin-bottom: 18px; }
+.hero .eyebrow { color: var(--kincha-light); }
+.hero p { color: #e4e0d5; max-width: 62ch; }
+.hero .btn { margin-top: 26px; }
+
+.hero-facts {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; padding: 0; list-style: none;
+}
+.hero-facts li {
+  font-size: 12.5px; color: #e9e4d6;
+  border: 1px solid rgba(201, 167, 108, 0.5); border-radius: 999px; padding: 5px 13px;
+}
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: inline-block; text-decoration: none;
+  border: 1px solid var(--kachi); color: var(--kachi); background: #fff;
+  padding: 13px 22px; border-radius: var(--radius);
+  font-size: 14.5px; font-weight: 700; transition: .16s;
+}
+.btn:hover { background: var(--kachi); color: #fff; }
+.btn-primary { background: var(--kincha); border-color: var(--kincha); color: #fff; }
+.btn-primary:hover { background: var(--kachi); border-color: var(--kachi); color: #fff; }
+.btn-quiet { background: transparent; border-color: var(--line); color: var(--sumi-soft); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+
+/* ---------- カード・グリッド ---------- */
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 24px;
+}
+.card h3 { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+/* ---------- 定義テーブル（AIが読みやすい構造） ---------- */
+.spec { width: 100%; border-collapse: collapse; margin: 18px 0; background: #fff; font-size: 15px; }
+.spec th, .spec td { border: 1px solid var(--line); padding: 12px 15px; text-align: left; vertical-align: top; }
+.spec th {
+  background: var(--washi-dim); color: var(--kachi); font-weight: 700;
+  width: 30%; white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .spec th { width: 36%; white-space: normal; }
+}
+
+.checklist { list-style: none; padding: 0; margin: 16px 0; }
+.checklist li { padding-left: 22px; position: relative; margin-bottom: 8px; }
+.checklist li::before {
+  content: "―"; position: absolute; left: 0; color: var(--kincha); font-weight: 700;
+}
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  margin-bottom: 14px; overflow: hidden;
+}
+.faq-item h3 {
+  margin: 0; padding: 18px 22px; font-size: 17px;
+  background: var(--washi-dim); border-bottom: 1px solid var(--line);
+}
+.faq-item .faq-a { padding: 18px 22px; margin: 0; }
+
+/* ---------- 記事 ---------- */
+.article-list { list-style: none; padding: 0; margin: 0; }
+.article-list li { border-bottom: 1px solid var(--line); padding: 20px 0; }
+.article-list a { font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif; font-size: 18px; text-decoration: none; }
+.article-list time { display: block; font-size: 12.5px; color: var(--sumi-soft); letter-spacing: .08em; }
+.article-list p { margin: 6px 0 0; font-size: 14.5px; color: var(--sumi-soft); }
+
+.post { max-width: 760px; margin-inline: auto; }
+.post-meta { font-size: 13px; color: var(--sumi-soft); letter-spacing: .06em; margin-bottom: 26px; }
+.post h2 { margin-top: 44px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.post blockquote {
+  margin: 22px 0; padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--kincha); color: var(--sumi-soft);
+}
+.post ul, .post ol { padding-left: 1.4em; }
+.post li { margin-bottom: 6px; }
+
+/* ---------- CTA帯 ---------- */
+.cta { background: var(--kachi); color: #fff; }
+.cta h2 { color: #fff; }
+.cta p { color: #ded9cc; }
+.cta .btn { background: transparent; border-color: rgba(255,255,255,.45); color: #fff; }
+.cta .btn:hover { background: #fff; color: var(--kachi); }
+.cta .btn-primary { background: var(--kincha); border-color: var(--kincha); }
+.cta .btn-quiet { border-color: rgba(255,255,255,.25); color: #cfc9ba; }
+
+/* ---------- フッター ---------- */
+.site-footer {
+  background: var(--kachi-deep); color: #cdc7b8; padding: 48px 0 30px;
+  font-size: 13.5px; line-height: 1.85;
+}
+.site-footer a { color: #e4dfd2; }
+.site-footer a:hover { color: var(--kincha-light); }
+.foot-grid { display: grid; gap: 34px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.foot-brand { font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif; color: #fff; font-size: 16px; margin: 0 0 14px; }
+.foot-h { color: #fff; font-size: 12px; letter-spacing: .2em; margin: 20px 0 8px; }
+.foot-dl { margin: 0; }
+.foot-dl > div { display: flex; gap: 12px; margin-bottom: 4px; }
+.foot-dl dt { color: #8d8676; min-width: 68px; margin: 0; }
+.foot-dl dd { margin: 0; }
+.foot-list { list-style: none; padding: 0; margin: 0; }
+.foot-list li { margin-bottom: 4px; }
+.disclaimer { margin-top: 34px; font-size: 11.5px; color: #8d8676; line-height: 1.7; }
+.copy { margin: 14px 0 0; font-size: 11.5px; color: #6f6a5d; letter-spacing: .1em; }
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 820px) {
+  .menu-toggle { display: block; }
+  .site-nav {
+    display: none; position: absolute; top: 64px; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--washi);
+    border-bottom: 1px solid var(--line); padding: 8px 20px 16px;
+  }
+  .site-nav.open { display: flex; }
+  .site-nav a { padding: 11px 0; border-bottom: 1px solid var(--washi-dim); }
+  section { padding: 44px 0; }
+  .hero { padding: 54px 0 46px; }
+}
+
+/* 出典リンク・注記 */
+.src-link { font-size: .78em; margin-left: .3em; white-space: nowrap; }
+.note { font-size: 13.5px; color: var(--sumi-soft); }
