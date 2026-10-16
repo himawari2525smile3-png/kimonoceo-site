@@ -12,6 +12,21 @@ jobs:
       - uses: actions/checkout@v4
       - name: 公開の反映を待つ
         run: sleep 90
+      - name: 公開されたか確かめる（トップと会社概要の本文が本番に出ているか）
+        run: |
+          python3 - <<'PY'
+          import urllib.request, sys, random
+          bad = 0
+          for path in ['index.html', 'faq/index.html']:
+              url = 'https://kimonoceo.com/' + ('' if path == 'index.html' else path.replace('index.html', ''))
+              live = urllib.request.urlopen(urllib.request.Request(url, headers={'Cache-Control': 'no-cache'})).read().decode('utf-8')
+              lines = [l.strip() for l in open(path, encoding='utf-8') if len(l.strip()) > 40]
+              random.seed(1); sample = random.sample(lines, min(25, len(lines)))
+              miss = [l for l in sample if l not in live]
+              print(url, '一致', len(sample) - len(miss), '/', len(sample))
+              bad += len(miss)
+          sys.exit(1 if bad else 0)
+          PY
       - name: IndexNow へ送信
         run: |
           KEY=6eaf9f5a6dc421ddc00883efb0533524
