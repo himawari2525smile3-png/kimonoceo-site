@@ -53,3 +53,9 @@ https://www.kimonoceo.com/*               https://kimonoceo.com/:splat   301!
 # note記事のCTA（/service/session/）を経営診断セッションの説明へ
 /service/session   /service/#session   301
 /service/session/  /service/#session   301
+
+# =====================================================================
+#  リンクの末尾に全角の「）」が付いて届いたURLをトップへ（2026-10-16 追加）
+# =====================================================================
+/%EF%BC%89   /   301
+/）          /   301
