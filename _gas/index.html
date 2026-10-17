@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日程のご相談｜飯村 惇</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --kachi:#1F2B4D; --kachi-2:#2C3A63; --washi:#F1F0EC; --paper:#FBFAF7;
+    --gold:#C9962B; --gold-soft:#E9D9B0; --ink:#2A2A2A; --mute:#6E6A63; --line:#DCD8CE;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html,body{margin:0}
+  body{background:var(--washi);color:var(--ink);font-family:'Noto Sans JP',system-ui,sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:520px;margin:0 auto;padding:0 16px 56px}
+  .mincho{font-family:'Shippori Mincho','Noto Serif JP',serif}
+
+  /* 見出し */
+  header{background:var(--kachi);color:#fff;text-align:center;padding:34px 16px 30px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .seigaiha{position:absolute;inset:0;opacity:.07;pointer-events:none}
+  .eyebrow{font-size:11px;letter-spacing:.32em;color:var(--gold-soft)}
+  header h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:25px;letter-spacing:.12em;margin:8px 0 2px}
+  header p{margin:0;font-size:12px;color:#C9CEDB;letter-spacing:.08em}
+
+  .lead{margin:26px 0 20px;text-align:center;font-family:'Shippori Mincho',serif;font-size:16.5px;line-height:2;color:var(--kachi)}
+
+  /* 2つの方法 */
+  .choice{display:grid;gap:12px}
+  .opt{display:block;width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s, box-shadow .15s}
+  .opt:hover{border-color:var(--gold)}
+  .opt[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-soft) inset}
+  .opt .t{display:flex;align-items:center;gap:10px;font-family:'Shippori Mincho',serif;font-weight:700;font-size:17px;color:var(--kachi)}
+  .opt .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--kachi);color:var(--gold-soft);font-size:12px;font-family:'Noto Sans JP';flex:none}
+  .opt .d{display:block;margin:4px 0 0 36px;font-size:13px;color:var(--mute)}
+
+  /* パネル */
+  .panel{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 18px}
+  .panel[hidden]{display:none}
+  .step{font-size:11px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin:0 0 6px}
+  .panel h2{font-family:'Shippori Mincho',serif;font-size:17px;color:var(--kachi);margin:0 0 12px}
+  .sec+.sec{margin-top:22px;padding-top:20px;border-top:1px dashed var(--line)}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;color:var(--ink);cursor:pointer;min-height:40px}
+  .chip:hover{border-color:var(--gold)}
+  .chip[aria-pressed="true"]{background:var(--kachi);border-color:var(--kachi);color:#fff}
+  .chip small{display:block;font-size:11px;color:var(--mute);line-height:1.3}
+  .chip[aria-pressed="true"] small{color:var(--gold-soft)}
+
+  .days{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;margin:0 -2px;scroll-snap-type:x mandatory}
+  .day{flex:none;scroll-snap-align:start;width:66px;border:1px solid var(--line);background:#fff;border-radius:12px;padding:8px 0;text-align:center;cursor:pointer;font:inherit;color:var(--ink)}
+  .day b{display:block;font-size:17px;font-family:'Shippori Mincho',serif;color:var(--kachi)}
+  .day span{font-size:11px;color:var(--mute)}
+  .day.sun span{color:#B4553E}
+  .day[aria-pressed="true"]{background:var(--kachi);border-color:var(--kachi)}
+  .day[aria-pressed="true"] b,.day[aria-pressed="true"] span{color:#fff}
+  .times{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+  .time{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 0;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+  .time:hover{border-color:var(--gold)}
+  .time[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:700}
+  .empty{font-size:13px;color:var(--mute)}
+
+  label{display:block;font-size:13px;font-weight:500;color:var(--kachi);margin:14px 0 6px}
+  label .req{font-size:10px;background:var(--kachi);color:#fff;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+  label .opt-l{font-size:11px;color:var(--mute);font-weight:400;margin-left:6px}
+  input,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+  input:focus,textarea:focus{outline:2px solid var(--gold-soft);border-color:var(--gold)}
+  textarea{min-height:76px;resize:vertical}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  .summary{background:var(--washi);border-radius:10px;padding:12px 14px;font-size:14px;margin-top:16px}
+  .summary b{color:var(--kachi)}
+  .btn{display:block;width:100%;margin-top:18px;border:0;border-radius:12px;padding:15px;background:var(--kachi);color:#fff;font-family:'Shippori Mincho',serif;font-weight:700;font-size:16px;letter-spacing:.08em;cursor:pointer}
+  .btn:disabled{opacity:.45;cursor:default}
+  .btn.line{background:#06C755;font-family:'Noto Sans JP';font-size:15px;letter-spacing:.02em;text-decoration:none;text-align:center}
+  .err{color:#A63A2B;font-size:13px;margin-top:10px;min-height:1em}
+  .note{font-size:12px;color:var(--mute);margin-top:10px}
+
+  .done{text-align:center}
+  .done .mark{width:56px;height:56px;margin:4px auto 10px;border-radius:50%;background:var(--kachi);display:grid;place-items:center;color:var(--gold-soft);font-size:26px}
+  .done h2{text-align:center}
+  .loading{color:var(--mute);font-size:13px}
+
+  footer{text-align:center;margin-top:34px;color:var(--mute);font-size:11.5px;letter-spacing:.06em}
+  footer .seal{display:inline-grid;place-items:center;width:30px;height:30px;border:1.5px solid #B4553E;color:#B4553E;border-radius:4px;font-family:'Shippori Mincho',serif;font-size:12px;margin-bottom:6px;transform:rotate(-4deg)}
+  .demo{white-space:nowrap;position:fixed;left:50%;bottom:10px;transform:translateX(-50%);background:rgba(31,43,77,.9);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px;z-index:5}
+</style>
+</head>
+<body>
+<header>
+  <svg class="seigaiha" aria-hidden="true" width="100%" height="100%"><defs><pattern id="sg" width="40" height="20" patternUnits="userSpaceOnUse"><g fill="none" stroke="#fff" stroke-width="1"><circle cx="20" cy="20" r="18"/><circle cx="20" cy="20" r="12"/><circle cx="20" cy="20" r="6"/><circle cx="0" cy="10" r="18"/><circle cx="40" cy="10" r="18"/></g></pattern></defs><rect width="100%" height="100%" fill="url(#sg)"/></svg>
+  <div class="eyebrow">SCHEDULE</div>
+  <h1>日程のご相談</h1>
+  <p>AI時代の経営者専属顧問　飯村 惇</p>
+</header>
+
+<main class="wrap">
+  <p class="lead">ご紹介ありがとうございます。<br>ご都合に合わせますので、<br>やりやすい方法をお選びください。</p>
+
+  <div class="choice" role="group" aria-label="日程の決め方">
+    <button class="opt" id="optLine" aria-pressed="false">
+      <span class="t"><span class="n">壱</span>LINEでご都合を送る</span>
+      <span class="d">いつものLINEで、ご都合の良い日時をお知らせください</span>
+    </button>
+    <button class="opt" id="optPick" aria-pressed="false">
+      <span class="t"><span class="n">弐</span>空いている日時から選ぶ</span>
+      <span class="d">その場で日時が確定し、Meetのリンクをお送りします</span>
+    </button>
+  </div>
+
+  <!-- 壱：LINE -->
+  <section class="panel" id="panelLine" hidden>
+    <h2>LINEでお知らせください</h2>
+    <p style="margin:0">このままLINEグループで、ご都合の良い日時を<b>2〜3つ</b>お送りください。こちらで合わせます。</p>
+    <p class="note">ご参考までに、お会いしやすい時間帯は<br>水〜土 10:00〜21:00／日 10:00〜13:00・18:00〜21:00 です。</p>
+    <a class="btn line" id="lineBtn" href="https://lin.ee/TypjZLM" target="_blank" rel="noopener">グループが見当たらない時は、公式LINEへ</a>
+  </section>
+
+  <!-- 弐：日時を選ぶ -->
+  <section class="panel" id="panelPick" hidden>
+    <div class="sec">
+      <p class="step">STEP 1</p>
+      <h2>お会いするのは</h2>
+      <div class="chips" id="kind">
+        <button class="chip" data-kind="new" aria-pressed="true">はじめて</button>
+        <button class="chip" data-kind="client" aria-pressed="false">顧問先・2回目以降の方</button>
+      </div>
+      <h2 style="margin-top:16px">お時間の長さ</h2>
+      <div class="chips" id="durs"></div>
+    </div>
+
+    <div class="sec">
+      <p class="step">STEP 2</p>
+      <h2>日にちと時間</h2>
+      <div class="days" id="days"><span class="loading">空いている日時を読み込んでいます…</span></div>
+      <div class="times" id="times"></div>
+    </div>
+
+    <div class="sec" id="formSec" hidden>
+      <p class="step">STEP 3</p>
+      <h2>ご連絡先</h2>
+      <form id="form" novalidate>
+        <label for="name">お名前<span class="req">必須</span></label>
+        <input id="name" name="name" autocomplete="name" required>
+        <label for="email">メールアドレス<span class="req">必須</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        <label for="intro">ご紹介者<span class="opt-l">任意</span></label>
+        <input id="intro" name="intro" placeholder="例）山田さん">
+        <label for="note">ひとこと<span class="opt-l">任意</span></label>
+        <textarea id="note" name="note" placeholder="当日お話ししたいことなど"></textarea>
+        <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="summary" id="summary"></div>
+        <button class="btn" id="submit" type="submit">この日時で確定する</button>
+        <div class="err" id="err" role="alert"></div>
+        <p class="note">確定のご連絡とMeetのリンクを、ご入力のメールアドレスにお送りします。</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="panel done" id="panelDone" hidden>
+    <div class="mark">✓</div>
+    <h2>ご予約ありがとうございます</h2>
+    <p id="doneWhen" class="mincho" style="font-size:17px;color:var(--kachi);margin:4px 0 8px"></p>
+    <p style="margin:0;font-size:14px">確定のご連絡とMeetのリンクを、メールでお送りしました。<br>お会いできるのを楽しみにしております。</p>
+  </section>
+
+  <footer>
+    <div class="seal">飯村</div><br>
+    HiMaWaRi合同会社
+  </footer>
+</main>
+
+<script>
+/* ── 設定：別のサーバーに置く時だけ、Apps Script のURLを入れる ── */
+const API_URL = '';
+
+(function () {
+  const $ = id => document.getElementById(id);
+  const qs = new URLSearchParams(location.search);
+  const W = '日月火水木金土';
+  let info = { durations: { new: [30, 60], client: [30, 60, 90] }, defaultDuration: 60, lineUrl: 'https://lin.ee/TypjZLM' };
+  const st = { kind: qs.get('k') === 'client' ? 'client' : 'new', dur: 60, date: null, time: null, days: [] };
+
+  /* ── サーバーとのやりとり（Apps Script内／別サーバー／見本） ── */
+  const inGas = typeof google !== 'undefined' && google.script && google.script.run;
+  const MODE = inGas ? 'gas' : (API_URL ? 'api' : 'demo');
+  function call(fn, ...args) {
+    if (MODE === 'gas') return new Promise((ok, ng) => google.script.run.withSuccessHandler(ok).withFailureHandler(ng)[fn](...args));
+    if (MODE === 'api') {
+      if (fn === 'book') return fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(args[0]) }).then(r => r.json());
+      const u = new URL(API_URL); u.searchParams.set('api', fn === 'getInfo' ? 'info' : 'slots');
+      if (fn === 'getSlots') { u.searchParams.set('kind', args[0]); u.searchParams.set('dur', args[1]); }
+      return fetch(u).then(r => r.json());
+    }
+    return Promise.resolve(DEMO[fn](...args));
+  }
+
+  /* ── 見本用（本番では使われない）：受付ルールどおりの仮の空き ── */
+  const DEMO = {
+    getInfo: () => info,
+    getSlots: (kind, dur) => {
+      const H = { 0: [[10, 13], [18, 21]], 1: [], 2: [], 3: [[10, 21]], 4: [[10, 21]], 5: [[10, 21]], 6: [[10, 21]] };
+      const now = new Date(), earliest = new Date(now.getTime() + 12 * 3600e3), days = [];
+      for (let i = 0; i <= 30; i++) {
+        const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i), times = [];
+        (H[d.getDay()] || []).forEach(([a, b]) => {
+          for (let m = a * 60; m + dur <= b * 60; m += 30) {
+            const t = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 0, m);
+            if (t < earliest) continue;
+            if (((d.getDate() * 7 + m / 30) % 5) === 0) continue;            // 仮の「埋まっている」時間
+            if (d.getDay() === 4 && m >= 14 * 60 && m < 17 * 60) continue;
+            times.push(String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'));
+          }
+        });
+        if (times.length) days.push({ date: d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'), label: (d.getMonth() + 1) + '/' + d.getDate() + '（' + W[d.getDay()] + '）', times });
+      }
+      return { dur, days };
+    },
+    book: p => new Promise(r => setTimeout(() => {
+      const [y, mo, d] = p.start.slice(0, 10).split('-').map(Number), dt = new Date(y, mo - 1, d);
+      const [h, mi] = p.start.slice(11).split(':').map(Number), e = h * 60 + mi + Number(p.dur);
+      r({ ok: true, when: mo + '月' + d + '日（' + W[dt.getDay()] + '）' + p.start.slice(11) + '〜' + String(Math.floor(e / 60)).padStart(2, '0') + ':' + String(e % 60).padStart(2, '0') });
+    }, 700)),
+  };
+  if (MODE === 'demo') { const b = document.createElement('div'); b.className = 'demo'; b.textContent = '見本（仮の空き時間を表示しています）'; document.body.appendChild(b); }
+
+  /* ── 表示 ── */
+  const press = (wrap, el) => wrap.querySelectorAll('[aria-pressed]').forEach(x => x.setAttribute('aria-pressed', x === el ? 'true' : 'false'));
+  const DUR_NOTE = { 30: '短めのご相談', 60: '通常', 90: 'じっくり' };
+
+  function renderDurs() {
+    const list = info.durations[st.kind];
+    if (list.indexOf(st.dur) < 0) st.dur = list.indexOf(info.defaultDuration) >= 0 ? info.defaultDuration : list[0];
+    $('durs').innerHTML = list.map(d => `<button class="chip" data-dur="${d}" aria-pressed="${d === st.dur}">${d}分<small>${DUR_NOTE[d] || ''}</small></button>`).join('');
+  }
+
+  function loadSlots() {
+    st.date = st.time = null; $('formSec').hidden = true; $('times').innerHTML = '';
+    $('days').innerHTML = '<span class="loading">空いている日時を読み込んでいます…</span>';
+    return call('getSlots', st.kind, st.dur).then(r => {
+      st.days = r.days || [];
+      if (!st.days.length) { $('days').innerHTML = '<span class="empty">いまご案内できる日時がありません。お手数ですが、LINEでご都合をお知らせください。</span>'; return; }
+      $('days').innerHTML = st.days.map((d, i) => {
+        const [md, w] = d.label.split('（');
+        return `<button class="day${w.startsWith('日') ? ' sun' : ''}" data-i="${i}" aria-pressed="false"><b>${md}</b><span>${w.replace('）', '')}</span></button>`;
+      }).join('');
+      pickDay(0);
+    }).catch(() => { $('days').innerHTML = '<span class="empty">読み込めませんでした。時間を置いて開き直すか、LINEでお知らせください。</span>'; });
+  }
+
+  function pickDay(i) {
+    const d = st.days[i]; if (!d) return;
+    st.date = d; st.time = null; $('formSec').hidden = true;
+    press($('days'), $('days').querySelector(`[data-i="${i}"]`));
+    $('times').innerHTML = d.times.map(t => `<button class="time" data-t="${t}" aria-pressed="false">${t}</button>`).join('');
+  }
+
+  function endOf(t) { const [h, m] = t.split(':').map(Number), e = h * 60 + m + st.dur; return String(Math.floor(e / 60)).padStart(2, '0') + ':' + String(e % 60).padStart(2, '0'); }
+
+  function pickTime(btn) {
+    st.time = btn.dataset.t; press($('times'), btn);
+    $('summary').innerHTML = `<b>${st.date.label} ${st.time}〜${endOf(st.time)}</b>（${st.dur}分・オンライン）`;
+    $('formSec').hidden = false;
+    setTimeout(() => $('formSec').scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+  }
+
+  /* ── 操作 ── */
+  $('optLine').onclick = () => { press($('optLine').parentNode, $('optLine')); $('panelLine').hidden = false; $('panelPick').hidden = true; };
+  let loaded = false;
+  $('optPick').onclick = () => {
+    press($('optPick').parentNode, $('optPick')); $('panelPick').hidden = false; $('panelLine').hidden = true;
+    if (!loaded) { loaded = true; renderDurs(); loadSlots(); }
+  };
+  $('kind').onclick = e => { const b = e.target.closest('[data-kind]'); if (!b || b.dataset.kind === st.kind) return; st.kind = b.dataset.kind; press($('kind'), b); renderDurs(); loadSlots(); };
+  $('durs').onclick = e => { const b = e.target.closest('[data-dur]'); if (!b || +b.dataset.dur === st.dur) return; st.dur = +b.dataset.dur; press($('durs'), b); loadSlots(); };
+  $('days').onclick = e => { const b = e.target.closest('[data-i]'); if (b) pickDay(+b.dataset.i); };
+  $('times').onclick = e => { const b = e.target.closest('[data-t]'); if (b) pickTime(b); };
+
+  $('form').onsubmit = e => {
+    e.preventDefault(); $('err').textContent = '';
+    const f = new FormData($('form')), p = Object.fromEntries(f.entries());
+    if (!p.name.trim()) return ($('err').textContent = 'お名前をご入力ください');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email.trim())) return ($('err').textContent = 'メールアドレスをご確認ください');
+    Object.assign(p, { kind: st.kind, dur: st.dur, start: st.date.date + 'T' + st.time });
+    $('submit').disabled = true; $('submit').textContent = '確定しています…';
+    call('book', p).then(r => {
+      if (!r.ok) {
+        $('err').textContent = r.error || '確定できませんでした';
+        $('submit').disabled = false; $('submit').textContent = 'この日時で確定する';
+        if (r.taken) loadSlots();
+        return;
+      }
+      ['panelPick', 'panelLine'].forEach(id => $(id).hidden = true);
+      document.querySelector('.choice').hidden = true; document.querySelector('.lead').hidden = true;
+      $('doneWhen').textContent = r.when; $('panelDone').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' });
+    }).catch(() => { $('err').textContent = '通信がうまくいきませんでした。もう一度お試しください'; $('submit').disabled = false; $('submit').textContent = 'この日時で確定する'; });
+  };
+
+  /* ── はじめに ── */
+  if (qs.get('from')) $('intro').value = qs.get('from');
+  if (st.kind === 'client') press($('kind'), $('kind').querySelector('[data-kind="client"]'));
+  call('getInfo').then(i => { info = i || info; if (i && i.lineUrl) $('lineBtn').href = i.lineUrl; }).catch(() => {});
+})();
+</script>
+</body>
+</html>
