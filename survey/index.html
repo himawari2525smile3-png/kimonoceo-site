@@ -42,6 +42,9 @@
   .gdemo{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:1px solid #dadce0;background:#fff;border-radius:999px;padding:10px;font:500 15px "Noto Sans JP";color:#3c4043;cursor:pointer}
   .review{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px}
   .small{font-size:12px;color:var(--mute);margin-top:8px}
+  .story{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px}
+  .story img{display:block;width:62%;max-width:240px;margin:12px auto 0;border-radius:10px;box-shadow:0 4px 16px rgba(31,43,77,.25)}
+  .btn.line{background:#fff;color:var(--kachi);border:1px solid var(--kachi)}
   footer{text-align:center;margin-top:30px;color:var(--mute);font-size:11.5px;letter-spacing:.06em}
   .demo{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);white-space:nowrap;background:rgba(31,43,77,.9);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px}
 </style>
@@ -124,6 +127,13 @@
       <a class="btn gold" id="reviewBtn" href="https://g.page/r/CZ1A6Bk47D2LEAE/review" target="_blank" rel="noopener">Googleの口コミを書く</a>
       <p class="small">任意です。どんなご感想でも、ご自身の言葉で書いていただけると嬉しいです。</p>
     </div>
+    <div class="story" id="story">
+      <p style="margin:0">Instagramのストーリーズで<br>シェアしていただける方へ</p>
+      <img id="storyImg" alt="ストーリーズ用の画像">
+      <button type="button" class="btn line" id="shareBtn">画像をストーリーズでシェアする</button>
+      <a class="btn line" id="saveBtn" download="iimura_story.png" hidden>画像を保存する</a>
+      <p class="small" id="shareNote">ボタンを押して、共有先にInstagramを選んでください。<br>@kimonoceo を付けていただけると、こちらからもお礼をお伝えできます。<br>任意です。シェアしなくても何も変わりません。</p>
+    </div>
   </section>
 
   <footer>HiMaWaRi合同会社</footer>
@@ -177,6 +187,49 @@ const API_URL = '';   // ← Apps Script の公開URL（…/exec）を入れる�
     return new Promise(r => setTimeout(() => r({ ok: true, reviewUrl: $('reviewBtn').href }), 600));
   }
 
+  // ── ストーリーズ用の画像（1080×1920）。回答者が選んだ「良かったこと」を入れる。任意・特典なし ──
+  let storyBlob = null;
+  function makeStory(good) {
+    const W = 1080, H = 1920, c = document.createElement('canvas'); c.width = W; c.height = H;
+    const x = c.getContext('2d'), MIN = "'Shippori Mincho','Hiragino Mincho ProN','Yu Mincho',serif";
+    const draw = () => {
+      const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#2a3a66'); g.addColorStop(.55, '#1F2B4D'); g.addColorStop(1, '#18223f');
+      x.fillStyle = g; x.fillRect(0, 0, W, H);
+      x.strokeStyle = 'rgba(217,180,90,.75)'; x.lineWidth = 4; x.strokeRect(54, 54, W - 108, H - 108);
+      x.strokeStyle = 'rgba(217,180,90,.4)'; x.lineWidth = 2; x.strokeRect(70, 70, W - 140, H - 140);
+      const gold = x.createLinearGradient(200, 0, 880, 0); gold.addColorStop(0, '#c8962f'); gold.addColorStop(.35, '#f6e6a6'); gold.addColorStop(.6, '#d6a941'); gold.addColorStop(1, '#c08d2c');
+      x.textAlign = 'center'; x.textBaseline = 'middle';
+      const fit = (t, size, max, weight) => { let f = size; do { x.font = `${weight} ${f}px ${MIN}`; f -= 2; } while (x.measureText(t).width > max && f > 20); };
+      x.fillStyle = '#E2C36E'; x.font = `500 34px ${MIN}`; x.fillText('今日、お話ししたのは', W / 2, 360);
+      x.fillStyle = '#F1F0EC'; fit('AI時代の経営者専属顧問', 50, 860, 600); x.fillText('AI時代の経営者専属顧問', W / 2, 470);
+      x.fillStyle = gold; fit('飯村 惇 さん', 120, 860, 700); x.fillText('飯村 惇 さん', W / 2, 620);
+      x.fillStyle = '#C9962B'; x.font = `500 34px ${MIN}`; x.fillText('━━━　◆　━━━', W / 2, 760);
+      const items = (good || []).slice(0, 3);
+      if (items.length) {
+        x.fillStyle = '#E2C36E'; x.font = `500 38px ${MIN}`; x.fillText('良かったこと', W / 2, 880);
+        items.forEach((t, i) => {
+          const y = 1000 + i * 140; fit(t, 52, 760, 600); const w = Math.min(860, x.measureText(t).width + 120);
+          x.strokeStyle = '#D9B45A'; x.lineWidth = 3; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - w / 2, y - 52, w, 104, 52) : x.rect(W / 2 - w / 2, y - 52, w, 104); x.stroke();
+          x.fillStyle = '#F3E2A4'; x.fillText(t, W / 2, y + 2);
+        });
+      }
+      x.fillStyle = gold; x.font = `700 72px ${MIN}`; x.fillText('@kimonoceo', W / 2, 1600);
+      x.fillStyle = '#cfd3df'; x.font = `500 36px ${MIN}`; x.fillText('kimonoceo.com', W / 2, 1690);
+      c.toBlob(b => { storyBlob = b; const u = URL.createObjectURL(b); $('storyImg').src = u; $('saveBtn').href = u; }, 'image/png');
+    };
+    (document.fonts && document.fonts.load ? Promise.all([document.fonts.load(`700 40px 'Shippori Mincho'`), document.fonts.load(`500 40px 'Shippori Mincho'`)]).catch(() => {}) : Promise.resolve()).then(draw);
+  }
+  $('shareBtn').onclick = () => {
+    if (!storyBlob) return;
+    const f = new File([storyBlob], 'iimura_story.png', { type: 'image/png' });
+    if (navigator.canShare && navigator.canShare({ files: [f] })) {
+      navigator.share({ files: [f] }).catch(() => {});
+    } else {
+      $('shareBtn').hidden = true; $('saveBtn').hidden = false;
+      $('shareNote').innerHTML = '画像を保存して（スマホは画像を長押し）、Instagramのストーリーズで選んでください。<br>@kimonoceo を付けていただけると、こちらからもお礼をお伝えできます。<br>任意です。シェアしなくても何も変わりません。';
+    }
+  };
+
   $('form').onsubmit = e => {
     e.preventDefault(); $('err').textContent = '';
     const p = Object.fromEntries(new FormData($('form')).entries());
@@ -190,6 +243,7 @@ const API_URL = '';   // ← Apps Script の公開URL（…/exec）を入れる�
       if (!r.ok) { $('err').textContent = r.error || '送信できませんでした'; $('submit').disabled = false; $('submit').textContent = '送信する'; return; }
       if (r.reviewUrl) $('reviewBtn').href = r.reviewUrl;
       $('form').hidden = true; $('lead').hidden = true; $('done').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' });
+      makeStory(p.good);
     }).catch(() => { $('err').textContent = '通信がうまくいきませんでした。もう一度お試しください'; $('submit').disabled = false; $('submit').textContent = '送信する'; });
   };
 })();
