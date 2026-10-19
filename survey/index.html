@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>面談アンケート｜飯村 惇</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--kachi:#1F2B4D;--washi:#F1F0EC;--paper:#FBFAF7;--gold:#C9962B;--gold-soft:#E9D9B0;--ink:#2A2A2A;--mute:#6E6A63;--line:#DCD8CE}
+  *{box-sizing:border-box}[hidden]{display:none!important}html,body{margin:0}
+  body{background:var(--washi);color:var(--ink);font-family:'Noto Sans JP',system-ui,sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:520px;margin:0 auto;padding:0 16px 56px}
+  header{background:var(--kachi);color:#fff;text-align:center;padding:30px 16px 26px;position:relative}
+  header::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .eyebrow{font-size:11px;letter-spacing:.32em;color:var(--gold-soft)}
+  header h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:24px;letter-spacing:.12em;margin:8px 0 2px}
+  header p{margin:0;font-size:12px;color:#C9CEDB;letter-spacing:.08em}
+  .lead{margin:24px 0 18px;text-align:center;font-family:'Shippori Mincho',serif;font-size:16px;line-height:2;color:var(--kachi)}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:14px}
+  .q{font-family:'Shippori Mincho',serif;font-weight:700;color:var(--kachi);font-size:16px;margin:0 0 4px}
+  .q .n{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--kachi);color:var(--gold-soft);font:12px 'Noto Sans JP';margin-right:8px;vertical-align:2px}
+  .hint{font-size:12px;color:var(--mute);margin:0 0 10px}
+  .req{font-size:10px;background:var(--kachi);color:#fff;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px;font-family:'Noto Sans JP'}
+  .opt{font-size:11px;color:var(--mute);margin-left:6px;font-weight:400;font-family:'Noto Sans JP'}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;color:var(--ink);cursor:pointer;min-height:40px;text-align:left}
+  .chip[aria-pressed="true"]{background:var(--kachi);border-color:var(--kachi);color:#fff}
+  label.s{display:block;font-size:13px;font-weight:500;color:var(--kachi);margin:12px 0 6px}
+  input,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+  input:focus,textarea:focus{outline:2px solid var(--gold-soft);border-color:var(--gold)}
+  textarea{min-height:76px;resize:vertical}.hp{position:absolute;left:-9999px}
+  .btn{display:block;width:100%;margin-top:20px;border:0;border-radius:12px;padding:15px;background:var(--kachi);color:#fff;font-family:'Shippori Mincho',serif;font-weight:700;font-size:16px;letter-spacing:.08em;cursor:pointer;text-align:center;text-decoration:none}
+  .btn:disabled{opacity:.45}.btn.gold{background:linear-gradient(100deg,#c8962f,#f1dc93 45%,#d2a43c);color:var(--kachi)}
+  .err{color:#A63A2B;font-size:13px;margin-top:10px;min-height:1em}
+  .done{text-align:center}.done .mark{width:56px;height:56px;margin:4px auto 10px;border-radius:50%;background:var(--kachi);display:grid;place-items:center;color:var(--gold-soft);font-size:26px}
+  .done h2{font-family:'Shippori Mincho',serif;color:var(--kachi);font-size:19px;margin:0 0 8px}
+  .stars{display:flex;align-items:center;gap:4px}.stars button{border:0;background:none;font-size:34px;line-height:1;color:#D8D3C6;cursor:pointer;padding:2px}.stars button.on{color:var(--gold)}.stars .sv{margin-left:8px;font-size:13px;color:var(--mute)}
+  .or{display:flex;align-items:center;gap:10px;color:var(--mute);font-size:12px;margin:14px 0 4px}.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+  .gdemo{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:1px solid #dadce0;background:#fff;border-radius:999px;padding:10px;font:500 15px "Noto Sans JP";color:#3c4043;cursor:pointer}
+  .review{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px}
+  .small{font-size:12px;color:var(--mute);margin-top:8px}
+  .story{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px}
+  .story img{display:block;width:62%;max-width:240px;margin:12px auto 0;border-radius:10px;box-shadow:0 4px 16px rgba(31,43,77,.25)}
+  .btn.line{background:#fff;color:var(--kachi);border:1px solid var(--kachi)}
+  footer{text-align:center;margin-top:30px;color:var(--mute);font-size:11.5px;letter-spacing:.06em}
+  .demo{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);white-space:nowrap;background:rgba(31,43,77,.9);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">THANK YOU</div><h1>面談アンケート</h1><p>AI時代の経営者専属顧問　飯村 惇</p></header>
+<main class="wrap">
+  <p class="lead" id="lead">先日はお時間をいただき、<br>ありがとうございました。<br>2分ほどで終わります。</p>
+
+  <form id="form" novalidate>
+    <div class="card">
+      <div id="gWrap" hidden>
+        <div id="gBtn"></div>
+        <p class="hint" id="gState" style="margin:8px 0 0">Googleでログインすると、お名前とメールアドレスが自動で入ります（ご連絡にだけ使います）</p>
+        <div class="or">または、お名前を入力</div>
+      </div>
+      <label class="s" for="name" style="margin-top:0">お名前<span class="req">必須</span></label>
+      <input id="name" name="name" autocomplete="name">
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">1</span>総合評価<span class="req">必須</span></p>
+      <p class="hint">星を押してお選びください</p>
+      <div class="stars" id="stars" role="radiogroup" aria-label="総合評価">
+        <button type="button" role="radio" aria-checked="false" data-v="1" aria-label="1">★</button><button type="button" role="radio" aria-checked="false" data-v="2" aria-label="2">★</button><button type="button" role="radio" aria-checked="false" data-v="3" aria-label="3">★</button><button type="button" role="radio" aria-checked="false" data-v="4" aria-label="4">★</button><button type="button" role="radio" aria-checked="false" data-v="5" aria-label="5">★</button>
+        <span class="sv" id="starText"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">2</span>面談で良かったこと<span class="req">必須</span></p>
+      <p class="hint">当てはまるものをすべてお選びください</p>
+      <div class="chips" id="good">
+        <button type="button" class="chip" aria-pressed="false">頭の中が整理できた</button>
+        <button type="button" class="chip" aria-pressed="false">いま何をするべきかが明確になった</button>
+        <button type="button" class="chip" aria-pressed="false">新しい視点・気づきがあった</button>
+        <button type="button" class="chip" aria-pressed="false">具体的なアドバイスがもらえた</button>
+        <button type="button" class="chip" aria-pressed="false">話しやすく、安心できた</button>
+        <button type="button" class="chip" aria-pressed="false">人とのご縁につながりそう</button>
+      </div>
+      <label class="s" for="goodNote">ひとこと<span class="opt">任意</span></label>
+      <textarea id="goodNote" name="goodNote"></textarea>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">3</span>いちばん役に立った話<span class="opt">任意</span></p>
+      <textarea id="useful" name="useful" placeholder="例）3年後から逆算して、今月やることを決めた話"></textarea>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">4</span>紹介してほしい方<span class="opt">任意</span></p>
+      <p class="hint">飯村のつながりの中から、合いそうな方をお探しします</p>
+      <label class="s" for="wantIndustry">業種</label><input id="wantIndustry" name="wantIndustry" placeholder="例）飲食店の経営者、税理士">
+      <label class="s" for="wantArea">地域</label><input id="wantArea" name="wantArea" placeholder="例）東京、オンラインでも可">
+      <label class="s" for="wantWho">どんな方と出会いたいか</label><textarea id="wantWho" name="wantWho" placeholder="例）一緒にイベントを企画できる方"></textarea>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">5</span>飯村を、どなたに紹介したいですか<span class="opt">任意</span></p>
+      <p class="hint">HiMaWaRi合同会社 代表の飯村を、ご紹介いただける方がいれば教えてください（お名前・関係・どんな方か）</p>
+      <textarea id="introduce" name="introduce" placeholder="例）経営者仲間の〇〇さん。社員が増えて、任せ方に悩んでいる"></textarea>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">6</span>これからやってみたいこと<span class="opt">任意</span></p>
+      <textarea id="next" name="next"></textarea>
+    </div>
+
+    <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+    <button class="btn" id="submit" type="submit">送信する</button>
+    <div class="err" id="err" role="alert"></div>
+  </form>
+
+  <section class="card done" id="done" hidden>
+    <div class="mark">✓</div>
+    <h2>ありがとうございました</h2>
+    <p style="margin:0">いただいた内容をもとに、<br>合いそうな方がいれば<br>ご紹介させてください。</p>
+    <div class="review">
+      <p style="margin:0">もしよろしければ、Googleの口コミで<br>ご感想をお聞かせください。</p>
+      <a class="btn gold" id="reviewBtn" href="https://g.page/r/CZ1A6Bk47D2LEAE/review" target="_blank" rel="noopener">Googleの口コミを書く</a>
+      <p class="small">任意です。どんなご感想でも、ご自身の言葉で書いていただけると嬉しいです。</p>
+    </div>
+    <div class="story" id="story">
+      <p style="margin:0">Instagramのストーリーズで<br>シェアしていただける方へ</p>
+      <img id="storyImg" alt="ストーリーズ用の画像">
+      <button type="button" class="btn line" id="shareBtn">画像をストーリーズでシェアする</button>
+      <a class="btn line" id="saveBtn" download="iimura_story.png" hidden>画像を保存する</a>
+      <p class="small" id="shareNote">ボタンを押して、共有先にInstagramを選んでください。<br>@kimonoceo を付けていただけると、こちらからもお礼をお伝えできます。<br>任意です。シェアしなくても何も変わりません。</p>
+    </div>
+  </section>
+
+  <footer>HiMaWaRi合同会社</footer>
+</main>
+
+<script>
+const API_URL = 'https://script.google.com/macros/s/AKfycbyZwob7c8WGp7h9tDQyHgIw3p2lJOvoK3Yf0SuG_p7Lo5X83QQFPmsUjrilnMFN8xlL/exec';   // ← Apps Script の公開URL（…/exec）を入れると本番で動く
+(function () {
+  const $ = id => document.getElementById(id);
+  const inGas = typeof google !== 'undefined' && google.script && google.script.run;
+  const MODE = inGas ? 'gas' : (API_URL ? 'api' : (location.protocol === 'file:' || /^(localhost|127\.)/.test(location.hostname) ? 'demo' : 'off'));
+  if (MODE === 'off') { document.querySelector('main').innerHTML = '<p style="padding:48px 8px;text-align:center;line-height:2">このページは準備中です。<br>恐れ入りますが、少し時間をおいてお開きください。</p>'; return; }
+  if (MODE === 'demo') { const b = document.createElement('div'); b.className = 'demo'; b.textContent = '見本（送信しても記録されません）'; document.body.appendChild(b); }
+
+  // 名前をリンクから受け取る（?p=survey&n=山田）
+  const setName = q => { if (q && q.n) { $('name').value = q.n; const L = $('lead'); L.textContent = ''; [q.n + 'さん、', '先日はお時間をいただき、', 'ありがとうございました。', '2分ほどで終わります。'].forEach((t, i) => { if (i) L.appendChild(document.createElement('br')); L.appendChild(document.createTextNode(t)); }); } };
+  if (MODE === 'gas' && google.script.url) google.script.url.getLocation(l => setName(l.parameter));
+  else setName(Object.fromEntries(new URLSearchParams(location.search)));
+
+  // ── Googleでログイン（自社ドメインに置いた時だけ動く。Apps Scriptの画面の中では出さない） ──
+  let idToken = '';
+  const decode = t => { try { return JSON.parse(decodeURIComponent(escape(atob(t.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))))); } catch (e) { return {}; } };
+  const signedIn = (nm, em) => { if (nm) $('name').value = nm; $('gState').textContent = (em || '') + ' でログインしています'; };
+  function setupGoogle(clientId) {
+    if (MODE === 'demo') {
+      $('gWrap').hidden = false;
+      $('gBtn').innerHTML = '<button type="button" class="gdemo"><b style="color:#4285F4">G</b>Googleでログイン（見本）</button>';
+      $('gBtn').firstChild.onclick = () => signedIn($('name').value || '山田 太郎', 'yamada@example.com');
+      return;
+    }
+    if (MODE !== 'api' || !clientId) return;
+    const sc = document.createElement('script'); sc.src = 'https://accounts.google.com/gsi/client'; sc.async = true;
+    sc.onload = () => {
+      google.accounts.id.initialize({ client_id: clientId, callback: r => { idToken = r.credential; const j = decode(idToken); signedIn(j.name, j.email); } });
+      google.accounts.id.renderButton($('gBtn'), { theme: 'outline', size: 'large', shape: 'pill', text: 'signin_with', width: 300, locale: 'ja' });
+      $('gWrap').hidden = false;
+    };
+    document.head.appendChild(sc);
+  }
+  if (MODE === 'api') fetch(API_URL + (API_URL.includes('?') ? '&' : '?') + 'api=info').then(r => r.json()).then(i => setupGoogle(i.clientId)).catch(() => {});
+  else setupGoogle('');
+
+  $('good').onclick = e => { const b = e.target.closest('.chip'); if (b) b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); };
+  let stars = 0; const LBL = ['', 'いまひとつ', 'ふつう', '良かった', 'とても良かった', '最高だった'];
+  const paint = n => $('stars').querySelectorAll('button').forEach(b => { const on = +b.dataset.v <= n; b.classList.toggle('on', on); b.setAttribute('aria-checked', +b.dataset.v === n ? 'true' : 'false'); });
+  $('stars').onclick = e => { const b = e.target.closest('button'); if (!b) return; stars = +b.dataset.v; paint(stars); $('starText').textContent = LBL[stars]; };
+
+  function send(p) {
+    if (MODE === 'gas') return new Promise((ok, ng) => google.script.run.withSuccessHandler(ok).withFailureHandler(ng).submitSurvey(p));
+    if (MODE === 'api') return fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(Object.assign({ type: 'survey' }, p)) }).then(r => r.json());
+    return new Promise(r => setTimeout(() => r({ ok: true, reviewUrl: $('reviewBtn').href }), 600));
+  }
+
+  // ── ストーリーズ用の画像（1080×1920）。回答者が選んだ「良かったこと」を入れる。任意・特典なし ──
+  let storyBlob = null;
+  function makeStory(good) {
+    const W = 1080, H = 1920, c = document.createElement('canvas'); c.width = W; c.height = H;
+    const x = c.getContext('2d'), MIN = "'Shippori Mincho','Hiragino Mincho ProN','Yu Mincho',serif";
+    const draw = () => {
+      const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#2a3a66'); g.addColorStop(.55, '#1F2B4D'); g.addColorStop(1, '#18223f');
+      x.fillStyle = g; x.fillRect(0, 0, W, H);
+      x.strokeStyle = 'rgba(217,180,90,.75)'; x.lineWidth = 4; x.strokeRect(54, 54, W - 108, H - 108);
+      x.strokeStyle = 'rgba(217,180,90,.4)'; x.lineWidth = 2; x.strokeRect(70, 70, W - 140, H - 140);
+      const gold = x.createLinearGradient(200, 0, 880, 0); gold.addColorStop(0, '#c8962f'); gold.addColorStop(.35, '#f6e6a6'); gold.addColorStop(.6, '#d6a941'); gold.addColorStop(1, '#c08d2c');
+      x.textAlign = 'center'; x.textBaseline = 'middle';
+      const fit = (t, size, max, weight) => { let f = size; do { x.font = `${weight} ${f}px ${MIN}`; f -= 2; } while (x.measureText(t).width > max && f > 20); };
+      x.fillStyle = '#E2C36E'; x.font = `500 34px ${MIN}`; x.fillText('今日、お話ししたのは', W / 2, 360);
+      x.fillStyle = '#F1F0EC'; fit('AI時代の経営者専属顧問', 50, 860, 600); x.fillText('AI時代の経営者専属顧問', W / 2, 470);
+      x.fillStyle = gold; fit('飯村 惇 さん', 120, 860, 700); x.fillText('飯村 惇 さん', W / 2, 620);
+      x.fillStyle = '#C9962B'; x.font = `500 34px ${MIN}`; x.fillText('━━━　◆　━━━', W / 2, 760);
+      const items = (good || []).slice(0, 3);
+      if (items.length) {
+        x.fillStyle = '#E2C36E'; x.font = `500 38px ${MIN}`; x.fillText('良かったこと', W / 2, 880);
+        items.forEach((t, i) => {
+          const y = 1000 + i * 140; fit(t, 52, 760, 600); const w = Math.min(860, x.measureText(t).width + 120);
+          x.strokeStyle = '#D9B45A'; x.lineWidth = 3; x.beginPath(); x.roundRect ? x.roundRect(W / 2 - w / 2, y - 52, w, 104, 52) : x.rect(W / 2 - w / 2, y - 52, w, 104); x.stroke();
+          x.fillStyle = '#F3E2A4'; x.fillText(t, W / 2, y + 2);
+        });
+      }
+      x.fillStyle = gold; x.font = `700 72px ${MIN}`; x.fillText('@kimonoceo', W / 2, 1600);
+      x.fillStyle = '#cfd3df'; x.font = `500 36px ${MIN}`; x.fillText('kimonoceo.com', W / 2, 1690);
+      c.toBlob(b => { storyBlob = b; const u = URL.createObjectURL(b); $('storyImg').src = u; $('saveBtn').href = u; }, 'image/png');
+    };
+    (document.fonts && document.fonts.load ? Promise.all([document.fonts.load(`700 40px 'Shippori Mincho'`), document.fonts.load(`500 40px 'Shippori Mincho'`)]).catch(() => {}) : Promise.resolve()).then(draw);
+  }
+  $('shareBtn').onclick = () => {
+    if (!storyBlob) return;
+    const f = new File([storyBlob], 'iimura_story.png', { type: 'image/png' });
+    if (navigator.canShare && navigator.canShare({ files: [f] })) {
+      navigator.share({ files: [f] }).catch(() => {});
+    } else {
+      $('shareBtn').hidden = true; $('saveBtn').hidden = false;
+      $('shareNote').innerHTML = '画像を保存して（スマホは画像を長押し）、Instagramのストーリーズで選んでください。<br>@kimonoceo を付けていただけると、こちらからもお礼をお伝えできます。<br>任意です。シェアしなくても何も変わりません。';
+    }
+  };
+
+  $('form').onsubmit = e => {
+    e.preventDefault(); $('err').textContent = '';
+    const p = Object.fromEntries(new FormData($('form')).entries());
+    p.good = [...$('good').querySelectorAll('[aria-pressed="true"]')].map(b => b.textContent);
+    p.stars = stars; if (idToken) p.idToken = idToken;
+    if (!p.name.trim()) return ($('err').textContent = 'お名前をご入力ください');
+    if (!stars) return ($('err').textContent = '総合評価を星でお選びください');
+    if (!p.good.length) return ($('err').textContent = '「良かったこと」を1つ以上お選びください');
+    $('submit').disabled = true; $('submit').textContent = '送信しています…';
+    send(p).then(r => {
+      if (!r.ok) { $('err').textContent = r.error || '送信できませんでした'; $('submit').disabled = false; $('submit').textContent = '送信する'; return; }
+      if (r.reviewUrl) $('reviewBtn').href = r.reviewUrl;
+      $('form').hidden = true; $('lead').hidden = true; $('done').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' });
+      makeStory(p.good);
+    }).catch(() => { $('err').textContent = '通信がうまくいきませんでした。もう一度お試しください'; $('submit').disabled = false; $('submit').textContent = '送信する'; });
+  };
+})();
+</script>
+</body>
+</html>
