@@ -183,7 +183,7 @@ const API_URL = '';
   const $ = id => document.getElementById(id);
   const qs = new URLSearchParams(location.search);
   const W = '日月火水木金土';
-  let info = { durations: { new: [30, 60], client: [30, 60, 90] }, defaultDuration: 60, lineUrl: 'https://lin.ee/TypjZLM' };
+  let info = { durations: { new: [30, 60, 90], client: [30, 60, 90] }, defaultDuration: 60, lineUrl: 'https://lin.ee/TypjZLM' };
   const st = { kind: qs.get('k') === 'client' ? 'client' : 'new', dur: 60, date: null, time: null, days: [] };
 
   /* ── サーバーとのやりとり（Apps Script内／別サーバー／見本） ── */

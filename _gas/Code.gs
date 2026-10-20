@@ -24,7 +24,7 @@ const CONFIG = {
     6: [[10, 21]],
   },
   // 所要時間（分）：new=はじめての方、client=2回目以降の方
-  DURATIONS: { new: [30, 60], client: [30, 60, 90] },
+  DURATIONS: { new: [30, 60, 90], client: [30, 60, 90] },
   DEFAULT_DURATION: 60,
   LINE_URL: 'https://lin.ee/TypjZLM',
   SHEET_ID: '',            // 空なら初回に「日程調整_予約一覧」を自動で作る（予約とアンケートの2枚）
