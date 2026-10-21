@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://kimonoceo.com/articles/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -88,6 +88,36 @@
   <url>
     <loc>https://kimonoceo.com/articles/shacho-ga-makaserarenai-riyu/</loc>
     <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kimonoceo.com/articles/shacho-no-migiude-towa/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kimonoceo.com/articles/keiei-komon-souba-erabikata/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kimonoceo.com/articles/kengen-ijou-dekinai-riyu/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kimonoceo.com/articles/keieisha-kabeuchi-aite/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kimonoceo.com/nakameguro/</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
