@@ -5,3 +5,6 @@
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+/ogp-v2.jpg
+  Access-Control-Allow-Origin: *
