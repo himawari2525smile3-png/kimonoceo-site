@@ -8,3 +8,6 @@
 
 /ogp-v2.jpg
   Access-Control-Allow-Origin: *
+
+/assets/img/himawari-*
+  Access-Control-Allow-Origin: *
