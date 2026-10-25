@@ -16,6 +16,7 @@ function loadFont(name) {
 }
 const SERIF = loadFont("serif.otf");
 const SANS = loadFont("sans.otf");
+const GOLD_LEAF = "data:image/jpeg;base64," + loadFont("goldleaf.jpg").toString("base64");
 let EXTRA = null; // 第2水準の漢字など、まれな文字のための予備（必要な時だけ読む）
 
 const W = 1080, H = 1350;
@@ -39,10 +40,11 @@ function frame(d, inner) {
     display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", height: "100%",
     border: `2px solid ${GOLD}`, padding: "50px 58px 44px 58px",
   }, [top, h("div", { display: "flex", flexDirection: "column", flexGrow: 1, justifyContent: "center", width: "100%" }, inner), foot]);
-  return h("div", {
-    width: W, height: H, display: "flex", backgroundColor: NAVY,
-    border: `24px solid ${GOLD}`, padding: 14,
-  }, [content]);
+  // 外枠は金箔の写真（本人支給の素材）を敷き、その上に紺の面を24px内側に重ねる
+  return h("div", { width: W, height: H, display: "flex", position: "relative" }, [
+    { type: "img", props: { src: GOLD_LEAF, width: W, height: H, style: { position: "absolute", left: 0, top: 0, width: W, height: H } } },
+    h("div", { position: "absolute", left: 28, top: 28, width: W - 56, height: H - 56, display: "flex", backgroundColor: NAVY, padding: 14 }, [content]),
+  ]);
 }
 
 const title = (t, size) => h("div", { display: "flex", fontFamily: "Serif", fontSize: size, color: INK, lineHeight: 1.35, letterSpacing: 1 }, t);
