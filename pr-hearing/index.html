@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ご紹介資料のための質問｜飯村 惇</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--kachi:#1F2B4D;--washi:#F1F0EC;--paper:#FBFAF7;--gold:#C9962B;--gold-soft:#E9D9B0;--ink:#2A2A2A;--mute:#6E6A63;--line:#DCD8CE}
+  *{box-sizing:border-box}[hidden]{display:none!important}html,body{margin:0}
+  body{background:var(--washi);color:var(--ink);font-family:'Noto Sans JP',system-ui,sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:520px;margin:0 auto;padding:0 16px 56px}
+  header{background:var(--kachi);color:#fff;text-align:center;padding:30px 16px 26px;position:relative}
+  header::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .eyebrow{font-size:11px;letter-spacing:.32em;color:var(--gold-soft)}
+  header h1{font-family:'Shippori Mincho',serif;font-weight:700;font-size:24px;letter-spacing:.12em;margin:8px 0 2px}
+  header p{margin:0;font-size:12px;color:#C9CEDB;letter-spacing:.08em}
+  .lead{margin:24px 0 18px;text-align:center;font-family:'Shippori Mincho',serif;font-size:16px;line-height:2;color:var(--kachi)}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:14px}
+  .q{font-family:'Shippori Mincho',serif;font-weight:700;color:var(--kachi);font-size:16px;margin:0 0 4px}
+  .q .n{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--kachi);color:var(--gold-soft);font:12px 'Noto Sans JP';margin-right:8px;vertical-align:2px}
+  .hint{font-size:12px;color:var(--mute);margin:0 0 10px}
+  .req{font-size:10px;background:var(--kachi);color:#fff;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px;font-family:'Noto Sans JP'}
+  .opt{font-size:11px;color:var(--mute);margin-left:6px;font-weight:400;font-family:'Noto Sans JP'}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;color:var(--ink);cursor:pointer;min-height:40px;text-align:left}
+  .chip[aria-pressed="true"]{background:var(--kachi);border-color:var(--kachi);color:#fff}
+  label.s{display:block;font-size:13px;font-weight:500;color:var(--kachi);margin:12px 0 6px}
+  input,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+  input:focus,textarea:focus{outline:2px solid var(--gold-soft);border-color:var(--gold)}
+  textarea{min-height:76px;resize:vertical}.hp{position:absolute;left:-9999px}
+  .btn{display:block;width:100%;margin-top:20px;border:0;border-radius:12px;padding:15px;background:var(--kachi);color:#fff;font-family:'Shippori Mincho',serif;font-weight:700;font-size:16px;letter-spacing:.08em;cursor:pointer;text-align:center;text-decoration:none}
+  .btn:disabled{opacity:.45}.btn.gold{background:linear-gradient(100deg,#c8962f,#f1dc93 45%,#d2a43c);color:var(--kachi)}
+  .err{color:#A63A2B;font-size:13px;margin-top:10px;min-height:1em}
+  .done{text-align:center}.done .mark{width:56px;height:56px;margin:4px auto 10px;border-radius:50%;background:var(--kachi);display:grid;place-items:center;color:var(--gold-soft);font-size:26px}
+  .done h2{font-family:'Shippori Mincho',serif;color:var(--kachi);font-size:19px;margin:0 0 8px}
+  .stars{display:flex;align-items:center;gap:4px}.stars button{border:0;background:none;font-size:34px;line-height:1;color:#D8D3C6;cursor:pointer;padding:2px}.stars button.on{color:var(--gold)}.stars .sv{margin-left:8px;font-size:13px;color:var(--mute)}
+  .or{display:flex;align-items:center;gap:10px;color:var(--mute);font-size:12px;margin:14px 0 4px}.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+  .gdemo{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:1px solid #dadce0;background:#fff;border-radius:999px;padding:10px;font:500 15px "Noto Sans JP";color:#3c4043;cursor:pointer}
+  .review{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px}
+  .small{font-size:12px;color:var(--mute);margin-top:8px}
+  .story{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px}
+  .story img{display:block;width:62%;max-width:240px;margin:12px auto 0;border-radius:10px;box-shadow:0 4px 16px rgba(31,43,77,.25)}
+  .btn.line{background:#fff;color:var(--kachi);border:1px solid var(--kachi)}
+  footer{text-align:center;margin-top:30px;color:var(--mute);font-size:11.5px;letter-spacing:.06em}
+  .demo{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);white-space:nowrap;background:rgba(31,43,77,.9);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px}
+  .check{display:flex;gap:10px;align-items:flex-start;font-size:14px;cursor:pointer}.check input{width:20px;height:20px;margin-top:3px;flex:none}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">FOR YOUR INTRODUCTION</div><h1>ご紹介資料のための質問</h1><p>AI時代の経営者専属顧問　飯村 惇</p></header>
+<main class="wrap">
+  <p class="lead" id="lead">あなたを周りの方へご紹介する<br>資料をつくるための質問です。<br>5〜10分ほどで終わります。</p>
+  <form id="form" novalidate>
+    <div class="card">
+      <label class="s" for="name" style="margin-top:0">お名前<span class="req">必須</span></label>
+      <input id="name" name="name" autocomplete="name">
+      <label class="s" for="title">会社名・屋号・肩書<span class="req">必須</span></label>
+      <input id="title" name="title" placeholder="例）株式会社〇〇 代表取締役／書道家">
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">1</span>この仕事を始めたきっかけ<span class="req">必須</span></p>
+      <p class="hint">原点になった出来事や、その時の思いを教えてください</p><textarea id="origin" name="origin" placeholder="例）子どもの頃から〇〇が好きで、△△をきっかけに独立を決めました"></textarea>
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">2</span>転機になった出来事<span class="opt">任意</span></p>
+      <p class="hint">挑戦したこと、乗り越えたこと、印象に残っている出来事など</p><textarea id="turning" name="turning" placeholder="例）3年前に〇〇へ出演したことで、仕事の幅が広がりました"></textarea>
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">3</span>大切にしている言葉・考え<span class="opt">任意</span></p>
+      <p class="hint">座右の銘や、仕事で大事にしていることを一言で</p><input id="words" name="words" placeholder="例）先に与える">
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">4</span>実績・数字<span class="opt">任意</span></p>
+      <p class="hint">活動年数、関わった人数、受賞・メディア出演など。紹介の信頼につながります</p><textarea id="record" name="record" placeholder="例）開業20年、受講生のべ300名、〇〇賞受賞"></textarea>
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">5</span>いま提供しているサービス<span class="req">必須</span></p>
+      <p class="hint">どんな方に、何を、どんな形で（オンライン・対面など）</p><textarea id="service" name="service" placeholder="例）経営者向けに、創業記念の書をオーダー制作しています"></textarea>
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">6</span>こんな方と出会えると嬉しい<span class="req">必須</span></p>
+      <p class="hint">お客様になってほしい方、一緒に何かできそうな方など</p><textarea id="meet" name="meet" placeholder="例）オフィスに飾る書を探している経営者の方"></textarea>
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">7</span>連絡先・リンク<span class="opt">任意</span></p>
+      <p class="hint">資料の一番下に「この方に連絡する」ボタンを付けます。どれか1つあれば大丈夫です</p>
+      <label class="s" for="lineUrl">公式LINEのURL</label><input id="lineUrl" name="lineUrl" placeholder="https://lin.ee/…">
+      <label class="s" for="insta">Instagramのユーザー名</label><input id="insta" name="insta" placeholder="@…">
+      <label class="s" for="hp">ホームページ</label><input id="hp" name="hp" placeholder="https://…">
+    </div>
+    <div class="card">
+      <p class="q"><span class="n">8</span>お写真<span class="opt">任意</span></p>
+      <p class="hint" style="margin:0">お顔やお仕事の様子が分かる写真があれば、飯村とのLINEにそのまま送ってください。</p>
+    </div>
+    <div class="card">
+      <label class="check"><input type="checkbox" id="agree" name="agree" value="1"><span>ここに書いた内容を、飯村が紹介資料にまとめ、ご紹介先の方へお見せすることに同意します。資料は公開前にご本人に確認していただきます。</span></label>
+    </div>
+    <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+    <button class="btn" id="submit" type="submit">送信する</button>
+    <div class="err" id="err" role="alert"></div>
+  </form>
+  <section class="card done" id="done" hidden>
+    <div class="mark">✓</div>
+    <h2>ありがとうございました</h2>
+    <p style="margin:0">いただいた内容をもとに<br>ご紹介資料をおつくりします。<br>できあがったら、LINEで確認をお願いします。</p>
+  </section>
+  <footer>HiMaWaRi合同会社</footer>
+</main>
+<script>
+const API_URL = '';   // ← 本番では Apps Script の公開URL（…/exec）を入れる（受け口を作ってから）
+(function () {
+  const $ = id => document.getElementById(id);
+  const MODE = API_URL ? 'api' : (location.protocol === 'file:' || /^(localhost|127\.)/.test(location.hostname) ? 'demo' : 'off');
+  if (MODE === 'off') { document.querySelector('main').innerHTML = '<p style="padding:48px 8px;text-align:center;line-height:2">このページは準備中です。<br>恐れ入りますが、少し時間をおいてお開きください。</p>'; return; }
+  if (MODE === 'demo') { const b = document.createElement('div'); b.className = 'demo'; b.textContent = '見本（送信しても記録されません）'; document.body.appendChild(b); }
+  const q = Object.fromEntries(new URLSearchParams(location.search));
+  if (q.n) { $('name').value = q.n; const L = $('lead'); L.textContent = ''; [q.n + 'さん、', 'ご紹介資料をつくるための質問です。', '5〜10分ほどで終わります。'].forEach((t, i) => { if (i) L.appendChild(document.createElement('br')); L.appendChild(document.createTextNode(t)); }); }
+  const send = p => MODE === 'api'
+    ? fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(Object.assign({ type: 'pr_hearing' }, p)) }).then(r => r.json())
+    : new Promise(r => setTimeout(() => r({ ok: true }), 600));
+  $('form').onsubmit = e => {
+    e.preventDefault(); $('err').textContent = '';
+    const p = Object.fromEntries(new FormData($('form')).entries());
+    if (!p.name.trim()) return ($('err').textContent = 'お名前をご入力ください');
+    if (!p.title.trim()) return ($('err').textContent = '会社名・屋号・肩書をご入力ください');
+    if (!p.origin.trim()) return ($('err').textContent = '「始めたきっかけ」をご入力ください');
+    if (!p.service.trim()) return ($('err').textContent = '「提供しているサービス」をご入力ください');
+    if (!p.meet.trim()) return ($('err').textContent = '「出会えると嬉しい方」をご入力ください');
+    if (!$('agree').checked) return ($('err').textContent = '最後の同意にチェックをお願いします');
+    $('submit').disabled = true; $('submit').textContent = '送信しています…';
+    send(p).then(r => {
+      if (!r.ok) { $('err').textContent = r.error || '送信できませんでした'; $('submit').disabled = false; $('submit').textContent = '送信する'; return; }
+      $('form').hidden = true; $('lead').hidden = true; $('done').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' });
+    }).catch(() => { $('err').textContent = '通信がうまくいきませんでした。もう一度お試しください'; $('submit').disabled = false; $('submit').textContent = '送信する'; });
+  };
+})();
+</script>
+</body>
+</html>
