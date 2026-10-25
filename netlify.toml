@@ -3,3 +3,10 @@
 [build]
   publish = "."
   command = ""
+
+# Instagram横スライドの画像を作る関数（/ig/slide.jpg）。2026-10-25追加
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["@resvg/resvg-js"]
+  included_files = ["netlify/functions/igslide/fonts/*"]
