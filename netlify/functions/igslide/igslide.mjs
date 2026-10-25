@@ -34,11 +34,15 @@ function frame(d, inner) {
     h("div", { display: "flex", fontFamily: "Sans", fontSize: 28, color: MUTED }, "AI時代の経営者専属顧問　飯村 惇"),
     h("div", { display: "flex", fontFamily: "Sans", fontSize: 28, color: GOLD_L }, d.k === "end" ? "@kimonoceo" : "スワイプ →"),
   ]);
-  return h("div", {
-    width: W, height: H, display: "flex", flexDirection: "column", justifyContent: "space-between",
-    backgroundColor: NAVY, padding: "72px 84px 64px 84px", border: `14px solid ${NAVY}`, outline: "none",
-    boxShadow: `inset 0 0 0 2px ${GOLD}`,
+  // 外側に太い金の縁（24px）、少し空けて内側に細い金の線（2px）
+  const content = h("div", {
+    display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", height: "100%",
+    border: `2px solid ${GOLD}`, padding: "50px 58px 44px 58px",
   }, [top, h("div", { display: "flex", flexDirection: "column", flexGrow: 1, justifyContent: "center", width: "100%" }, inner), foot]);
+  return h("div", {
+    width: W, height: H, display: "flex", backgroundColor: NAVY,
+    border: `24px solid ${GOLD}`, padding: 14,
+  }, [content]);
 }
 
 const title = (t, size) => h("div", { display: "flex", fontFamily: "Serif", fontSize: size, color: INK, lineHeight: 1.35, letterSpacing: 1 }, t);
