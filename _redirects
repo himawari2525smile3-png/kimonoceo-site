@@ -30,6 +30,25 @@ https://www.kimonoceo.com/*               https://kimonoceo.com/:splat   301!
 /ref   /?utm_source=referral&utm_medium=introduction&utm_campaign=client  302
 
 # =====================================================================
+#  36タイプ診断へ直接行く短縮URL（2026-10-26 追加）
+#  診断ページの from= に媒体名が入り、「診断記録」の流入元に出る
+# =====================================================================
+/36      https://mentalism36.netlify.app/?from=kimonoceo   302
+/36th    https://mentalism36.netlify.app/?from=th_bio      302
+/36thp   https://mentalism36.netlify.app/?from=th_post     302
+/36ig    https://mentalism36.netlify.app/?from=ig_bio      302
+/36igs   https://mentalism36.netlify.app/?from=ig_story    302
+/36li    https://mentalism36.netlify.app/?from=linkedin    302
+/36nt    https://mentalism36.netlify.app/?from=note        302
+/36fb    https://mentalism36.netlify.app/?from=facebook    302
+/36x     https://mentalism36.netlify.app/?from=x           302
+/36sf    https://mentalism36.netlify.app/?from=standfm     302
+/36gbp   https://mentalism36.netlify.app/?from=gbp         302
+/36line  https://mentalism36.netlify.app/?from=line_menu   302
+/36qr    https://mentalism36.netlify.app/?from=meishi      302
+/36ref   https://mentalism36.netlify.app/?from=referral    302
+
+# =====================================================================
 #  投稿ごとに分けたいとき（末尾に自由な文字列を足す）
 #  例： kimonoceo.com/x/0928  →  campaign が 0928 で記録される
 # =====================================================================
