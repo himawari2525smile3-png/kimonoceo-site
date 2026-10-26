@@ -59,13 +59,13 @@ function frame(d, inner, photo) {
   const content = h("div", {
     display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", height: "100%",
     border: `2px solid ${GOLD}`, padding: "50px 56px 42px 56px",
-  }, [top, h("div", { display: "flex", flexDirection: "column", flexGrow: 1, justifyContent: photo ? "flex-start" : "center", paddingTop: photo ? 60 : 0, width: "100%" }, inner), foot]);
+  }, [top, h("div", { display: "flex", flexDirection: "column", flexGrow: 1, justifyContent: photo ? "flex-start" : "center", paddingTop: photo ? 36 : 0, width: "100%" }, inner), foot]);
   const PW = W - 56, PH = H - 56; // 紺の面の大きさ
   const layers = [];
   if (photo) {
-    const PHOTO_H = 760; // 写真は下側に置き、上の文字の面は紺のまま残す
+    const PHOTO_H = 600; // 写真は下側に置き、上の文字の面は紺のまま残す（2026-10-26 顔に文字が重ならないよう 760→600）
     layers.push({ type: "img", props: { src: photo.src, width: PW, height: PHOTO_H, style: { position: "absolute", left: 0, top: PH - PHOTO_H, width: PW, height: PHOTO_H, objectFit: "cover", objectPosition: photo.pos } } });
-    layers.push(h("div", { position: "absolute", left: 0, top: PH - PHOTO_H - 2, width: PW, height: 360, display: "flex", backgroundImage: `linear-gradient(to bottom, ${NAVY} 0%, rgba(15,27,61,0.85) 35%, rgba(15,27,61,0) 100%)` }, []));
+    layers.push(h("div", { position: "absolute", left: 0, top: PH - PHOTO_H - 2, width: PW, height: 170, display: "flex", backgroundImage: `linear-gradient(to bottom, ${NAVY} 0%, rgba(15,27,61,0.6) 45%, rgba(15,27,61,0) 100%)` }, []));
     layers.push(h("div", { position: "absolute", left: 0, top: PH - 220, width: PW, height: 220, display: "flex", backgroundImage: "linear-gradient(to bottom, rgba(15,27,61,0) 0%, rgba(15,27,61,0.9) 70%)" }, []));
   }
   layers.push(h("div", { position: "absolute", left: 0, top: 0, width: PW, height: PH, display: "flex", padding: 14 }, [content]));
@@ -95,7 +95,7 @@ function body(d) {
   const b = (Array.isArray(d.b) ? d.b : []).slice(0, 5).map((x) => clip(String(x).replace(/^\s*[□☐■・\-]\s*/, ""), 44));
   switch (d.k) {
     case "cover":
-      return [rule, title(clip(d.t, 40), 88), d.s ? sub(clip(d.s, 50), 40) : null].filter(Boolean);
+      return [rule, title(clip(d.t, 40), 74), d.s ? sub(clip(d.s, 50), 34) : null].filter(Boolean);
     case "list":
     case "steps":
       return [rule, title(clip(d.t, 34), 72), items(b, d.k), d.s ? sub(clip(d.s, 60)) : null].filter(Boolean);
