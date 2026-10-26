@@ -1748,6 +1748,29 @@ update();
   upd();
 })();
 </script>
+<script>
+/* 2026-10-26 SNSから来た人が診断に進んだ時、どの媒体から来たかを診断側に引き継ぐ。
+   例：/ig（utm_source=instagram）で来た人の「診断を受ける」→ ?from=lp_hero_ig */
+(function(){
+  try {
+    var MAP = {instagram:'ig', threads:'th', linkedin:'li', note:'nt', facebook:'fb', x:'x', twitter:'x', standfm:'sf', gbp:'gbp', google_business:'gbp', line:'line'};
+    var q = new URLSearchParams(location.search), src = q.get('utm_source');
+    var key = 'kimonoceo_src';
+    if (src) { try { sessionStorage.setItem(key, src); } catch(e){} }
+    else { try { src = sessionStorage.getItem(key); } catch(e){} }
+    if (!src) return;
+    var tag = MAP[src.toLowerCase()] || src.toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,10);
+    if (!tag) return;
+    var links = document.querySelectorAll('a[href*="mentalism36.netlify.app"]');
+    for (var i = 0; i < links.length; i++) {
+      var u = new URL(links[i].href);
+      var f = u.searchParams.get('from') || 'hp';
+      if (f.slice(-tag.length - 1) !== '_' + tag) u.searchParams.set('from', f + '_' + tag);
+      links[i].href = u.toString();
+    }
+  } catch(e) {}
+})();
+</script>
 </body>
 </html>
 

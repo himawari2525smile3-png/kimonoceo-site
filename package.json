@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@netlify/blobs": "^11.1.6",
     "@resvg/resvg-js": "2.6.2",
+    "budoux": "^0.10.1",
     "jpeg-js": "^0.4.4",
     "satori": "0.10.14"
   }
