@@ -124,6 +124,11 @@
     <p style="margin:0">いただいた内容をもとに、<br>合いそうな方がいれば<br>ご紹介させてください。</p>
     <div class="review">
       <p style="margin:0">もしよろしければ、Googleの口コミで<br>ご感想をお聞かせください。</p>
+      <div id="ownWords" hidden style="margin:14px 0 4px;text-align:left">
+        <p class="small" style="margin:0 0 6px">アンケートに書いていただいたお言葉です（こちらでは手を加えていません）。口コミに使う場合は、そのままでも、書き直しても大丈夫です。</p>
+        <textarea id="ownText" rows="5" style="width:100%"></textarea>
+        <button type="button" class="btn line" id="copyBtn">この文をコピーする</button>
+      </div>
       <a class="btn gold" id="reviewBtn" href="https://g.page/r/CZ1A6Bk47D2LEAE/review" target="_blank" rel="noopener">Googleの口コミを書く</a>
       <p class="small">任意です。どんなご感想でも、ご自身の言葉で書いていただけると嬉しいです。</p>
     </div>
@@ -230,6 +235,13 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbyZwob7c8WGp7h9tDQyHgIw
     }
   };
 
+  $('copyBtn').onclick = () => {
+    const t = $('ownText').value;
+    const done = () => { $('copyBtn').textContent = 'コピーしました'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, () => { $('ownText').select(); document.execCommand('copy'); done(); });
+    else { $('ownText').select(); document.execCommand('copy'); done(); }
+  };
+
   $('form').onsubmit = e => {
     e.preventDefault(); $('err').textContent = '';
     const p = Object.fromEntries(new FormData($('form')).entries());
@@ -243,6 +255,8 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbyZwob7c8WGp7h9tDQyHgIw
       if (!r.ok) { $('err').textContent = r.error || '送信できませんでした'; $('submit').disabled = false; $('submit').textContent = '送信する'; return; }
       if (r.reviewUrl) $('reviewBtn').href = r.reviewUrl;
       $('form').hidden = true; $('lead').hidden = true; $('done').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' });
+      const own = [p.goodNote, p.useful].map(x => String(x || '').trim()).filter(Boolean).join('\n\n');
+      if (own) { $('ownText').value = own; $('ownWords').hidden = false; }
       makeStory(p.good);
     }).catch(() => { $('err').textContent = '通信がうまくいきませんでした。もう一度お試しください'; $('submit').disabled = false; $('submit').textContent = '送信する'; });
   };
