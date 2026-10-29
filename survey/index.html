@@ -52,7 +52,7 @@
 <body>
 <header><div class="eyebrow">THANK YOU</div><h1>面談アンケート</h1><p>AI時代の経営者専属顧問　飯村 惇</p></header>
 <main class="wrap">
-  <p class="lead" id="lead">先日はお時間をいただき、<br>ありがとうございました。<br>2分ほどで終わります。</p>
+  <p class="lead" id="lead">先日はお時間をいただき、<br>ありがとうございました。<br>3分ほどで終わります。</p>
 
   <form id="form" novalidate>
     <div class="card">
@@ -75,7 +75,18 @@
     </div>
 
     <div class="card">
-      <p class="q"><span class="n">2</span>面談で良かったこと<span class="req">必須</span></p>
+      <p class="q"><span class="n">2</span>いまのお立場<span class="req">必須</span></p>
+      <p class="hint">いちばん近いものを1つお選びください（次の質問が、お立場に合わせて変わります）</p>
+      <div class="chips" id="role" role="radiogroup" aria-label="いまのお立場">
+        <button type="button" class="chip" role="radio" aria-pressed="false" data-r="owner">経営者・役員</button>
+        <button type="button" class="chip" role="radio" aria-pressed="false" data-r="solo">個人事業主・フリーランス</button>
+        <button type="button" class="chip" role="radio" aria-pressed="false" data-r="staff">会社員（管理職・営業など）</button>
+        <button type="button" class="chip" role="radio" aria-pressed="false" data-r="other">その他</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">3</span>面談で良かったこと<span class="req">必須</span></p>
       <p class="hint">当てはまるものをすべてお選びください</p>
       <div class="chips" id="good">
         <button type="button" class="chip" aria-pressed="false">頭の中が整理できた</button>
@@ -85,17 +96,25 @@
         <button type="button" class="chip" aria-pressed="false">話しやすく、安心できた</button>
         <button type="button" class="chip" aria-pressed="false">人とのご縁につながりそう</button>
       </div>
-      <label class="s" for="goodNote">ひとこと<span class="opt">任意</span></label>
-      <textarea id="goodNote" name="goodNote"></textarea>
     </div>
 
     <div class="card">
-      <p class="q"><span class="n">3</span>いちばん役に立った話<span class="opt">任意</span></p>
-      <textarea id="useful" name="useful" placeholder="例）3年後から逆算して、今月やることを決めた話"></textarea>
+      <p class="hint" style="margin:0">ここからの3問は、「以前どうだったか」「何を学んだか」「何が変わったか」の順に、思い出せる範囲で。期間や数字があれば、そのままどうぞ。</p>
+      <label class="q" for="before" style="display:block;margin-top:14px"><span class="n">4</span><span id="qBefore">相談する前、どんなことに悩んでいましたか</span><span class="opt">任意</span></label>
+      <textarea id="before" name="before"></textarea>
+      <label class="q" for="did" style="display:block;margin-top:16px"><span class="n">5</span><span id="qDid">面談でどんなことを話し、決めましたか</span><span class="opt">任意</span></label>
+      <textarea id="did" name="did"></textarea>
+      <label class="q" for="change" style="display:block;margin-top:16px"><span class="n">6</span><span id="qChange">面談のあと、何が変わりましたか（変わりそうですか）</span><span class="opt">任意</span></label>
+      <textarea id="change" name="change"></textarea>
     </div>
 
     <div class="card">
-      <p class="q"><span class="n">4</span>紹介してほしい方<span class="opt">任意</span></p>
+      <label class="q" for="recommend" style="display:block"><span class="n">7</span>どんな方に勧めたいですか<span class="opt">任意</span></label>
+      <textarea id="recommend" name="recommend"></textarea>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">8</span>紹介してほしい方<span class="opt">任意</span></p>
       <p class="hint">飯村のつながりの中から、合いそうな方をお探しします</p>
       <label class="s" for="wantIndustry">業種</label><input id="wantIndustry" name="wantIndustry" placeholder="例）飲食店の経営者、税理士">
       <label class="s" for="wantArea">地域</label><input id="wantArea" name="wantArea" placeholder="例）東京、オンラインでも可">
@@ -103,13 +122,13 @@
     </div>
 
     <div class="card">
-      <p class="q"><span class="n">5</span>飯村を、どなたに紹介したいですか<span class="opt">任意</span></p>
+      <p class="q"><span class="n">9</span>飯村を、どなたに紹介したいですか<span class="opt">任意</span></p>
       <p class="hint">HiMaWaRi合同会社 代表の飯村を、ご紹介いただける方がいれば教えてください（お名前・関係・どんな方か）</p>
       <textarea id="introduce" name="introduce" placeholder="例）経営者仲間の〇〇さん。社員が増えて、任せ方に悩んでいる"></textarea>
     </div>
 
     <div class="card">
-      <p class="q"><span class="n">6</span>これからやってみたいこと<span class="opt">任意</span></p>
+      <p class="q"><span class="n">10</span>これからやってみたいこと<span class="opt">任意</span></p>
       <textarea id="next" name="next"></textarea>
     </div>
 
@@ -154,7 +173,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbyZwob7c8WGp7h9tDQyHgIw
   if (MODE === 'demo') { const b = document.createElement('div'); b.className = 'demo'; b.textContent = '見本（送信しても記録されません）'; document.body.appendChild(b); }
 
   // 名前をリンクから受け取る（?p=survey&n=山田）
-  const setName = q => { if (q && q.n) { $('name').value = q.n; const L = $('lead'); L.textContent = ''; [q.n + 'さん、', '先日はお時間をいただき、', 'ありがとうございました。', '2分ほどで終わります。'].forEach((t, i) => { if (i) L.appendChild(document.createElement('br')); L.appendChild(document.createTextNode(t)); }); } };
+  const setName = q => { if (q && q.n) { $('name').value = q.n; const L = $('lead'); L.textContent = ''; [q.n + 'さん、', '先日はお時間をいただき、', 'ありがとうございました。', '3分ほどで終わります。'].forEach((t, i) => { if (i) L.appendChild(document.createElement('br')); L.appendChild(document.createTextNode(t)); }); } };
   if (MODE === 'gas' && google.script.url) google.script.url.getLocation(l => setName(l.parameter));
   else setName(Object.fromEntries(new URLSearchParams(location.search)));
 
@@ -181,6 +200,19 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbyZwob7c8WGp7h9tDQyHgIw
   if (MODE === 'api') fetch(API_URL + (API_URL.includes('?') ? '&' : '?') + 'api=info').then(r => r.json()).then(i => setupGoogle(i.clientId)).catch(() => {});
   else setupGoogle('');
 
+  const ROLE_TXT = {
+    owner: ['経営者・役員', '会社や社員のことで、何に悩んでいましたか', '面談で何を決め、何を始めましたか', '社員・数字・ご自身の時間で、何が変わりましたか（変わりそうですか）'],
+    solo:  ['個人事業主・フリーランス', '事業のことで、何に悩んでいましたか', '事業の進め方や仕組みで、何を変えましたか', '売上・お客様・働き方で、何が変わりましたか（変わりそうですか）'],
+    staff: ['会社員（管理職・営業など）', '仕事やチームのことで、何に悩んでいましたか', '学んだことを、職場でどう使いましたか（使えそうですか）', '部下・チーム・成果・ご自身の働き方で、何が変わりましたか（変わりそうですか）'],
+    other: ['その他', '相談する前、どんなことに悩んでいましたか', '面談でどんなことを話し、決めましたか', '面談のあと、何が変わりましたか（変わりそうですか）'],
+  };
+  let role = '';
+  $('role').onclick = e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    role = b.dataset.r;
+    $('role').querySelectorAll('.chip').forEach(c => { const on = c === b; c.setAttribute('aria-pressed', on ? 'true' : 'false'); c.setAttribute('aria-checked', on ? 'true' : 'false'); });
+    const t = ROLE_TXT[role]; $('qBefore').textContent = t[1]; $('qDid').textContent = t[2]; $('qChange').textContent = t[3];
+  };
   $('good').onclick = e => { const b = e.target.closest('.chip'); if (b) b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); };
   let stars = 0; const LBL = ['', 'いまひとつ', 'ふつう', '良かった', 'とても良かった', '最高だった'];
   const paint = n => $('stars').querySelectorAll('button').forEach(b => { const on = +b.dataset.v <= n; b.classList.toggle('on', on); b.setAttribute('aria-checked', +b.dataset.v === n ? 'true' : 'false'); });
@@ -246,16 +278,17 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbyZwob7c8WGp7h9tDQyHgIw
     e.preventDefault(); $('err').textContent = '';
     const p = Object.fromEntries(new FormData($('form')).entries());
     p.good = [...$('good').querySelectorAll('[aria-pressed="true"]')].map(b => b.textContent);
-    p.stars = stars; if (idToken) p.idToken = idToken;
+    p.stars = stars; p.role = role ? ROLE_TXT[role][0] : ''; if (idToken) p.idToken = idToken;
     if (!p.name.trim()) return ($('err').textContent = 'お名前をご入力ください');
     if (!stars) return ($('err').textContent = '総合評価を星でお選びください');
+    if (!role) return ($('err').textContent = 'いまのお立場を1つお選びください');
     if (!p.good.length) return ($('err').textContent = '「良かったこと」を1つ以上お選びください');
     $('submit').disabled = true; $('submit').textContent = '送信しています…';
     send(p).then(r => {
       if (!r.ok) { $('err').textContent = r.error || '送信できませんでした'; $('submit').disabled = false; $('submit').textContent = '送信する'; return; }
       if (r.reviewUrl) $('reviewBtn').href = r.reviewUrl;
       $('form').hidden = true; $('lead').hidden = true; $('done').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' });
-      const own = [p.goodNote, p.useful].map(x => String(x || '').trim()).filter(Boolean).join('\n\n');
+      const own = [p.before, p.did, p.change, p.recommend].map(x => String(x || '').trim()).filter(Boolean).join('\n\n');
       if (own) { $('ownText').value = own; $('ownWords').hidden = false; }
       makeStory(p.good);
     }).catch(() => { $('err').textContent = '通信がうまくいきませんでした。もう一度お試しください'; $('submit').disabled = false; $('submit').textContent = '送信する'; });
