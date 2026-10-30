@@ -1,6 +1,6 @@
 // Instagram横スライド（カルーセル）の画像を、URLのパラメーターから作る。
 // 例：/ig/slide.jpg?d=<base64url JSON>
-// JSON: { k:"cover|point|list|steps|scene|end", e:"シリーズ名", t:"見出し", s:"補足", b:["箇条書き"...], n:"2/7", p:"hero|seiza|none"（表紙の写真。省略時 hero） }
+// JSON: { k:"cover|point|list|steps|scene|end", e:"シリーズ名", t:"見出し", s:"補足", b:["箇条書き"...], n:"2/7", p:"hero|seiza|none"（表紙の写真。省略時 hero）, v:"li"（LinkedIn用：右上の枚数と右下の「スワイプ →」を出さず、右下は社名。2026-10-30） }
 // 2026-10-26 改修：文節で改行（BudouX）／本文の文字を大きく／表紙に本人写真／締めの箇条書きを指定可能に
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
@@ -50,11 +50,11 @@ function wrap(text, style) {
 function frame(d, inner, photo) {
   const top = h("div", { display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }, [
     h("div", { display: "flex", fontFamily: "Sans", fontSize: 32, color: GOLD_L, letterSpacing: 2 }, clip(d.e, 24)),
-    h("div", { display: "flex", fontFamily: "Sans", fontSize: 32, color: MUTED }, clip(d.n, 8)),
+    h("div", { display: "flex", fontFamily: "Sans", fontSize: 32, color: MUTED }, d.v === "li" ? "" : clip(d.n, 8)),
   ]);
   const foot = h("div", { display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", borderTop: `2px solid ${GOLD}`, paddingTop: 26 }, [
     h("div", { display: "flex", fontFamily: "Sans", fontSize: 30, color: photo ? INK : MUTED }, "AI時代の経営者専属顧問　飯村 惇"),
-    h("div", { display: "flex", fontFamily: "Sans", fontSize: 30, color: GOLD_L }, d.k === "end" ? "@kimonoceo" : "スワイプ →"),
+    h("div", { display: "flex", fontFamily: "Sans", fontSize: 30, color: GOLD_L }, d.v === "li" ? "HiMaWaRi合同会社" : d.k === "end" ? "@kimonoceo" : "スワイプ →"),
   ]);
   const content = h("div", {
     display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", height: "100%",
