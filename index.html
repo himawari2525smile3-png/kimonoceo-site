@@ -22,9 +22,8 @@
 /* =====================================================================
    ▼ 設定　※ここだけ書き換えれば全体に反映されます
    ===================================================================== */
-/* メンタリズム36診断の設置場所。同ドメインの /36/ に移した場合はこのまま。
-   まだ移していない場合は "https://mentalism36.netlify.app" に戻してください */
-var DIAG36_URL = "https://mentalism36.netlify.app";
+/* 経営36タイプ診断の設置場所（2026-11-05 メンタリズム36から切り替え） */
+var DIAG36_URL = "https://keiei36.netlify.app";
 
 /* Microsoft Clarity のプロジェクトID（10文字程度）。取得したら貼り付けてください。
    空のままなら計測タグは読み込まれません */
@@ -818,7 +817,7 @@ body{font-size:15.5px}
         <div class="heroimg heroimg-sp"><img src="/assets/img/hero-84cb4994.webp" alt="HiMaWaRi合同会社 代表 飯村惇"></div>
         <p class="sub">社長ひとりに集まる判断を言葉にして、組織とAIに渡せる形にします。<br>広告を出さず、ご紹介だけで10期目です。</p>
         <div class="ctas">
-          <a class="cta" data-d36 href="https://mentalism36.netlify.app/?from=lp_hero" target="_blank" rel="noopener">無料の36タイプ経営診断を受ける（5分）</a>
+          <a class="cta" data-d36 href="https://keiei36.netlify.app/?from=lp_hero" target="_blank" rel="noopener">無料の経営36タイプ診断を受ける（5分）</a>
         </div>
         <p class="fine"><a href="#offer" style="color:var(--gold-l);border-bottom:1px solid rgba(201,162,39,.4);text-decoration:none">90分の経営診断セッション（無料・毎月<span data-session-limit>3</span>名）はこちら →</a></p>
         <p class="slots" id="slotsHero"></p>
@@ -956,11 +955,11 @@ body{font-size:15.5px}
       <p>無料の二つからどうぞ。売り込みのご連絡はいたしません。</p>
     </div>
     <div class="tools two">
-      <a class="tool main" data-d36 href="https://mentalism36.netlify.app/?from=lp_free" target="_blank" rel="noopener">
+      <a class="tool main" data-d36 href="https://keiei36.netlify.app/?from=lp_free" target="_blank" rel="noopener">
         <span class="rec">おすすめ</span>
         <span class="tag">01 ／ 所要5分</span>
-        <b>36タイプ経営診断</b>
-        <p>30の質問で、ご自身の意思決定の癖と、任せられること・任せにくいことの傾向が分かります。詳しい解析はLINEで無料でお届けします。</p>
+        <b>経営36タイプ診断</b>
+        <p>22の質問と生年月日から、生まれ持った気質と「今の経営の仕方」のずれ（一致度）が分かります。解析レポート（PDF）も、ご希望の方に無料でお送りします。</p>
         <span class="go">診断を受ける　→</span>
       </a>
       <a class="tool" href="#offer">
@@ -1062,17 +1061,16 @@ body{font-size:15.5px}
     <div class="lineoffer">
       <div class="lo-top">
         <div class="lo-eyebrow">FREE / LINE</div>
-        <h4>36タイプ診断の詳細解析<br>PDFでお届けします</h4>
+        <h4>経営36タイプ診断の解析レポート<br>PDFでお届けします</h4>
       </div>
       <div class="lo-body">
-        <p>自動で出力される結果とは別に、気質と性質の組み合わせから、強みの活かし方・決断の癖・人との関わり方までを飯村が文章でお伝えします。費用はいただきません。</p>
+        <p>生年月日から出る12の気質と、回答から見た「今の経営の仕方」を照らし合わせ、一致度の内訳と、気質を経営に生かす手立てをPDFにまとめてお送りします。費用はいただきません。</p>
         <ol>
-          <li>下のボタンからLINEを追加します</li>
-          <li>「解析希望」とだけ送ってください</li>
-          <li>3日ほどお時間をいただき、お一人ずつ読み解きます</li>
-          <li>ご登録のメールアドレス宛にPDFでお届けします</li>
+          <li>下のボタンから経営36タイプ診断を受けます（22問・約5分）</li>
+          <li>結果画面の「解析レポートを希望する」を押します</li>
+          <li>3営業日以内に、ご登録のメールアドレスへPDFでお届けします</li>
         </ol>
-        <a class="linebtn" data-line="lp_result" href="https://lin.ee/TypjZLM" target="_blank" rel="noopener">LINEで詳細解析を受け取る<small>「解析希望」と送るだけ・無料</small></a>
+        <a class="linebtn" data-d36 href="https://keiei36.netlify.app/?from=lp_result" target="_blank" rel="noopener">経営36タイプ診断を受ける<small>22問・約5分・無料</small></a>
         <p class="lo-note">売り込みはいたしません。<br>ご相談内容が固まっていない段階でも構いません。</p>
       </div>
     </div>
@@ -1186,7 +1184,7 @@ body{font-size:15.5px}
     <p class="slots slots-final" id="slotsFinal"></p>
     <p>ご相談内容が固まっていなくても構いません。<br>売り込むことはいたしません。</p>
     <div style="max-width:440px;margin:0 auto">
-      <a class="linebtn" data-line="lp_footer" href="https://lin.ee/TypjZLM" target="_blank" rel="noopener">公式LINEで相談する<small>診断の詳細解析・セッションのお申し込みもこちらから</small></a>
+      <a class="linebtn" data-line="lp_footer" href="https://lin.ee/TypjZLM" target="_blank" rel="noopener">公式LINEで相談する<small>経営診断セッションのお申し込みもこちらから</small></a>
     </div>
     <p class="mailsub"><a href="mailto:KimonoCEO@kimonoceo.com">メールでのお問い合わせはこちら</a></p>
     <address style="font-style:normal;margin:26px auto 0;max-width:520px;font-size:13px;line-height:1.9;color:rgba(255,255,255,.75)">
@@ -1752,7 +1750,7 @@ update();
     if (!src) return;
     var tag = MAP[src.toLowerCase()] || src.toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,10);
     if (!tag) return;
-    var links = document.querySelectorAll('a[href*="mentalism36.netlify.app"]');
+    var links = document.querySelectorAll('a[href*="keiei36.netlify.app"]');
     for (var i = 0; i < links.length; i++) {
       var u = new URL(links[i].href);
       var f = u.searchParams.get('from') || 'hp';
