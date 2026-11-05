@@ -125,4 +125,22 @@
     <loc>https://kimonoceo.com/en/</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://kimonoceo.com/service/komon/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimonoceo.com/service/bunshin-ai/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kimonoceo.com/service/migiude/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

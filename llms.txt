@@ -16,6 +16,9 @@
 - [飯村惇とは](https://kimonoceo.com/about/): 経歴、保有資格（内閣総理大臣認証NPO認定コーチング1級・カウンセリング1級、英国王立技芸協会フェローFRSA）、実績
 - [36タイプとは](https://kimonoceo.com/36type/): 自社開発のパーソナル分析フレームの定義と構造
 - [顧問サービス](https://kimonoceo.com/service/): 法人顧問プラン、パーソナル顧問プラン、初回90分の無料セッション
+- [経営顧問（意思決定の同席・判断基準書）](https://kimonoceo.com/service/komon/): 重要な判断の場に同席し、判断の根拠を判断基準書に残す月額制・年間契約の顧問
+- [社長の分身AI（中小企業のAI導入）](https://kimonoceo.com/service/bunshin-ai/): 判断基準書をもとに社内用AIをつくる。言語化→AI→配置の順
+- [右腕・幹部の育成（組織分析）](https://kimonoceo.com/service/migiude/): 36タイプ分析で判断の癖と相性を見える化し、誰に何を任せるかを整理
 - [よくある質問](https://kimonoceo.com/faq/): 費用、受入枠、審査、契約期間、海外対応
 - [会社概要](https://kimonoceo.com/company/): 所在地・電話・営業時間・事業内容
 - [記事](https://kimonoceo.com/articles/): 顧問の現場で使っている判断の型
