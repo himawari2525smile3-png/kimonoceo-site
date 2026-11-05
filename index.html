@@ -23,7 +23,7 @@
    ▼ 設定　※ここだけ書き換えれば全体に反映されます
    ===================================================================== */
 /* 経営36タイプ診断の設置場所（2026-11-05 メンタリズム36から切り替え） */
-var DIAG36_URL = "https://keiei36.netlify.app";
+var DIAG36_URL = "/36/";
 
 /* Microsoft Clarity のプロジェクトID（10文字程度）。取得したら貼り付けてください。
    空のままなら計測タグは読み込まれません */
@@ -822,7 +822,7 @@ body{font-size:15.5px}
         <div class="heroimg heroimg-sp"><img src="/assets/img/hero-84cb4994.webp" alt="HiMaWaRi合同会社 代表 飯村惇"></div>
         <p class="sub">社長ひとりに集まる判断を言葉にして、組織とAIに渡せる形にします。<br>広告を出さず、ご紹介だけで10期目です。</p>
         <div class="ctas">
-          <a class="cta" data-d36 href="https://keiei36.netlify.app/?from=lp_hero" target="_blank" rel="noopener">無料の経営36タイプ診断を受ける（5分）</a>
+          <a class="cta" data-d36 href="/36/?from=lp_hero" rel="noopener">無料の経営36タイプ診断を受ける（5分）</a>
         </div>
         <p class="fine"><a href="#offer" style="color:var(--gold-l);border-bottom:1px solid rgba(201,162,39,.4);text-decoration:none">90分の経営診断セッション（無料・毎月<span data-session-limit>3</span>名）はこちら →</a></p>
         <p class="slots" id="slotsHero"></p>
@@ -943,12 +943,12 @@ body{font-size:15.5px}
       <p>業種も規模も違いますが、共通しているのは「一人で抱えていた判断を外に出した」ことです。</p>
     </div>
     <div class="cases">
-      <div class="case big"><div class="from">大規模農家</div><div class="ar">↓</div><div class="to">半年で年商 <i>2,000万円</i> 増</div></div>
-      <div class="case big"><div class="from">借金3,000万円の経営者</div><div class="ar">↓</div><div class="to">年収 <i>3倍</i> へV字回復</div></div>
-      <div class="case big"><div class="from">学校の先生</div><div class="ar">↓</div><div class="to">2社で <i>日本一</i> の営業マン</div></div>
-      <div class="case"><div class="from">保険営業マン</div><div class="ar">↓</div><div class="to">IT会社 <i>経営者</i></div></div>
-      <div class="case"><div class="from">薬剤師</div><div class="ar">↓</div><div class="to">金融業で <i>法人設立</i></div></div>
-      <div class="case"><div class="from">IT会社の新卒</div><div class="ar">↓</div><div class="to">半年でWEBコンサル <i>独立</i></div></div>
+      <div class="case big"><div class="from">サービス業の会社</div><div class="ar">↓</div><div class="to">4か月で月の利益 <i>200万円→450万円</i></div></div>
+      <div class="case big"><div class="from">社員4名の金融業</div><div class="ar">↓</div><div class="to">社長に上がる相談 <i>週21件→3件</i>（社長の作業 月20時間減）</div></div>
+      <div class="case big"><div class="from">固定費が重かった事業</div><div class="ar">↓</div><div class="to">3か月で固定費 <i>月80万円</i> 削減</div></div>
+      <div class="case"><div class="from">大規模農家</div><div class="ar">↓</div><div class="to">半年で年商 <i>2,000万円</i> 増</div></div>
+      <div class="case"><div class="from">借金3,000万円の経営者</div><div class="ar">↓</div><div class="to">年収 <i>3倍</i> へV字回復</div></div>
+      <div class="case"><div class="from">学校の先生</div><div class="ar">↓</div><div class="to">2社で <i>日本一</i> の営業マン</div></div>
     </div>
     <p class="casenote">クライアント様との対談動画を収録しております。お名前と映像でお話しいただいたものを、順次掲載いたします。</p>
     <p class="casenote" style="margin-top:10px"><a href="https://www.google.com/maps/place/?q=place_id:ChIJTYsfR-4HImARnUDoGTjsPYs" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">Googleのクチコミ ★5.0（26件・2026年11月時点）を読む →</a></p>
@@ -964,7 +964,7 @@ body{font-size:15.5px}
       <p>無料の二つからどうぞ。売り込みのご連絡はいたしません。</p>
     </div>
     <div class="tools two">
-      <a class="tool main" data-d36 href="https://keiei36.netlify.app/?from=lp_free" target="_blank" rel="noopener">
+      <a class="tool main" data-d36 href="/36/?from=lp_free" rel="noopener">
         <span class="rec">おすすめ</span>
         <span class="tag">01 ／ 所要5分</span>
         <b>経営36タイプ診断</b>
@@ -972,7 +972,7 @@ body{font-size:15.5px}
         <span class="go">診断を受ける　→</span>
       </a>
       <a class="tool" href="#offer">
-        <span class="tag">02 ／ 90分・毎月<span data-session-limit>3</span>名</span>
+        <span class="tag">02 ／ 90分（診断後は30〜60分）・毎月<span data-session-limit>3</span>名</span>
         <b>経営診断セッション</b>
         <p>いま社長に集中している判断を棚卸しし、何から移せるかを見立てとしてお返しします。オンラインまたは対面です。</p>
         <span class="go">内容を見る　↓</span>
@@ -982,7 +982,7 @@ body{font-size:15.5px}
 </div>
 
 <!-- ============ 診断ツール（お困りごと対応診断：開いたときだけ表示） ============ -->
-<div class="wrap" id="shindan">
+<div class="wrap" id="shindan" hidden><!-- 2026-11-06 入口を2つに絞るため非表示（中身とスクリプトは残す） -->
   <details class="shindan-fold" style="max-width:860px;margin:0 auto 8px;padding:0 20px">
     <summary style="cursor:pointer;text-align:center;color:var(--gold-l);font-size:14px;letter-spacing:.06em;padding:12px 0">そのお悩みに対応できるか、3つの質問で確かめる（2分・入力不要）</summary>
   <div class="sec" style="padding-top:20px">
@@ -1079,7 +1079,7 @@ body{font-size:15.5px}
           <li>結果画面の「解析レポートを希望する」を押します</li>
           <li>3営業日以内に、ご登録のメールアドレスへPDFでお届けします</li>
         </ol>
-        <a class="linebtn" data-d36 href="https://keiei36.netlify.app/?from=lp_result" target="_blank" rel="noopener">経営36タイプ診断を受ける<small>22問・約5分・無料</small></a>
+        <a class="linebtn" data-d36 href="/36/?from=lp_result" rel="noopener">経営36タイプ診断を受ける<small>22問・約5分・無料</small></a>
         <p class="lo-note">売り込みはいたしません。<br>ご相談内容が固まっていない段階でも構いません。</p>
       </div>
     </div>
@@ -1113,6 +1113,7 @@ body{font-size:15.5px}
         <span class="limit">毎月 <span data-session-limit>3</span>名 限定</span>
         <h3>経営診断セッション（90分）</h3>
         <p class="free">オンラインまたは対面　／　費用はいただきません</p>
+        <p class="free">経営36タイプ診断を先に受けた方は、結果をもとに30〜60分（オンライン）で行います</p>
       </div>
       <div class="body">
         <p class="lead">前半はお話を伺い、後半で「いま何が社長に集中していて、何から移せるか」を見立てとしてお返しします。整理がついてそこで終わる方もいらっしゃいます。それで構いません。</p>
@@ -1172,7 +1173,7 @@ body{font-size:15.5px}
     </div>
     <div class="faq">
       <details><summary>経営診断セッションは、本当に無料ですか</summary>
-        <div class="a">はい。費用はいただきません。じっくり伺うため90分を確保しており、毎月3名までとしています。売り込みもいたしません。</div></details>
+        <div class="a">はい。費用はいただきません。じっくり伺うため90分を確保しており（経営36タイプ診断を受けた方は、事前に傾向が分かっているため30〜60分）、毎月3名までとしています。売り込みもいたしません。</div></details>
       <details><summary>費用はどのくらいかかりますか</summary>
         <div class="a">お話を伺ったうえで、一社ずつ個別にご案内しています。同じお悩みでも、必要な深さと関わり方が会社によって異なるためです。法人顧問プランは月額制の年間契約（更新制）です。</div></details>
       <details><summary>AIに判断を任せて、間違えませんか</summary>
@@ -1759,7 +1760,7 @@ update();
     if (!src) return;
     var tag = MAP[src.toLowerCase()] || src.toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,10);
     if (!tag) return;
-    var links = document.querySelectorAll('a[href*="keiei36.netlify.app"]');
+    var links = document.querySelectorAll('a[href*="/36/"]');
     for (var i = 0; i < links.length; i++) {
       var u = new URL(links[i].href);
       var f = u.searchParams.get('from') || 'hp';

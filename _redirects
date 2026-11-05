@@ -30,23 +30,26 @@ https://www.kimonoceo.com/*               https://kimonoceo.com/:splat   301!
 /ref   /?utm_source=referral&utm_medium=introduction&utm_campaign=client  302
 
 # =====================================================================
+#  経営36タイプ診断を kimonoceo.com/36/ で表示する（2026-11-06。中身は keiei36.netlify.app。短縮URLより先に置く）
+/36/*    https://keiei36.netlify.app/:splat    200
+
 #  36タイプ診断へ直接行く短縮URL（2026-10-26 追加）
 #  診断ページの from= に媒体名が入り、「診断記録」の流入元に出る
 # =====================================================================
-/36      https://keiei36.netlify.app/?from=kimonoceo   302
-/36th    https://keiei36.netlify.app/?from=th_bio      302
-/36thp   https://keiei36.netlify.app/?from=th_post     302
-/36ig    https://keiei36.netlify.app/?from=ig_bio      302
-/36igs   https://keiei36.netlify.app/?from=ig_story    302
-/36li    https://keiei36.netlify.app/?from=linkedin    302
-/36nt    https://keiei36.netlify.app/?from=note        302
-/36fb    https://keiei36.netlify.app/?from=facebook    302
-/36x     https://keiei36.netlify.app/?from=x           302
-/36sf    https://keiei36.netlify.app/?from=standfm     302
-/36gbp   https://keiei36.netlify.app/?from=gbp         302
-/36line  https://keiei36.netlify.app/?from=line_menu   302
-/36qr    https://keiei36.netlify.app/?from=meishi      302
-/36ref   https://keiei36.netlify.app/?from=referral    302
+/36      /36/?from=kimonoceo   302
+/36th    /36/?from=th_bio      302
+/36thp   /36/?from=th_post     302
+/36ig    /36/?from=ig_bio      302
+/36igs   /36/?from=ig_story    302
+/36li    /36/?from=linkedin    302
+/36nt    /36/?from=note        302
+/36fb    /36/?from=facebook    302
+/36x     /36/?from=x           302
+/36sf    /36/?from=standfm     302
+/36gbp   /36/?from=gbp         302
+/36line  /36/?from=line_menu   302
+/36qr    /36/?from=meishi      302
+/36ref   /36/?from=referral    302
 
 # =====================================================================
 #  投稿ごとに分けたいとき（末尾に自由な文字列を足す）
