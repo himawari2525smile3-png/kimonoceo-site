@@ -36,6 +36,7 @@ https://www.kimonoceo.com/*               https://kimonoceo.com/:splat   301!
 #  36タイプ診断へ直接行く短縮URL（2026-10-26 追加）
 #  診断ページの from= に媒体名が入り、「診断記録」の流入元に出る
 # =====================================================================
+/m36s    https://mentalism36.netlify.app/?from=ig_story_yomitoki   302
 /36      /36/?from=kimonoceo   302
 /36th    /36/?from=th_bio      302
 /36thp   /36/?from=th_post     302
