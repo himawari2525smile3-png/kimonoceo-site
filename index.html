@@ -260,7 +260,21 @@ body{font-size:15.5px}
   .hero .grid > .heroimg:not(.heroimg-sp){display:none}
   .hero .sub{font-size:13.5px;line-height:1.9;margin-top:14px}
 }
-.hero{padding:66px 0 62px;position:relative;overflow:hidden}
+/* 2026-11-17 スマホ：診断ボタンを最初の画面に入れる（写真と説明文はボタンの下へ） */
+.hero .ctanote{margin:10px 0 0;font-size:12px;letter-spacing:.08em;color:rgba(244,238,226,.62)}
+@media(max-width:859px){
+  .hero .herotext{display:flex;flex-direction:column}
+  .hero .herotext > .eyebrow{order:1}
+  .hero .herotext > h1{order:2}
+  .hero .herotext > .tag{order:3}
+  .hero .herotext > .ctas{order:4;margin-top:20px}
+  .hero .herotext > .ctanote{order:5}
+  .hero .herotext > .fine{order:6}
+  .hero .herotext > .slots{order:7}
+  .hero .herotext > .heroimg-sp{order:8;width:100%;margin-top:22px}
+  .hero .herotext > .sub{order:9}
+}
+.hero{padding:66px 22px 62px;position:relative;overflow:hidden}
 .hero .grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
 .hero .heroimg{max-width:420px;margin:0 auto}
 @media(min-width:860px){.hero .grid{grid-template-columns:1.1fr .9fr;gap:48px}}
@@ -494,7 +508,7 @@ body{font-size:15.5px}
   .stickybar{left:0;right:0;bottom:0;width:auto;border:none;border-radius:0;
     border-top:1px solid rgba(201,162,39,.3);padding:10px 14px;box-shadow:none}
   .sm-hide{display:none}
-  .hero{padding:44px 0 46px}
+  .hero{padding:26px 22px 46px}
   .hero h1{font-size:25.5px;line-height:1.55;letter-spacing:.02em}
   .hero .grid{gap:28px}
   .cta{width:100%;padding:16px 0;text-align:center}
@@ -890,7 +904,7 @@ body{font-size:15.5px}
 <div class="band" id="hero">
   <div class="band-inner hero">
     <div class="grid">
-      <div>
+      <div class="herotext">
         <p class="eyebrow">HiMaWaRi合同会社 ／ AI時代の経営者専属顧問　飯村 惇</p>
         <h1>中目黒の経営顧問。<br>社長の判断を、<br class="sponly"><span class="gl">組織とAIに移す。</span></h1>
         <p class="tag">判断を一人で抱えている社長のための、専属顧問です。</p>
@@ -899,6 +913,7 @@ body{font-size:15.5px}
         <div class="ctas">
           <a class="cta" data-d36 href="/36/?from=lp_hero" rel="noopener">無料の経営36タイプ診断を受ける（5分）</a>
         </div>
+        <p class="ctanote">22問・約5分・無料　／　結果はその場で表示</p>
         <p class="fine"><a href="#offer" style="color:var(--gold-l);border-bottom:1px solid rgba(201,162,39,.4);text-decoration:none">経営診断セッション（無料・毎月<span data-session-limit>3</span>名）はこちら →</a></p>
         <p class="slots" id="slotsHero"></p>
       </div>
@@ -1706,7 +1721,10 @@ update();
   })();
   const ol=document.getElementById('offerLine');
   if(ol){ ol.setAttribute('href', LINE_URL);
-    ol.addEventListener('click',()=>{ try{ if(window.clarity) clarity('set','line_click','lp_offer'); }catch(e){} }); }
+    ol.addEventListener('click',()=>{
+      try{ if(window.clarity) clarity('set','line_click','lp_offer'); }catch(e){}
+      try{ if(window.gtag) gtag('event','line_friend_click',{placement:'lp_offer'}); }catch(e){}
+    }); }
 
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
