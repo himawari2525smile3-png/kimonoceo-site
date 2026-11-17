@@ -17,7 +17,7 @@ https://www.kimonoceo.com/*               https://kimonoceo.com/:splat   301!
 /ig    /?utm_source=instagram&utm_medium=social&utm_campaign=shindan&utm_content=profile   302
 /th    /?utm_source=threads&utm_medium=social&utm_campaign=shindan&utm_content=profile     302
 /fb    /?utm_source=facebook&utm_medium=social&utm_campaign=shindan&utm_content=profile    302
-/li    /?utm_source=linkedin&utm_medium=social&utm_campaign=shindan&utm_content=profile    302
+/li    /36/?from=li_bio    302
 /yt    /?utm_source=youtube&utm_medium=social&utm_campaign=shindan&utm_content=profile     302
 /nt    /?utm_source=note&utm_medium=social&utm_campaign=shindan&utm_content=profile        302
 /pi    /?utm_source=pinterest&utm_medium=social&utm_campaign=shindan&utm_content=profile   302
