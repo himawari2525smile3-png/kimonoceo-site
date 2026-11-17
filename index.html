@@ -36,9 +36,13 @@ var GA4_ID = "G-9QV3GB55KC";
 /* 顧問契約の受入枠。毎月ここだけ書き換えてください。
    ADVISORY_LEFT を 0 にすると「今月は満枠」と表示されます */
 var ADVISORY_TOTAL = 3;   /* 月あたりの新規お引き受け社数 */
-var ADVISORY_LEFT  = 1;   /* 今月の残り枠 */
+var ADVISORY_LEFT  = 3;   /* 今月の残り枠（受付再開後に使う） */
+/* 受付を止めている間の表示。ADVISORY_OPEN_FROM（日本時間）より前はこの文を出し、
+   その日以降は自動で「残り◯社」の表示に戻ります。止めない時は ADVISORY_PAUSE_MSG を "" に */
+var ADVISORY_PAUSE_MSG = "11月は満席／12月分は12/1から受付";
+var ADVISORY_OPEN_FROM = "2026-12-01T00:00:00+09:00";
 
-/* 経営診断セッション（初回90分・無料）の月間受入人数 */
+/* 経営診断セッション（30〜60分・オンラインのみ・無料）の月間受入人数 */
 var SESSION_LIMIT  = 3;
 
 /* 内部トラフィック判定（IPに依存しない端末フラグ）
@@ -686,7 +690,7 @@ body{font-size:15.5px}
     {
       "@type": "Offer",
       "name": "経営診断セッション（無料）",
-      "description": "顧問契約の前に、一度お話しする無料の場です。時間は、経営36タイプ診断を受けた方は30〜60分、受けていない方は90分です。その場で解決すれば、それで終わりで構いません。",
+      "description": "顧問契約の前に、一度お話しする無料の場です。時間は30〜60分、オンラインのみです。その場で解決すれば、それで終わりで構いません。",
       "url": "https://kimonoceo.com/service/#session",
       "price": "0",
       "priceCurrency": "JPY"
@@ -795,7 +799,7 @@ body{font-size:15.5px}
    "name": "経営診断セッションは、本当に無料ですか",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "はい。費用はいただきません。じっくり伺うため90分を確保しており（経営36タイプ診断を受けた方は、事前に傾向が分かっているため30〜60分）、毎月3名までとしています。売り込みもいたしません。"
+    "text": "はい。費用はいただきません。時間は30〜60分（オンラインのみ）で、毎月3名までとしています。売り込みもいたしません。"
    }
   },
   {
@@ -891,7 +895,7 @@ body{font-size:15.5px}
         <h1>中目黒の経営顧問。<br>社長の判断を、<br class="sponly"><span class="gl">組織とAIに移す。</span></h1>
         <p class="tag">判断を一人で抱えている社長のための、専属顧問です。</p>
         <div class="heroimg heroimg-sp"><img src="/assets/img/hero-84cb4994.webp" alt="HiMaWaRi合同会社 代表 飯村惇"></div>
-        <p class="sub">社長ひとりに集まる判断を言葉にして、組織とAIに渡せる形にします。<br>広告を出さず、ご紹介だけで10期目です。</p>
+        <p class="sub">社長ひとりに集まる判断を言葉にして、組織とAIに渡せる形にします。<br>広告を出さず、ご紹介だけで11期目です。</p>
         <div class="ctas">
           <a class="cta" data-d36 href="/36/?from=lp_hero" rel="noopener">無料の経営36タイプ診断を受ける（5分）</a>
         </div>
@@ -901,7 +905,7 @@ body{font-size:15.5px}
       <div class="heroimg"><img src="/assets/img/hero-84cb4994.webp" alt="HiMaWaRi合同会社 代表 飯村惇"></div>
     </div>
     <div class="badges">
-      <span>会社経営 10期目（ご紹介のみ）</span>
+      <span>会社経営 11期目（ご紹介のみ）</span>
       <span>英国王立技芸協会フェロー（FRSA）</span>
       <span>内閣総理大臣認証NPO認定 コーチング・カウンセリング1級</span>
     </div>
@@ -1051,9 +1055,9 @@ body{font-size:15.5px}
         <span class="go">診断を受ける　→</span>
       </a>
       <a class="tool" href="#offer">
-        <span class="tag">02 ／ 90分（診断後は30〜60分）・毎月<span data-session-limit>3</span>名</span>
+        <span class="tag">02 ／ 30〜60分（オンラインのみ）・毎月<span data-session-limit>3</span>名</span>
         <b>経営診断セッション</b>
-        <p>いま社長に集中している判断を棚卸しし、何から移せるかを見立てとしてお返しします。オンラインまたは対面です。</p>
+        <p>いま社長に集中している判断を棚卸しし、何から移せるかを見立てとしてお返しします。オンラインのみで行います。</p>
         <span class="go">内容を見る　↓</span>
       </a>
     </div>
@@ -1185,14 +1189,14 @@ body{font-size:15.5px}
   <div class="sec">
     <div class="sec-h">
       <p class="eyebrow">FIRST SESSION</p>
-      <h2>いきなり契約ではなく、<br>まず一度、90分お話ししませんか</h2>
+      <h2>いきなり契約ではなく、<br>まず一度、30〜60分お話ししませんか</h2>
     </div>
     <div class="offer">
       <div class="top">
         <span class="limit">毎月 <span data-session-limit>3</span>名 限定</span>
-        <h3>経営診断セッション（90分）</h3>
-        <p class="free">オンラインまたは対面　／　費用はいただきません</p>
-        <p class="free">経営36タイプ診断を先に受けた方は、結果をもとに30〜60分（オンライン）で行います</p>
+        <h3>経営診断セッション（30〜60分）</h3>
+        <p class="free">オンラインのみ　／　費用はいただきません</p>
+        <p class="free">経営36タイプ診断を先に受けた方は、結果をもとにお話しします</p>
       </div>
       <div class="body">
         <p class="lead">前半はお話を伺い、後半で「いま何が社長に集中していて、何から移せるか」を見立てとしてお返しします。整理がついてそこで終わる方もいらっしゃいます。それで構いません。</p>
@@ -1252,7 +1256,7 @@ body{font-size:15.5px}
     </div>
     <div class="faq">
       <details><summary>経営診断セッションは、本当に無料ですか</summary>
-        <div class="a">はい。費用はいただきません。じっくり伺うため90分を確保しており（経営36タイプ診断を受けた方は、事前に傾向が分かっているため30〜60分）、毎月3名までとしています。売り込みもいたしません。</div></details>
+        <div class="a">はい。費用はいただきません。時間は30〜60分（オンラインのみ）で、毎月3名までとしています。売り込みもいたしません。</div></details>
       <details><summary>費用はどのくらいかかりますか</summary>
         <div class="a">お話を伺ったうえで、一社ずつ個別にご案内しています。同じお悩みでも、必要な深さと関わり方が会社によって異なるためです。法人顧問プランは月額制の年間契約（更新制）です。</div></details>
       <details><summary>AIに判断を任せて、間違えませんか</summary>
@@ -1310,7 +1314,7 @@ body{font-size:15.5px}
 </div>
 
 <div class="stickybar" id="stickyCta">
-  <span class="sbt">無料　／　毎月<span data-session-limit>3</span>名　／　30〜90分</span>
+  <span class="sbt">無料　／　毎月<span data-session-limit>3</span>名　／　30〜60分（オンライン）</span>
   <a href="#offer">経営診断セッションを申し込む</a>
 </div>
 
@@ -1680,8 +1684,11 @@ update();
   /* 顧問枠の残数を描画 */
   (function(){
     const left = ADVISORY_LEFT, total = ADVISORY_TOTAL;
-    const full = left <= 0;
-    const chip = full
+    const paused = !!ADVISORY_PAUSE_MSG && Date.now() < new Date(ADVISORY_OPEN_FROM).getTime();
+    const full = paused || left <= 0;
+    const chip = paused
+      ? '<span class="dot"></span><b>' + ADVISORY_PAUSE_MSG + '</b>'
+      : full
       ? '<span class="dot"></span>今月の新規お引き受けは<b>満枠</b>となりました'
       : '<span class="dot"></span>今月の新規お引き受け　<b>残り' + left + '社</b>　（月' + total + '社まで）';
     ['slotsHero','slotsFinal'].forEach(id=>{
@@ -1690,7 +1697,9 @@ update();
     });
     const sn=document.getElementById('slotsSanctuary');
     if(sn){
-      sn.innerHTML = full
+      sn.innerHTML = paused
+        ? '※ 顧問契約は完全審査制　／　新規のお引き受けは月'+total+'社まで（'+ADVISORY_PAUSE_MSG+'）'
+        : full
         ? '※ 顧問契約は完全審査制　／　新規のお引き受けは月'+total+'社まで（今月は満枠となりました）'
         : '※ 顧問契約は完全審査制　／　新規のお引き受けは月'+total+'社まで（今月 残り'+left+'社）';
     }
